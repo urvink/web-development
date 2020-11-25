@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro vragen</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Intro</h2>
+
+        <div>
+            <h3 class="questions">1. Wat is het verschil tussen het internet en het world wide web?</h3>
+            <p class="answers">
+                World Wide Web, is een stukje van het internet. Het internet is een wereldwijde netwerk die miljoenen computers met elkaar verbindt, denk aan hardware, routers, kabels, computers enz. De WWW is een grote verzameling van pagina's van informatie die je met een simpele muisklik kan bekijken.
+            </p>
+        </div>
+        <div>
+            <h3 class="questions">2. Wat is het verschil tussen HTML, CSS en JavaScript?</h3>
+            <p class="answers">
+                HTML geeft structuur aan de website, CSS geeft opmaak aan de website en Javascript gaat om de functionaliteit van de website (interactief maken van de website)
+            </p>
+        </div>
+        <div>
+            <h3 class="questions">3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.</h3>
+            <p class="answers">
+                Geeft begin en eind van een HTML pagina weer, dit wordt de HTML-element genoemd. <code><HTML> en </HTML></code> zijn de tags
+                <img src="./img/grumpy-cat-small.png" alt="element structuur weergave" height="100px">
+            </p>
+        </div>
+        <div>
+            <h3 class="questions">4. HTML gebruikt basis tags om structuur op te bouwen. De &lt;html&gt;, &lt;head&gt; en &lt;body&gt;. Geef voor elke element aan waarvoor het dient.</h3>
+            <p class="answers">
+                    Zie hieronder uitgeschreven html code uitgeschreven.<br>
+                    Het &lt;head&gt; -element is een container voor metadata (data over data) en wordt tussen de &lt;html&gt; -tag en de &lt;body&gt; -tag geplaatst. Metadata zijn gegevens over het HTML-document. Metagegevens worden niet weergegeven. Metadata definiëren doorgaans de documenttitel, tekenset, stijlen, scripts en andere metagegevens.
+                    &lt;html&gt; (tag daarin staat de structuur van je HTML document.)
+                    &lt;head&gt; (tag waarin metadata in staat en is niet zichtbaar op de pagina. De title tag is wel zichtbaar op de pagina) <br>
+                    Title (Titel van je website) <br>
+                    Styles (css) <br>
+                    Scripts (javascript) <br>
+                    Metadata (kernwoorden die van belang zijn voor je website, deze worden door de zoekmachine gebruikt) <br>
+                    &lt;/head&gt;
+                    &lt;body&gt; (tag bevat alle tags, elementen die zichtbaar zijn op de pagina)
+                    (je website)
+                    &lt;body&gt; 
+                    </html>
+            </p>
+        </div>
+        <div>
+            <h3 class="questions">5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.</h3>
+            <p class="answers">
+
+                Een attribuut geeft extra informatie over een element. Attributen worden altijd geschreven in de start-tag en worden gevolgd door een gelijk teken.
+                <pre>
+                    - Style attribute 
+                        &lt;h2 style="background-color: #ff0000;"&gt;Mijn eerste HTML pagina.&lt;/h2&gt;
+                
+                    - class attribute
+                        &lt;p class=&quot;important&quot;&gt;Let op dit is belangrijk&lt;/p&gt;
+                    
+                    - id attribute ID=&quot;id-waarde&quot;
+                        &lt;h1 id=&quot;myHeader&quot;&gt;My Header&lt;/h1&gt;
+                    
+                    - Title attribute TITLE=&quot;waarde&rdquo;
+                        &lt;p title=&quot;Free Web tutorials&quot;&gt;W3Schools.com&lt;/p&gt;
+                    
+                    - href attribute 
+                        &lt;a href=&quot;https://www.w3schools.com&quot;&gt;Visit W3Schools&lt;/a&gt;
+                </pre>
+                
+            </p>
+        </div>
+        
+        <div>
+            <h3 class="questions">6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit.</h3>
+            <p class="answers">Belangrijk, zodat je een goed overzicht kan houden over wat je in HTML hebt gedaan en kan aanpassen waar nodig. Je ziet welke tag, element, paragrafen etc. hebt geschreven.
+                HTML-structuur geeft betekenis aan wat er wordt weergegeven en de browser weet hoe (of) het anders gestyled moet worden.
+                HTML code voorbeeld, de structuur is niet goed. De basis van de HTML is neergezet, maar de daadwerkelijke tekst die de pagina maken is niet gestructureerd. Er staat alleen een stuk tekst tussen de “body tag”.  
+                Niks is gedefinieerd in tags of elements. Het resultaat is dat je een lege pagina krijgt met enkel een stuk zwarte tekst op witte achtergrond.
+            </p>
+        </div>
+        
+        <div>
+            <h3 class="questions">7. Wat is het verschil tussen inline en block elementen?</h3>
+            <p class="answers">Een block-level element begint altijd op een nieuwe regel en neemt de volle breedte van het browservenster in. 
+                Het strekt zich uit naar links en rechts uit zo ver als het kan. Een inline element start niet op een nieuwe regel en beslaat slechts zo veel breedte als het nodig heeft om wat erin staat weer te geven
+                https://www.w3schools.com/html/html_blocks.asp
+                <div>
+                    <span class="bold">Inline:</span>  &lt;span&gt; &lt;img&gt; &lt;a&gt;
+                The following span is an <span class="yellow">inline element</span>; its background has been colored to display both the beginning and end of the inline element's influence.
+                
+                <span class="bold">Block: </span> &lt;div&gt; &lt;section&gt; &lt;p&gt;
+                The following paragraph is a &lt;div&gt;
+                <div class="yellow" style="padding: 10px;">
+                    <span style="background-color: white;">block-level element;</span> 
+                </div>
+                </div>
+                
+                
+                its background has been colored to display both the beginning and end of the block-level element's influence.
+            </p>
+        </div>
+        <div>
+            <h3 class="questions">8. Wat betekent nesting? Codeer een voorbeeld met nesting erin. </h3>
+            <p class="answers">Nesting betekent elementen die binnen elementen worden geplaatst
+                It is a common practice to place multiple &lt;div&gt; inside another &lt;div&gt;. This is usually referred to as "nesting" elements and allows for further dividing elements into subsections or aid developers with CSS styling.
+                <p>
+                    The <span class="red">&lt;div class=&quot;outer-div&quot;&gt;</span>  is used to group together two <span class="red">&lt;div class=&quot;inner-div&quot;&gt; elements; each containing a &lt;p&gt; </span> element.
+                    <pre>
+                    &lt;div class=&quot;outer-div&quot;&gt;
+                        &lt;div class=&quot;inner-div&quot;&gt;
+                                &lt;p&gt;This is a paragraph&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;inner-div&quot;&gt;
+                            &lt;p&gt;This is another paragraph&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    </pre>
+                </p>
+                
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+Opdrachten 
+
+1. Wat is het verschil tussen het internet en het world wide web? 
+World Wide Web, is een stukje van het internet. Het internet is een wereldwijde netwerk die miljoenen computers met elkaar verbindt, denk aan hardware, routers, kabels, computers enz. De WWW is een grote verzameling van pagina's van informatie die je met een simpele muisklik kan bekijken.
+
+2. Wat is het verschil tussen HTML, CSS en JavaScript? 
+HTML geeft structuur aan de website
+CSS geeft opmaak aan de website 
+Javascript gaat om de functionaliteit van de website (interactief maken van de website)
+
+
+3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit. 
+<html> <head></head></html> - Geeft begin en eind van een HTML pagina weer, dit wordt de HTML-element genoemd. <HTML> en </HTML> zijn de tags
+
+
+4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>. Geef voor elke element aan waarvoor het dient. 
+
+5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen ? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast. 
+
+6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur? Leg uit. 
+
+7. Wat is het verschil tussen inline en block elementen? 
+
+8. Wat betekent nesting? Codeer een voorbeeld met nesting erin. 

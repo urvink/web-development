@@ -1,0 +1,15 @@
+Paragrafen  
+13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.  Geef hier een voorbeeld bij.  
+
+14.Onderzoek en leg het verschil tussen het stoppen van alle tekst in één  paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.  
+
+
+15.Reproduceer het volgende resultaat door gebruik te maken van text-headers  en de paragraaf tags.  
+
+Horizontal rule  
+We willen nu een footer toevoegen onderaan onze pagina. Onderzoek hoe een  horizontal rule werkt en start aan de onderstaande opdracht.  
+16.Voeg een Horizontal rule toe en reproduceer het volgende resultaat.  Link tags  
+In onze footer willen we graag linken naar de TechGrounds website. Onderzoek hoe  een link tag werkt.  
+17.Voeg een link tag toe en reproduceer het volgende resultaat in de footer.  Zodra een gebruiker op de link klikt wordt de pagina weergegeven in de huidige  browser window. Door gebruik te maken van attributen kan de link geopend worden  in bijvoorbeeld een nieuw tabblad. Voorbeelden van HTML attributen zijn  bijvoorbeeld een image tag die een “alt” attribuut heeft.  
+18. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen  en voeg deze als voorbeeld toe op je website.  
+

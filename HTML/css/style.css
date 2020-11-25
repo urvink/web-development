@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+pre{
+    margin-top: 20px;
+}
+#wrapper{
+    width: 85%;
+    margin: 20px auto;
+}
+.questions{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.answers{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.red{
+    color: red;
+}
