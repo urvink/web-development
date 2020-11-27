@@ -7,8 +7,9 @@
     - Paragrafen
 
     * Onderdeel 2
-
+    
     * Eindopdracht (Onderdeel 3)
+    - 
     - HTML - Handout Cursist Eindopdracht.pdf
 
 ## Week 2

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms - HTML</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Forms - HTML (Week 1)</h1>
+
+        <!-- Vraag 1 -->
+        <div class="questions">
+            <h4>1. Maak een HTML form waarbij de gebruiker zijn naam en achternaam in kan vullen. Zie hieronder voor een voorbeeld:</h4>
+        </div>
+        <div class="answers">
+            <form action="/action_page.php">
+                <label for="fname">Achternaam:</label>
+                <input type="text" id="fname" name="fname" placeholder="Achternaam"><br>
+                <label for="lname">Voornaam:</label>
+                <input type="text" id="lname" name="lname" placeholder="Voornaam"><br>
+            </form>
+        </div>
+
+        <!-- Vraag 2 -->
+        <div class="questions">
+            2. Naast input text ﬁelds zijn er ook nog andere input ﬁelds. Zoals:
+        </div>
+        <div class="answers">
+            <ul>
+                <li>radiobutton</li>
+                <li>checkbox</li>
+                <li>password</li>
+                <li>reset</li>
+                <li>submit</li>
+                <li>date</li>
+                <li>search</li>
+                <li>time</li>
+                <li>hidden</li>
+                <li>email</li>
+            </ul>
+
+            <h4>Maak voor elk input ﬁeld een voorbeeld.</h4>
+
+            <div id="examples">
+
+                <!-- Voorbeeld Radio Button -->
+                <h4>Voorbeeld Radio Button</h4>
+                <form action="/techgrounds.nl">
+                    <input type="radio" id="male" name="gender" value="man">
+                    <label for="male">Man</label><br>
+                    <input type="radio" id="female" name="gender" value="vrouw">
+                    <label for="female">Vrouw</label><br>
+                </form>
+                
+                <!-- Voorbeeld checkbox -->
+                <h4>Voorbeeld checkbox</h4>
+                <form action="/techgrounds.nl">
+                    <input type="checkbox" id="appel" name="appel" value="appel">
+                    <label for="appel"> Ik houd van appels</label><br>
+                    <input type="checkbox" id="geenfruit" name="fruit2" value="fruit2">
+                    <label for="vehicle2"> Ik eet geen fruit</label> 
+                </form>
+                
+                <!-- Voorbeeld password -->
+                <h4>Voorbeeld password</h4>
+                <form action="/techgrounds.nl">
+                    <label for="username">Gebruikersnaam</label><br>
+                    <input type="text" id="username" name="username"><br>
+                    <label for="pwd">Wachtwoord</label><br>
+                    <input type="password" id="pwd" name="pwd">
+                </form>
+                
+                <!-- Voorbeeld Reset -->
+                <h4>Voorbeeld Reset</h4>
+                <form action="/techgrounds.nl">
+                    <input type="reset">
+                </form>
+                
+                <!-- Voorbeeld Submit -->
+                <h4>Voorbeeld Submit</h4>
+                <form action="/techgrounds.nl">
+                    <input type="submit" value="knop">
+                </form>  
+     
+                <!-- Voorbeeld date -->
+                <h4>Voorbeeld date</h4>
+                <form action="/action_page.php">
+                    <label for="birthday">Geboortedatum</label>
+                    <input type="date" id="birthday" name="birthday">
+                </form>
+                
+                <!-- Voorbeeld search -->
+                <h4>Voorbeeld search</h4>
+                <form action="/action_page.php">
+                    <label for="gsearch">Typ hier jouw zoekwoord</label>
+                    <input type="search" id="gsearch" name="gsearch">
+                </form>
+                
+                <!-- Voorbeeld time -->
+                <h4>Voorbeeld time</h4>
+                <form action="/techgrounds.nl">
+                    <label for="appt">Selecteer een tijd</label>
+                    <input type="time" id="tijd" name="tijd">
+                </form>
+                
+                <!-- Voorbeeld hidden (is alleen zichtbaar in html code) -->
+                <h4>Voorbeeld hidden (is alleen zichtbaar in html code)</h4>
+                <form action="/techgrounds.nl">
+                    <input type="hidden" id="custId" name="custId" value="3487">
+                </form>
+    
+                <!-- Voorbeeld E-mail -->
+                <h4>Voorbeeld E-mail</h4>
+                <form action="/techgrounds.nl">
+                    <label for="email">Vul hier jouw e-mailadres in:</label>
+                    <input type="email" id="email" name="email">
+                </form>
+     
+                
+            </div>
+
+        </div>
+        
+        <!-- Vraag 3 -->
+        <div class="questions">
+            <h4>3. Maak een input email ﬁeld met een submit knop.</h4>            
+        </div>
+        <div class="answers">
+            
+            <form action="/techgrounds.nl">
+                <label for="email">Vul hier jouw e-mailadres in:</label>
+                <input type="email" id="email" name="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+            
+            <h4>tip: wat gebeurt er wanneer je op de submit knop klikt met een random text?</h4>
+            Als je gewoon een tekst invoert krijg je een melding dat je @ moet gebruiken.
+        </div>
+        
+        <!-- Vraag 4 -->
+        <div class="questions">
+            4. Een formulier kun je ook groeperen. Zie hieronder voor een voorbeeld:
+            <img src="../media/Fieldset.png" alt="Fieldset example form image">
+            Bouw dit voorbeeld na. 
+        </div>
+        <div class="answers">
+            <form action="/" method="get">
+                <fieldset>
+                    <legend>Persoons gegevens</legend>
+    
+                    <div>
+                        <!-- Achternaam -->
+                        <label for="achternaam">Achternaam: </label>
+                        <input type="text" name="achternaam" id="achternaam" placeholder="achternaam">
+                    </div>
+                    
+                    <div>
+                        <!-- Voornaam -->
+                        <label for="voornaam">Voornaam: </label>
+                        <input type="text" name="voornaam" id="voornaam" placeholder="voornaam">
+                    </div>                    
+    
+                    <div>
+                        <!-- Geboortedatum -->
+                        <label for="geboorte_datum">Geboortedatum: </label>
+                        <input type="date" name="geboorte_datum" id="geboorte_datum" placeholder="mm / dd / yyyy">
+                    </div>
+                    
+                    <div>
+                        <!-- Geslacht -->
+                        <label for="male">M:</label>
+                        <input type="radio" name="geslacht" id="male" placeholder="achternaam">
+                        <label for="female">V: </label>
+                        <input type="radio" name="geslacht" id="female">
+                    </div>
+                    
+                    <div>
+                        <!-- Postcode -->
+                        <label for="postcode">Postcode: </label>
+                        <input type="text" name="postcode" id="postcode" placeholder="postcode">
+                    </div>
+                   
+                    <div>
+                        <!-- Adres -->
+                        <label for="adres">Adres: </label>
+                        <input type="text" name="adres" id="adres" placeholder="adres">
+                    </div>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+
+        <!-- Vraag 5 -->
+        <div class="questions">5. Naast input element heb je ook een select element. Hiermee kan je een
+            dropdown list maken. Maak een drop down list.</div>
+        <div class="answers">
+            <label for="os">Besturingssystemen</label>
+            <select name="os" id="os">
+                <option value="mac">MacOS</option>
+                <option value="windows">Windows</option>
+                <option value="linux">Linux</option>
+            </select>
+        </div>
+
+        <!-- Vraag 6 -->
+        <div class="questions">6. We hebben nu geleerd hoe je dropdown list, radio buttons en checkboxes
+            maak. Dit zijn 3 verschillende manieren om de gebruiker een keuze te laten
+            maken. Benoem voor dropdown list, radio buttons en checkboxes een situatie
+            waar je in kan gebruiken en leg dat uit?</div>
+        <p class="answers">
+            <p id="dropdown_list"><span class="bold">Dropdown List: </span> Een dropdown list kan gebruikt worden om bijvoorbeeld een keuze te maken van welke regio iemand woont</p>
+            <p id="radio_button"> <span class="bold">Radio button: </span> Kan worden gebruikt om een geslacht te kiezen</p>
+            <p id="checkbox"> <span class="bold">Checkbox: </span> Dit kan worden toegepast als iemand akkoord gaat met de algemene voorwaarden</p>
+        </p>
+
+        <!-- Vraag 7 -->
+        <div class="questions">
+            <p>
+                7. Maak een reserveringsformulier om een sport te reserveren. In dit formulier willen we graag het volgende weten:
+                <ul style="font-style: italic;">
+                    <li>Naam van dat persoon</li>
+                    <li>Off hij/zij lidmaatschap heeft</li>
+                    <li>E-mail van dat persoon</li>
+                    <li>Type sport om te reserveren. Keuze uit: tafeltennis, badminton of squash</li>
+                    <li>Datum en tijdstip om te reserveren</li>
+                    <li>Een checkbox waarbij de gebruiker akkoord gaat over de reserverings
+                        voorwaardes</li>
+                    <li>Een submit knop</li>
+                </ul>
+            </p> 
+        </div>
+        <div class="answers">
+            <form>
+                <fieldset>
+                    <legend>Reserveringsformulier</legend>
+                    <br>
+                    <label for="vnaam">Voornaam:</label>
+                    <input type="text" placeholder="Voornaam">
+                    <br>
+                    <br>
+                    <label for="vnaam">Bent u al lid?</label>
+                    <br>
+                    <input type="checkbox" id="Ja" name="Ja" value="Ja">
+                    <label for="ja">Ja, ik ben lid</label><br>
+                    <input type="checkbox" id="Ja" name="Ja" value="Ja">
+                    <label for="lid">Nee, ik ben geen lid</label><br>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Vul uw emailadres in">
+                    <br>
+                    <br>
+                    <label for="sport">Welke sport?</label>
+                    <select id="sport" name="sport">
+                        <option value="tafel">Tafeltennis</option>
+                        <option value="badmin">Badminton</option>
+                        <option value="squash">Squash</option>
+                    </select>
+                    <br>
+                    <div>
+                        <label for="reserveren">Voor wanneer wilt u reserveren?</label>
+                        <input type="datetime-local">
+                    </div>
+                        
+                    <br>
+                    <div>
+                        <label for="Akkoord">Ik ga akkoord met de voorwaardes</label>
+                        <input type="checkbox">
+                    </div>
+                    <br>
+                    <input type="submit" name="" id="">    
+                </fieldset>    
+            </form>
+        </div>
+
+        <!-- Vraag 8 -->
+        <div class="questions">
+            8. Maak een reserverings formulier om een boek te reserveren. In dit formulier
+            willen we graag het volgende weten:
+            <ul>
+                <li>Naam van dat persoon</li>
+                <li>Telefoonnummer</li>
+                <li>E-mail van dat persoon</li>
+                <li>Naam van dat boek</li>
+                <li>
+                    Aantal boeken om te reserveren. Het aantal moet minimaal 1 en maximaal 5 zijn.
+                </li>
+                <li>Een submit knop</li>
+            </ul>
+        </div>
+        <div class="answers">
+            <form action="/">
+                <fieldset>
+                    <legend>Reserverings formulier boeken</legend>
+                    
+                    <!-- voornaam -->
+                    <div>
+                        <label for="vnaam">Voornaam:</label>
+                        <input type="text" id="vnaam" name="vnaam" placeholder="Voornaam"><br><br>
+                    </div>
+         
+                    <!-- achternaam -->
+                    <div>
+                        <label for="anaam">Achternaam:</label>
+                        <input type="text" id="anaam" name="anaam" placeholder="Achternaam"><br><br>
+                    </div>
+         
+                    <!-- telefoonnummer -->
+                    <div>
+                        <label for="tnummer">Telefoonnummer:</label>
+                        <input type="tel" id="tnummer" name="tnummer" placeholder="Telefoonnummer"><br><br>
+                    </div>
+         
+                    <!-- email -->
+                    <div>
+                        <label for="email">Email:</label> 
+                        <input type="email" name="email" id="email" placeholder="Email"><br><br>
+                    </div>
+         
+                    <!-- naam van het boek -->
+                    <div>
+                        <label for="boek">Naam van het boek:</label>
+                        <input type="text" name="boek" id="boek" placeholder="Naam van het boek"><br><br>
+                    </div>
+         
+                    <!-- aantal boeken om te serveren -->
+                    <div>
+                        <label for="quantity">Aantal boeken om te reserveren:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+                    </div>
+         
+                    <!-- submit -->
+                    <div>
+                        <input type="submit">
+                    </div>
+                </form>
+        </div>
+
+        <!-- Vraag 9 -->
+        <div class="questions">
+            9. Bouw nu zelf een formulier met wat je hiervoor hebt geleerd
+        </div>
+        <div class="answers">
+            <form action="/" method="get">
+                <fieldset>
+                    <legend>Personalia</legend>
+                    
+                    <div>
+                        <!-- Voornaam -->
+                        <label for="first_name">Voornaam: </label>
+                        <input type="text" name="first_name" id="first_name" placeholder="Voornaam">
+                    </div>
+                    <div>
+                        <!-- Achternaam -->
+                        <label for="last_name">Achternaam: </label>
+                        <input type="text" name="achter_naam" id="achter_naam" placeholder="Achternaam">
+                    </div>
+
+                    <div>
+                        <!-- Geslacht -->
+                        <label for="man">Man: </label>
+                        <input type="radio" name="geslacht" id="man" value="man">
+                        
+                        <label for="vrouw">Vrouw: </label>
+                        <input type="radio" name="geslacht" id="vrouw" value="female">
+
+                        <label for="anders">Anders: </label>
+                        <input type="radio" name="geslacht" id="anders" value="other">
+                    </div>
+                    
+                    <div>
+                        <!-- Geboortedatum -->
+                        <label for="geb_datum">Geboortedatum: </label>
+                        <input type="date" name="geb_datum" id="geb_datum">
+                    </div>
+
+                    <div>
+                        <!-- Telefoonnummer -->
+                        <div>
+
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <!-- Favourite color -->
+                        <label for="fav_color">Favourite color</label>
+                        <input type="color" name="fav_color" id="fav_color">
+                    </div>
+                    <div>
+                        <!-- Locatie -->
+                        <label for="location">Woonplaats</label>
+                        <select name="location" id="location">
+                            <option value="other">-</option>
+                            <option value="Noord-Holland">Noord-Holland</option>
+                            <option value="Zuid-Holland">Zuid-Holland</option>
+                            <option value="Gelderland">Gelderland</option>
+                            <option value="Overijssel">Overijssel</option>
+                            <option value="Drenthe">Drenthe</option>
+                        </select>
+                    </div>          
+                </fieldset>
+                <fieldset>
+                    <legend>Inloggegevens</legend>
+
+                    <input type="hidden" name="client_id" value="4432">
+                    
+                    <!-- Email (username) -->
+                    <label for="username">Email: </label>
+                    <input type="email" name="username" id="username" placeholder="Voer hier uw email in" required>
+
+                    <!-- Password -->
+                    <label for="password">Wachtwoord</label>
+                    <input type="password" name="password" id="password" placeholder="voer hier uw wachtwoord in" required>
+                </fieldset>
+
+                <div>
+                    <!-- TOS -->
+                    <a href="127.0.0.1">algemene voorwaarden</a>
+                    <input type="checkbox" name="tos" id="tos" value="akkoord" required>   
+                </div>
+
+                <input type="submit" value="Create Account">
+                <input type="reset" value="Reset">
+            </form>
+        </div>
+    </div>    
+</body>
+</html>
