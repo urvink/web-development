@@ -3,9 +3,20 @@
     padding: 0;
 }
 
+main{
+    margin-top: 20px;
+    background-color: rgba(126, 123, 123, 0.185);
+}
+
 pre{
     margin-top: 20px;
 }
+
+ul li{
+    list-style-type: none;
+
+}
+
 #wrapper{
     width: 85%;
     margin: 20px auto;
@@ -18,6 +29,12 @@ pre{
 .answers{
     margin-top: 5px;
     font-style: italic;
+}
+
+/* UTILITIES */
+
+.border{
+    border: 3px solid black;
 }
 
 .bold{
@@ -48,4 +65,50 @@ form div{
 
 input[type=submit], input[type=reset]{
     margin: 5px auto
+}
+
+/* EINDOPDRACHT */
+img{
+    width: 100px;
+}
+
+header, footer, .main_container, .skills, .reactions, #personal_info .row{
+    display: flex;
+}
+
+.bigger{
+    width: 400px;
+}
+.card{
+    background-color: cornflowerblue;
+    justify-content: center;
+    width: 200px;
+}
+
+#personal_info .row{
+    justify-content:end;
+}
+
+.p_info{
+    border-bottom: 2px solid darkblue;
+}
+
+.skills{
+    justify-content: space-between;
+}
+
+.skills img{
+    width: 15px;
+}
+
+.skills .fill{
+    background-color: darkorange;
+}
+
+.reactions{
+    width: 100px;
+}
+
+.reactions img{
+    width: 25px;
 }

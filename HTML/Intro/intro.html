@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intro - HTML</title>
+    <title>Intro - HTML (Week1)</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <header>
+        <div class="logo"><img src="../media/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
     <div id="wrapper">
         <h2>Intro</h2>
 
@@ -16,19 +24,22 @@
                 World Wide Web, is een stukje van het internet. Het internet is een wereldwijde netwerk die miljoenen computers met elkaar verbindt, denk aan hardware, routers, kabels, computers enz. De WWW is een grote verzameling van pagina's van informatie die je met een simpele muisklik kan bekijken.
             </p>
         </div>
+
         <div>
             <h3 class="questions">2. Wat is het verschil tussen HTML, CSS en JavaScript?</h3>
             <p class="answers">
                 HTML geeft structuur aan de website, CSS geeft opmaak aan de website en Javascript gaat om de functionaliteit van de website (interactief maken van de website)
             </p>
         </div>
+
         <div>
             <h3 class="questions">3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.</h3>
             <p class="answers">
-                Geeft begin en eind van een HTML pagina weer, dit wordt de HTML-element genoemd. <code><HTML> en </HTML></code> zijn de tags
-                <img src="../img/grumpy-cat-small.png" alt="element structuur weergave" height="100px">
+                Geeft begin en eind van een HTML pagina weer, dit wordt de HTML-element genoemd. &lt;HTML&gt; en &lt;/HTML&gt; zijn de tags
+                <img class="bigger" src="../media/grumpy-cat-small.png" alt="element structuur weergave">
             </p>
         </div>
+
         <div>
             <h3 class="questions">4. HTML gebruikt basis tags om structuur op te bouwen. De &lt;html&gt;, &lt;head&gt; en &lt;body&gt;. Geef voor elke element aan waarvoor het dient.</h3>
             <p class="answers">
@@ -47,6 +58,7 @@
                     </html>
             </p>
         </div>
+
         <div>
             <h3 class="questions">5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.</h3>
             <p class="answers">
@@ -101,6 +113,7 @@
                 its background has been colored to display both the beginning and end of the block-level element's influence.
             </p>
         </div>
+
         <div>
             <h3 class="questions">8. Wat betekent nesting? Codeer een voorbeeld met nesting erin. </h3>
             <p class="answers">Nesting betekent elementen die binnen elementen worden geplaatst
@@ -108,20 +121,18 @@
                 <p>
                     The <span class="red">&lt;div class=&quot;outer-div&quot;&gt;</span>  is used to group together two <span class="red">&lt;div class=&quot;inner-div&quot;&gt; elements; each containing a &lt;p&gt; </span> element.
                     <pre>
-                    &lt;div class=&quot;outer-div&quot;&gt;
-                        &lt;div class=&quot;inner-div&quot;&gt;
-                                &lt;p&gt;This is a paragraph&lt;/p&gt;
+                        &lt;div class=&quot;outer-div&quot;&gt;
+                            &lt;div class=&quot;inner-div&quot;&gt;
+                                    &lt;p&gt;This is a paragraph&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;inner-div&quot;&gt;
+                                &lt;p&gt;This is another paragraph&lt;/p&gt;
+                            &lt;/div&gt;
                         &lt;/div&gt;
-                        &lt;div class=&quot;inner-div&quot;&gt;
-                            &lt;p&gt;This is another paragraph&lt;/p&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
                     </pre>
                 </p>
-                
             </p>
         </div>
     </div>
-    
 </body>
 </html>
