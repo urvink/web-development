@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lijsten - HTML (Week1)</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/style.css">     -->
+    <style>
+        .questions{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.answers{
+    margin-top: 5px;
+    font-style: italic;
+}
+    </style>
 </head>
 <body>
     <header>
@@ -18,10 +29,77 @@
     <div id="wrapper">
         <h1>Lijsten - HTML (Week1)</h1>
         <div>
+            <p>
+                Door   gebruik   te   maken   van   lijsten   in   HTML   kan   je   opsommingen   eenvoudig weergeven.   
+                Onderzoek   de   verschillende   soorten   lijsten   en   op   welke   wijze   je   deze kunt   toepassen. 
+            </p>
             <h3 class="questions">
-                11.Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en
+                9. Maak   gebruik   van   de   verschillende   soorten   lijsten   om   het   volgende   resultaat op   je   webpagina   weer   te   geven. 
+            </h3>
+            <div id="opdr9" class="answers">
+                <ol>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ol>                            
+                <ol>
+                    <li>item 1</li>
+                    <li>item 2
+                        <ol>
+                            <li>sub item1</li>
+                            <li>sub item 2</li>
+                        </ol>
+                    </li>
+                    <li>item 3</li>
+                </ol>
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2</li>
+                    <li>item 3</li>
+                </ul>                
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2
+                        <ul>
+                            <li>sub item 1</li>
+                            <li>sub item 2</li>
+                        </ul>
+                    </li>
+                    <li>item 3</li>
+                </ul>                
+                <ul>
+                    <li>item 1</li>
+                    <li>item 2
+                        <ol>
+                            <li>sub item 1</li>
+                            <li>sub item 2</li>
+                        </ol>
+                    </li>
+                    <li>item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>10.Bouw   een   navigatiebalk   door   gebruik   te   maken   uit   een   lijst   dat   bestaat   uit   de volgende   onderdelen: ○Tigers ○Lions ○Monkeys ○Hippopotaumus 
+                11.Creëer   nu   voor   elk   onderdeel   een   header   en   een   bijbehorende   stuk   tekst   en zorg   ervoor   dat   door   te   klikken   op   de   links   in   de   navigatiebalk   je   gerefereerd wordt   naar   het   bijbehorende   onderdeel.   Zie   hieronder   een   voorbeeld: 14
+            </h3>
+            <div>
+                <ul>
+                    <li><a href="#tigers">Tigers</a></li>
+                    <li><a href="#lions">Lions</a></li>
+                    <li><a href="#monkeys">Monkeys</a></li>
+                    <li><a href="#hippopotamus">Hippopotamus</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="questions">
+                11. Creëer nu voor elk onderdeel een header en een bijbehorende stuk tekst en
                 zorg ervoor dat door te klikken op de links in de navigatiebalk je gerefereerd
                 wordt naar het bijbehorende onderdeel. Zie hieronder een voorbeeld:
+
+                <img width="500" src="../media/opdracht10_fig.png" alt="Screenshot opdraht 11">
             </h3>
             <p class="answers">
                 <article id="tigers">
