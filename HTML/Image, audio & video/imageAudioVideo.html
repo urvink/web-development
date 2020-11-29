@@ -8,6 +8,9 @@
 </head>
 <body>
     <div id="wrapper">
+        <header>
+            <a href="https://www.techgrounds.nl"><img src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png" alt="Techgrounds Logo"></a>
+        </header>
         <h1>Image, Audio & Video - HTML (Week1)</h1>
         <h3>Het plaatsen van foto's op een website is een belangrijke toevoeging voor velen. Zo
             bestaan de meeste websites uit een grote collectie van foto's. Vaak kun je logo's,
@@ -22,10 +25,118 @@
                 ● Relative path
                 Wat houden deze 2 paths in?
             </h3>
-            <p class="answers">
-                
+            <div class="answers">
+                <ul>
+                    <li>Absolute pathe: Een complete referentie naar een resource
+                        vb.: https://www.google.com/fotos/dsc01205.jpg
+                    </li>
+                    <li>Relative path: Een referentie naar een resource vanuit de huidige locqatie
+                        vb.: ./images/dsc23405.jpg
+                    </li>
+                </ul>                
+            </div>
+        </div>
+        <div>
+            <p>
+                Een   image   element   is   voor   het   inladen   van   een   afbeelding.   Afbeeldingen   kunnen   van verschillende   formaat   zijn.   Bijvoorbeeld,   een   afbeelding   kan   een   JPG   formaat   zijn. 
+            </p>
+            <h3 class="questions">
+                2.  Zoek   uit   welke   formaat   afbeeldingen   er   nog   meer   kan   zijn
+            </h3>
+            <div class="answers">
+                <ul>
+                    <li>*.jpg voor jpeg-bestanden - jpeg images</li>
+                    <li>*.png voor png-bestanden - png images (lossless afbeeldingsformaat met een alpha-laag)</li>
+                    <li>*.bmp voor bmp-bestanden - Bitmap images</li>
+                    <li>*.svg voor svg-bestanden - Vector graphics</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p>Een   afbeelding   tonen   is   afhankelijk   van   of   de   browser   het   ondersteunt</p>
+            <h3 class="questions">3.Zoek   uit   welke   browsers   er   zijn   en   maak   een   lijst   van   je   antwoord</h3>
+            <div class="answers">
+                <ul>
+                    <li>
+                        <a href="https://www.google.com/chrome/">Google Chrome</a>
+                        <a href="https://www.opera.com">Opera browser</a>
+                        <a href="https://www.apple.com/safari">Safari browser</a>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox browser</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p class="questions">4. Onderzoek   hoe   het   plaatsen   van   een   foto   gedaan   wordt   en   plaats   deze   boven en   onderaan   je   website   door   zowel   gebruik   te   maken   van   de   absolute   path   en relative   path.</p>
+        </div>
+        <div>
+            <h3 class="questions">5. Wat   houdt   de    alt    attribute   in?   En   waarom   is   het   handig   om   de    alt    attribuut   te gebruiken? </h3>
+            <p class="answers">ALT-attribuut gebruik je bij een img-tag om op het moment dat de afbeelding niet werkt (gevonden kan worden) wordt de tekst die er staat bij de alt-attribuut weergegeven.</p>
+        </div>
+
+        <!-- AUDIO-Tag -->
+        <div>
+            <p>In   de   sound   folder   staat   een   explosion.mp3   bestand.</p>
+            <h3 class="questions">
+                6. Laadt   dit   bestand   in   als   een   audio   op   het   scherm. 
+                Extra:   Maak   het   leuker   door   de   audio   op   repeat   te   zetten. 
+                Tip:   gebruik   controls   attribute   om   audio   af   te   spelen.
+            </h3>
+            <div class="answers">
+                <audio src="../media/explosie.mp3" title="Using src-attribute within AUDIO-element" controls loop>
+                </audio>
+            </div>
+        </div>
+        <div>
+            <p>Een   audio   bestand   heeft   verschillende   formaten.   Niet   alle   formaten   worden ondersteund   door   de   browser.   Hiervoor   is   een   oplossing   voor.</p>
+            <h3 class="questions">
+                7.Speel   een   audio   bestand   af   met   <source>   tag.   Leg   uit   wat   hier   het   voordeel van   is
+            </h3>
+            <div class="answers">
+                <p>Het voordeel van het gebruik van de source element, betekent dat je meerdere bronnen kan toevoegen aan de AUDIO-element.</p>
+                <audio controls title="Using &lt;SOURCE&gt; element!!">
+                    <source src="../media/explosie.mp3" type="audio/mpeg">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            </div>
+        </div>
+
+        
+        <!-- VIDEO-TAG -->
+        <div>
+            <h3 class="questions">
+                8.Zoek   een   willekeurig   video   en   sla   dit   op   in   je   computer.   
+                Laadt   dit   bestand   in als   een   video   op   het   scherm. 
+                Tip:   De   video   is   veel   groter   dan   het   scherm.   
+                Zoek   uit   welke   attribuut   je   voor   de video   element   kan   gebruiken   om   de   grootte   van   de   video   aan   te   passen.
+            </h3>
+            <div class="answers">
+                <p>Door height en/of width-attribuute te gebruiken kan je de hoogte en/ of breedte van de video bepalen</p>
+                <video height="320" controls>
+                    <source src="../media/small.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p>
+                Een   video   bestand   heeft   verschillende   formaten.   
+                Niet   alle   formaten   worden ondersteund   door   de   browser.   
+                Hiervoor   is   een   oplossing   voor. 
+                Speel   een   video   bestand   af   met   &lt;source&gt;   tag.   
+                Leg   uit   wat   hier   het   voordeel   van   is.
+            </p>
+            <div>
+                <video height="320" controls>
+                    <source src="../media/file_example_WEBM_480_900KB.webm" type="video/webm">
+                </video>
+            </div>
+            <p>
+                Het voordeel van het gebruik van het source-element is het mogelijk maken om meerdere video's in te laden.
             </p>
         </div>
+        <footer>
+            <a href="https://www.techgrounds.nl">
+                <img class="bigger" src="../media/techgrounds_logo.png" alt="techgrounds_logo">
+            </a>
+        </footer>
     </div>
 </body>
 </html>
