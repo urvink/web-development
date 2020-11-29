@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <header>
+        <div class="logo"><img src="../../resources/img/HTML5_logo_and_wordmark.svg" alt="HTML 5 Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
     <div id="wrapper">
         <h1>Forms - HTML (Week 1)</h1>
 
@@ -116,11 +124,8 @@
                 <form action="/techgrounds.nl">
                     <label for="email">Vul hier jouw e-mailadres in:</label>
                     <input type="email" id="email" name="email">
-                </form>
-     
-                
+                </form>                
             </div>
-
         </div>
         
         <!-- Vraag 3 -->
@@ -345,8 +350,7 @@
         <div class="answers">
             <form action="/" method="get">
                 <fieldset>
-                    <legend>Personalia</legend>
-                    
+                    <legend>Personalia</legend>                    
                     <div>
                         <!-- Voornaam -->
                         <label for="first_name">Voornaam: </label>
@@ -357,7 +361,6 @@
                         <label for="last_name">Achternaam: </label>
                         <input type="text" name="achter_naam" id="achter_naam" placeholder="Achternaam">
                     </div>
-
                     <div>
                         <!-- Geslacht -->
                         <label for="man">Man: </label>
@@ -368,21 +371,18 @@
 
                         <label for="anders">Anders: </label>
                         <input type="radio" name="geslacht" id="anders" value="other">
-                    </div>
-                    
+                    </div>                    
                     <div>
                         <!-- Geboortedatum -->
                         <label for="geb_datum">Geboortedatum: </label>
                         <input type="date" name="geb_datum" id="geb_datum">
                     </div>
-
                     <div>
                         <!-- Telefoonnummer -->
                         <div>
-
+                            <label for="tel">Telefoonnr: </label><input type="tel" name="telnr" id="tel" placeholder="Telefoon nummer">
                         </div>
-                    </div>
-                    
+                    </div>                    
                     <div>
                         <!-- Favourite color -->
                         <label for="fav_color">Favourite color</label>
@@ -417,7 +417,7 @@
 
                 <div>
                     <!-- TOS -->
-                    <a href="127.0.0.1">algemene voorwaarden</a>
+                    <a href="127.0.0.1">Algemene voorwaarden</a>
                     <input type="checkbox" name="tos" id="tos" value="akkoord" required>   
                 </div>
 
