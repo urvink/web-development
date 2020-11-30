@@ -8,22 +8,19 @@
     - Headers
     - Paragrafen
 
-    * Onderdeel2
+    * Onderdeel 2
     - [README](/README.md)
     - /HTML/HTML Forms/html_forms.html
     - https://www.techgrounds.nl
 
 
-    * ** Onderdeel 3 **
-    - Forms <HTML/HTML Forms/html_forms.html>
-    - [Tables](/HTML/Tables/tables.html)
-    - <https://www.google.com>
-    - [a link](/index.html)
-    - /HTML/index.html
+    * Onderdeel 3 **
+    - Forms
+    - Tables
+    - 
     
     * Eindopdracht (Onderdeel 3)
     - 
-    - HTML - Handout Cursist Eindopdracht.pdf
 
 ## Week 2: CSS
 

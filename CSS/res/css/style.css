@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+figure img{
+    width: 320px;
+}
+/* UTILITIES */
+.bold{
+    font-weight: bold;
+}
+
+.red{
+    color: red;
+}
+
+.border{
+    border: 1px solid;
+}
+
+.purple{
+    color: purple;
+    background-color: seagreen;
+}
+
+#wrapper{
+    width: 85%;
+    margin: 0px auto;
+}
+
+.assignments{
+    margin-top: 10px;
+}
+
+.assignments ul{
+    margin-left: 50px;
+}
+
+.results{
+    margin-top: 10px;
+}
