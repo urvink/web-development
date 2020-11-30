@@ -10,15 +10,16 @@
 
     * Onderdeel2
     -
-    -HTML/HTML Forms/html_forms.html
-    -
+    - /HTML/HTML Forms/html_forms.html
+    - https://www.techgrounds.nl
 
 
     * Onderdeel 3
     - Forms <HTML/HTML Forms/html_forms.html>
-    - [Tables](HTML/Tables/tables.html)
+    - [Tables](/HTML/Tables/tables.html)
     - <https://www.google.com>
-    - [a link](index.html)
+    - [a link](/index.html)
+    - /HTML/index.html
     
     * Eindopdracht (Onderdeel 3)
     - 
