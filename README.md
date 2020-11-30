@@ -14,7 +14,7 @@
     - https://www.techgrounds.nl
 
 
-    * Onderdeel 3
+    * ** Onderdeel 3 **
     - Forms <HTML/HTML Forms/html_forms.html>
     - [Tables](/HTML/Tables/tables.html)
     - <https://www.google.com>
