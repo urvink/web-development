@@ -2,21 +2,22 @@
 
 ## Week 1: HTML
 
-    **Onderdeel 1**
+    * Onderdeel 1
     - Intro
     - Semantics
     - Headers
     - Paragrafen
 
-    **Onderdeel2**
+    * Onderdeel2
     -
-    -
+    -HTML/HTML Forms/html_forms.html
     -
 
 
-    **Onderdeel 3**
-    - Forms <./HTML/HTML Forms/html_forms.html>
-    - Tables
+    * Onderdeel 3
+    - Forms <HTML/HTML Forms/html_forms.html>
+    - [Tables](HTML/Tables/tables.html)
+    - 
     
     * Eindopdracht (Onderdeel 3)
     - 
