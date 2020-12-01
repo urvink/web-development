@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo Element Selectors | CSS</title>
+    <style>
+        p::first-letter{
+            text-transform: uppercase;
+            /* background-color: chocolate; */
+            color: crimson;
+        }        
+    </style>
 </head>
 <body>
-    
+    <h1>Pseudo Element Selector Example</h1>
+    <div id="wrapper">
+        <main>
+            <div>
+                <h2>Het eerste letter in het p-element wordt geselecteerd en krijgt een rode kleur en wordt hoofdletter.</h2>
+                <p>lorem 5</p>
+                <ul>
+                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

@@ -11,6 +11,10 @@ figure img{
     font-weight: bold;
 }
 
+.italic{
+    font-style: italic;
+}
+
 .red{
     color: red;
 }
