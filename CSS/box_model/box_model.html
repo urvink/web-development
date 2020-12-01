@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="../res/css/style.css">
     <style>
         #opdr2{
-            background-color: green;
             width: fit-content;            
         }
 
         #opdr2 p{
             border: 1px solid black;
-            background-color: rgba(0, 7, 7, 0.219);
+            background-color: green;
+            height: 20px;
+        }
+
+        #opdr2 p:nth-child(2){
+            background-color: chartreuse;
+            border: none;
         }
 
         p>span{
             background-color: white;
+        }
+
+        #opdr5 p:nth-child(2){
+            padding: 30px;
+            background-color: coral;
         }
         
     </style>
@@ -49,7 +59,8 @@
                     </figure>
                 </div>
                 <div id="opdr2" class="results">
-                    <p style="margin-bottom: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <p></p>                    
                     <p>Lorem <span>ipsum</span> dolor <span>sit</span> amet.</p>
                 </div>
             </div>
@@ -61,11 +72,10 @@
                     <h3>Opdracht 3 Wat gebeurt er als je een width en een height toevoegt aan de span tag ( &lt;span&gt; ) van vorige opdracht?</h3>
                 </div>
                 <div class="results">
-                    <p>Dan wordt alles om de &lt;span&gt; - element weggeduwd</p>                
+                    <p>Er gebeurt niks!</p>                
                 </div>
             </div>
             
-
             <!-- Opdracht 4 -->
             <div>
                 <div class="assignments">
@@ -88,10 +98,14 @@
             <!-- Opdracht 5 -->
             <div>
                 <div class="assignments">
-                    <h3></h3>
+                    <h3>Opdracht 5</h3>
+                    <p>Als je ruimte wilt maken tussen de border en content, welke css property gebruik je dan? 
+                        Maak een voorbeeld in je antwoord.</p>
                 </div>
-                <div class="results">
-                    <p></p>                
+                <div id="opdr5" class="results">
+                    <p>Om ruimte te maken tussen content en border gebruik je <span class="underline caps">padding!!</span></p>
+                    <p class="border">Lorem ipsum dolor sit amet.</p>
+                    
                 </div>
             </div>
 

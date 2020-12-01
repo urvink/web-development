@@ -16,6 +16,13 @@ figure img{
     font-style: italic;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
+.caps{
+    text-transform: uppercase;
+}
 .red{
     color: red;
 }
