@@ -6,6 +6,7 @@
     <title>Box Model Assignments - CSS (Week 2)</title>
     <link rel="stylesheet" href="../res/css/style.css">
     <style>
+        /* Opdracht 2 Section */
         #opdr2{
             width: fit-content;            
         }
@@ -24,12 +25,58 @@
         p>span{
             background-color: white;
         }
+        /* ------------------------------- */
 
         #opdr5 p:nth-child(2){
             padding: 30px;
             background-color: coral;
         }
+
+        #margin_example{
+            background-color: darkgreen;
+            height: fit-content;            
+        }
         
+        #margin_example p:nth-child(2){
+            background-color: cornflowerblue;
+            margin: 50px;
+            border: 5px dotted purple;
+        }
+        
+
+        #opdr7 p:first-child{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            padding: 5px;
+            border: 5px solid black;
+        }
+
+        /* Opdracht 9 */
+
+        #opdr9a, #opdr9b{
+            height: 100px;
+            background-color: dodgerblue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #opdr9a p, #opdr9b p{
+            box-sizing: border-box;
+        }
+
+        #opdr9a p{
+            padding: 20px;
+            border: 2px ridge yellow;
+            background-color: firebrick;
+        }
+
+        #opdr9b p{
+            margin: 60px;
+            background-color: hotpink;
+            border-top-style: dashed;
+        }
+
     </style>
 </head>
 <body>
@@ -65,14 +112,13 @@
                 </div>
             </div>
             
-
             <!-- Opdracht 3 -->
             <div>
                 <div class="assignments">
                     <h3>Opdracht 3 Wat gebeurt er als je een width en een height toevoegt aan de span tag ( &lt;span&gt; ) van vorige opdracht?</h3>
                 </div>
                 <div class="results">
-                    <p>Er gebeurt niks!</p>                
+                    <p>Er gebeurt niks, want het is een inline-element en die negeert de styling</p>                
                 </div>
             </div>
             
@@ -112,39 +158,77 @@
             <!-- Opdracht 6 -->
             <div>
                 <div class="assignments">
-                    <h3></h3>
+                    <h3>Opdracht 6</h3>
+                    <p>Als je ruimte wilt maken tussen de border en buiten de box, welke css property gebruik je dan? Maak een voorbeeld in je antwoord</p>
                 </div>
                 <div class="results">
-                    <p></p>                
+                    <p>Tussen de border en andere elementen aan de buitenkant hebben we het over de margin van de huidige element</p> 
+                    <div id="margin_example">
+                        <p>Lorem ipsum dolor sit amet.</p>                        
+                        <p>Dit alinea duwt zijn siblings WEG</p>
+                        <p>Lorem, ipsum dolor.</p>
+                    </div>               
                 </div>
             </div>
 
             <!-- Opdracht 7 -->
             <div>
                 <div class="assignments">
-                    <h3></h3>
+                    <h3>Opdracht 7</h3>
+                    <p>Maak nu een blok met width: 100px, height: 100px, margin: 5px, padding 5px en border-width: 5px. Zie hieronder: </p>
+                    <figure>
+                        <img src="../res/img/ond2_opdr7_fig.png" alt="Onderdeel 2 Opdracht 7 fig">
+                    </figure>
+                    <ol>
+                        <li>Hoe breed is de box?</li>
+                        <li>Hoe hoog is de box?</li>
+                        <li>Wat merk je op met width en height?</li>
+                    </ol>
                 </div>
-                <div class="results">
-                    <p></p>                
+                <div id="opdr7" class="results">
+                    <p>Lorem, ipsum dolor.</p>
+                    <p>1. 120 px (100px + 10px + 10px)</p>
+                    <p>2. 120 px (100px + 10px + 10px)</p>
+                    <p>3. De width en height zijn afhankelijk van de padding en de border van een element</p>                
                 </div>
             </div>
 
             <!-- Opdracht 8 -->
             <div>
                 <div class="assignments">
-                    <h3></h3>
+                    <h3>Opdracht 8</h3>
+                    <p>Welke CSS property kun je gebruiken om ervoor te zorgen dat de waarde van width en height de totale breedte en hoogte is van het blok van de voorgaande opdracht? </p>
                 </div>
                 <div class="results">
-                    <p></p>                
+                    <p>Hiervoor gebruik je box-sizing:border-box</p>                
                 </div>
             </div>
 
             <!-- Opdracht 9 -->
             <div>
-                <div class="assignments">
-                    <h3></h3>
+                <div class="assignments"><div>
+                    <p>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </p>
+                    <img src="" alt="">
+                    <figure></figure>
+                </div>
+                    <h3>Opdracht 9</h3>
+                    <p>Maak een aantal voorbeelden van boxen en maak gebruik van steeds verschillende margin, padding en border properties.</p>
                 </div>
                 <div class="results">
+                    <div id="opdr9a">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div id="opdr9b">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
                     <p></p>                
                 </div>
             </div>

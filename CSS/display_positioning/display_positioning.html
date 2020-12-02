@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Positioning - CSS (Week 2)</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <style>
+        header li{
+            list-style-type: none;
+        }
+
+        #opdr2 h1{
+            /* waarden van opdracht 2:  */
+            /* top: 50px;
+            right: 50px;
+            position: fixed; */
+
+            /* Waardes van opdracht 3: */
+            left: -20px;
+            bottom: -30px;
+            position: relative;
+
+            color:rgb(255, 0, 0)          
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            Ik ben de header
+            <div class="logo"><img src="../../resources/img/css3.svg" alt="CSS3 Loho"></div>
+            <nav>
+                <ul>
+                    <li>Onderdeel 1 LINK</li>
+                    <li>Onderdeel 2 Link</li>
+                    <li>Onderdeel 3 Link</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- Opdracht 1 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 1</h3>
+                    <p>Welke position properties zijn er? Leg voor elke position property uit wat het doet.
+                        Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
+                    </p>
+                </div>
+                <div id="" class="results">
+                    <p class="bold italic">Oorsprong: Linker/ boven hoekje van een element</p>
+                    <p><span class="bold">Top: </span>De hoeveelheid dat je vanuit de oorsprong naar boven gaat</p>    
+                    <p><span class="bold">Right:</span>De hoeveelheid dat je vanuit oorsprong naar rechts gaat</p> 
+                    <p><span class="bold">Bottom:</span>De hoeveelheid dat je vanuit oorsprong naar omlaag gaat</p>    
+                    <p><span class="bold">Left:</span>De hoeveelheid dat je vanuit oorsprong naar links gaat</p>  
+                    
+                    <!-- <span class="bold">Relative:</span>
+                    <span class="bold">Sticky:</span>
+                    <span class="bold">Absolute: Element staat vast ten opzichte van een </span>
+                    <span class="bold">Static:</span>
+                    <span class="bold">Fixed: Dit gebruik je om je element een vaste positie te geven t.o.v. de viewport (zichtbare venster)</span> -->
+                </div>
+            </section>
+
+            <!-- Opdracht 2 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 2</h3>
+                    <p>
+                        Zie de onderstaande HTML code. 
+                        &lt;h1&gt;Dit is een titel&lt;/h1&gt; 
+                        &lt;p&gt;Dit is een paragraaf.&lt;/p&gt; 
+                        &lt;p&gt;Dit is nog een paragraaf.&lt;/p&gt; 
+                        
+                        Hoe zorg je er voor dat het &lt;h1&gt; element altijd 50px van de top en 50px van de rechterkant van het scherm zichtbaar is. 
+                        Maak het &lt;h1&gt; element rood door een RGB kleurcodering toe te passen. 
+                    </p>
+                </div>
+                <div id="opdr2" class="results">
+                    <h4>Position property</h4>
+                    <h1>Dit is een titel</h1> 
+                    <p>Dit is een paragraaf.</p> 
+                    <p>Dit is nog een paragraaf.</p>
+                    
+                </div>
+            </section>
+
+            <!-- Opdracht 3 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 3</h3>
+                    <p>Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links en 30px naar onder wordt geplaatst, relatief t.o.v. diens normale positie. 
+                    </p>
+                </div>
+                <div class="results">                    
+                    <p>
+                        <span class="bold italic">Waardes van opdracht 3: </span> 
+                        top: 50px;
+                        right: 50px; 
+                        position: fixed;
+                    </p>                    
+                </div>
+            </section>
+
+            <!-- Opdracht 4 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 4</h3>
+                    <p>Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links en 30px naar onder wordt geplaatst, relatief t.o.v. diens normale positie.
+                    </p>
+                </div>
+                <div class="results">
+                    <p>
+                        <span class="bold italic">Waardes van opdracht 3: </span> 
+                        left: -20px;
+                        bottom: -30px;
+                        position: relative;
+                    </p>                    
+                </div>
+            </section>
+
+            <!-- Opdracht 5 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 5</h3>
+                    <p>Welke position properties zijn er? Leg voor elke position property uit wat het doet.
+                        Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
+                    </p>
+                </div>
+                <div class="results">
+                    
+                </div>
+            </section>
+            
+                              
+        </main>
+        <footer>Ik ben de footer</footer>
+    </div>
+</body>
+</html>
