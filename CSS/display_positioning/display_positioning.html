@@ -24,6 +24,41 @@
             color:rgb(255, 0, 0)          
         }
 
+        #opdr5{
+            position: relative;
+            height: fit-content;
+            padding: 20px;
+        }
+        #opdr5 img{
+            height: 300px;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+
+        #opdr5 p, #opdr5 h1{
+            
+            margin: 40px auto;
+            color: rgba(155, 23, 23, 0.89);
+        }
+
+        #opdr6 #outer{
+            position: relative;
+            background-color: orange;
+            height: 100px;
+            width: 100px;
+        }
+
+        #opdr6 #inner{
+            height: 50px;
+            width: 50px;
+            background-color: green;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+        }
+
     </style>
 </head>
 <body>
@@ -69,9 +104,10 @@
                     <h3>Opdracht 2</h3>
                     <p>
                         Zie de onderstaande HTML code. 
-                        &lt;h1&gt;Dit is een titel&lt;/h1&gt; 
-                        &lt;p&gt;Dit is een paragraaf.&lt;/p&gt; 
-                        &lt;p&gt;Dit is nog een paragraaf.&lt;/p&gt; 
+                        &lt;h1&gt;Dit is een titel&lt;/h1&gt;<br> 
+                        &lt;p&gt;Dit is een paragraaf.&lt;/p&gt;<br>
+                        &lt;p&gt;Dit is nog een paragraaf.&lt;/p&gt;<br>
+                        <br>
                         
                         Hoe zorg je er voor dat het &lt;h1&gt; element altijd 50px van de top en 50px van de rechterkant van het scherm zichtbaar is. 
                         Maak het &lt;h1&gt; element rood door een RGB kleurcodering toe te passen. 
@@ -79,10 +115,9 @@
                 </div>
                 <div id="opdr2" class="results">
                     <h4>Position property</h4>
-                    <h1>Dit is een titel</h1> 
-                    <p>Dit is een paragraaf.</p> 
+                    <h1>Dit is een titel</h1>
+                    <p>Dit is een paragraaf.</p>
                     <p>Dit is nog een paragraaf.</p>
-                    
                 </div>
             </section>
 
@@ -96,10 +131,10 @@
                 <div class="results">                    
                     <p>
                         <span class="bold italic">Waardes van opdracht 3: </span> 
-                        top: 50px;
-                        right: 50px; 
-                        position: fixed;
-                    </p>                    
+                        left: -20px;
+                        bottom: -30px;
+                        position: relative;
+                    </p>
                 </div>
             </section>
 
@@ -107,16 +142,16 @@
             <section>
                 <div class="assignments">
                     <h3>Opdracht 4</h3>
-                    <p>Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links en 30px naar onder wordt geplaatst, relatief t.o.v. diens normale positie.
+                    <p>Zorg er nu voor dat het <h1> element uit opdracht 2 50px links en 100px van de top wordt geplaatst relatief t.o.v. de HTML pagina.
                     </p>
                 </div>
                 <div class="results">
                     <p>
-                        <span class="bold italic">Waardes van opdracht 3: </span> 
-                        left: -20px;
-                        bottom: -30px;
-                        position: relative;
-                    </p>                    
+                        <span class="bold italic">Waardes van opdracht 4: </span> 
+                        top: 100px;
+                        right: 50px;
+                        position: Absolute;
+                    </p>
                 </div>
             </section>
 
@@ -127,15 +162,66 @@
                     <p>Welke position properties zijn er? Leg voor elke position property uit wat het doet.
                         Geef ook aan welke default position waarde elementen hebben die je gebruikt in html.
                     </p>
-                </div>
+                    <figure>green
                 <div class="results">
+                    <div id="opdr5">
+                        <h1>Dit is een titel</h1>
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem, ipsum dolor.</p>
+                        <img src="../res/img/shapes-bg-color.png" alt="Shapes and Colors background image">
+                    </div>                    
+                </div>
+            </section>
+
+            <!-- Opdracht 6  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 6</h3>
+                    <p>
+                        Maak het onderstaande na door gebruik te maken van relative position. 
+                        De outer div block is 100px breed en 100px hoog. 
+                        De inner div block is 50px breed en 50px hoog. 
+                    </p>
+                    <figure><img src="../res/img/ond3_opd6_fig.png" alt="Onderdeel 3 Opdracht 6 fig"></figure>
+                </div>
+                <div id="opdr6" class="results">
+                    <div id="outer">
+                        <div id="inner"></div>
+                    </div>
                     
                 </div>
             </section>
-            
-                              
+ 
+            <!-- Opdracht 7  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 7</h3>
+                    <p>
+                        Zie de onderstaande image met tekst.
+                        Kun jij dit namaken? Gebruik zelf een foto van een zonnige bestemming. 
+                        Gebruik position, maar je mag geen z-index toepassen.
+                    </p>
+                    <figure><img src="../res/img/ond3_opdr7_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr7" class="results">
+                    <a href="./greetings_curacao.html">Uitwerking Opdracht 7</a>                                        
+                </div>
+            </section>
+
+            <!-- Opdracht 8 -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 8</h3>
+                    <p>Maak het onderstaande na. Je mag zelf een image zoeken en gebruiken.
+                    </p>
+                    <figure><img src="../res/img/ond3_opdr8_fig.png" alt="Onderdeel 3 Opdracht 8 fig"></figure>
+                </div>
+                <div class="results">
+                    <a href="#">Opdracht 8 - Positioning eindopdracht</a>
+                </div>
+            </section>
         </main>
-        <footer>Ik ben de footer</footer>
+        <footer></footer>
     </div>
 </body>
 </html>

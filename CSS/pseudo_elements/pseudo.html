@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elements - CSS (Week 2)</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <style>
+        article{
+            margin-bottom: 20px;
+        }
+
+        article .pseudo_term{
+            font-weight: bolder;
+            text-transform: capitalize;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        #after p::after{
+            content: "Hallo ik ben door CSS gestuurd om achter lorem te staan";
+        }
+
+        #opdr4 #button{
+            background-color: rgb(31, 194, 167);
+            color: whitesmoke;
+            width: 20rem;
+            margin: opx auto;
+        }
+
+        #opdr4 #button p{
+            text-align: center;
+        }
+
+        #opdr4 #before, #opdr4 #after{
+            height: 5px;
+            width: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo">
+                <img src="../../resources/img/css3.svg" alt="CSS Logo">
+                <nav>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Pseudo elements - CSS</h1>
+
+            <!-- Opdracht 1, 2, 3 -->
+            <section>
+                <div id="opdr123" class="assignments">
+                    <h3>Opdracht 1, 2, 3</h3>
+                    <p>
+                        Kun je enkele voorbeelden geven van pseudo-elementen ( minimaal 4 )? Beschrijf met je eigen woorden wat deze pseudo-elementen inhouden.
+                    </p>
+                    <p>
+                        Er zijn 14 verschillende pseudo elementen. 
+                        Je hebt in de voorgaande opdracht reeds 4 kunnen benoemen. 
+                        Kun je de andere 10 ook benoemen en aangeven wat ze precies doen?
+                    </p>
+                </div>
+                <div class="results">
+                    <!-- ::after -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::after</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Hier wordt na het geselcteerd element dit CSS uitgevoerd</p>
+                        </div>
+                    <div id="after" class="pseudo_example">
+                            <p></p>                          
+                        </div>
+                    </article>
+                    <!-- ::backdrop -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::backdrop</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Deze code wordt uitgevoerd op het moment dat er een element in fullscreen mode word geplaatst en die is even groot als de viewport</p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <!-- ::cue -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::before</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::placeholder</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::part()</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::marker</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::grammar-error</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::file-selector</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue-region</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p><article>
+                        <div class="pseudo_term">
+                            <p>::after</p></div>
+                        <div class="pseudo_definition">
+
+                        </div>
+                        <div class="pseudo_example">
+
+                        </div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::backdrop</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Deze code wordt uitgevoerd op het moment dat er een element in fullscreen mode word geplaatst en die is even groot als de viewport</p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::before</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::placeholder</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::part()</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::marker</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::grammar-error</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::file-selector</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::cue-region</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::first-line</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Dit stukje CSS wordt uitgevoerd op de eerste lijn (zin) van het element</p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::first-letter</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>CSS wordt uitgevoerd op de eerste letter in het geselecteerd element</p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>
+                    <article>
+                        <div class="pseudo_term">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p></p>
+                        </div>
+                        <div class="pseudo_example"></div>
+                    </article>                                        
+                </div>
+            </section>
+            <!-- Opdracht 4  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 4</h3>
+                    <p>
+                        Hieronder vind je een voorbeeld van het gebruik van een pseudo-element. Kun jij dit namaken? 12
+                    </p>
+                    <figure><img src="../res/img/ond4_opdr4_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr4" class="results">
+                    <div id="before" class="orange_bg"></div>
+                    <div id="button"><p>Button</p></div>
+                    <div id="after" class="orange_bg"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

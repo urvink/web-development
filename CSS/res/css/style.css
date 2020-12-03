@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+nav ul li{
+    list-style-type: none;
+}
+
 figure img{
     width: 320px;
 }
@@ -31,10 +35,24 @@ figure img{
     border: 1px solid;
 }
 
+.white{
+    color: whitesmoke;
+}
+
+.yellow{
+    color: yellow;
+}
+
 .purple{
     color: purple;
     background-color: seagreen;
 }
+
+.orange_bg{
+    background-color: rgb(221, 81, 16);
+}
+
+/* Body Section */
 
 #wrapper{
     width: 85%;
@@ -43,6 +61,13 @@ figure img{
 
 .logo img{
     width: 150px;
+}
+
+
+main div .assignments, main section .assignments{
+    /* border-bottom: 2px solid blue; */
+    margin-top:10px;
+    background-color: blanchedalmond;
 }
 
 .assignments{
