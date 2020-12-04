@@ -10,31 +10,229 @@
             margin-bottom: 20px;
         }
 
+        pre{
+            white-space: pre-line ;
+            border: 2px dashed black;
+            background-color: rgba(180, 176, 176, 0.26);
+            /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+            margin-top: 2em;
+            width: fit-content;
+            padding: 5px;
+        }
+
         article .pseudo_term{
             font-weight: bolder;
-            text-transform: capitalize;
+            text-transform: uppercase;
             font-style: italic;
             text-decoration: underline;
         }
 
-        #after p::after{
-            content: "Hallo ik ben door CSS gestuurd om achter lorem te staan";
+        article .pseudo_definition{
+            background-color: rgba(168, 199, 224, 0.212);
+            width: 100%;
+            text-align: center;
         }
 
+        article .pseudo_example{
+            /* background-color: rgba(182, 157, 211, 0.315); */
+            width: 100%;
+        }
+
+        /* Opdracht 1, 2 en 3 */
+
+        /* ::first-letter */
+        .first_letter::first-letter{
+            background-color: rgba(199, 5, 5, 0.377);
+        }
+
+        /* ::first-line */
+        .first_line::first-line{
+            color: rgb(28, 155, 2);
+            text-transform: uppercase;
+            background-color: rgba(231, 26, 26, 0.295);
+        }
+
+        /* ::after */
+        .after::after{
+            content: "Ik ben toegevoegd door CSS pseudo element \"After\" ";
+            font-style: oblique;
+            background-color: yellow;
+        }
+
+        /* ::backdrop */
+        video::backdrop{
+            background: rgba(86, 204, 219, 0.842);
+        }
+
+        /* Opdracht 4 */
         #opdr4 #button{
-            background-color: rgb(31, 194, 167);
-            color: whitesmoke;
-            width: 20rem;
-            margin: opx auto;
+            background-color: rgb(56, 197, 174);
+            color: white;
+            height: 1.5em;
+            width: 20em;
+            border-left:4px solid rgb(221, 81, 16);
+            border-right: 4px solid  rgb(221, 81, 16);
+            position: relative;
+        }
+
+        #opdr4 #button::after{
+            border-top:4px solid rgb(221, 81, 16);
+            content: "";
+            width: 1.5em;
+            height: 1.5em;
+            bottom: -1.5em;
+            left: 18.74em;
+            position: absolute;
+        }
+
+        #opdr4 #button::before{
+            content: "";
+            width: 1.5em;
+            top: 0;
+            border-bottom:4px solid rgb(221, 81, 16);
+            position: absolute;
         }
 
         #opdr4 #button p{
             text-align: center;
+            font-size: .9em;
+            top: 50%;
+            left: 50%;
+            box-sizing: border-box;
         }
 
-        #opdr4 #before, #opdr4 #after{
-            height: 5px;
-            width: 50px;
+        /* Opdracht 5 */
+        #opdr5{
+            
+            position: relative;
+            height: 20em;
+            width: 30em;
+            
+            z-index: 4;
+        }
+
+        #opdr5 img{
+            width: 30em;
+            top: 0;
+            left: 5em;
+            /* z-index: -2; */
+            position: absolute;
+        }
+
+        #opdr5::before{
+            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et tenetur fugit alias eveniet unde. Cupiditate accusamus asperiores reprehenderit nesciunt tempore error quam minima incidunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et tenetur fugit alias eveniet unde. Cupiditate accusamus asperiores reprehenderit nesciunt tempore error quam minima incidunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et tenetur fugit alias eveniet unde. Cupiditate accusamus asperiores reprehenderit nesciunt tempore error quam minima incidunt.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut et tenetur fugit alias eveniet unde. Cupiditate accusamus asperiores reprehenderit nesciunt tempore error quam minima incidunt.Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+            color: blanchedalmond;
+            position: absolute;
+            left: 5em;
+            border: 1px solid red;
+            width: fit-content;
+            height: 14.75em;
+            padding: 1em;
+            
+            z-index: 3;
+        }
+
+        /* Opdracht 6 */
+        #opdr6{
+            position: relative;
+            height: 10em;
+        }
+
+        #opdr6 .bell{
+            background-color: black;
+            border-radius: 50%;
+            width: 4em;
+            height: 4em;
+            position: absolute;
+        }
+
+        /* Bells*/
+        /* Left cup */
+        #opdr6 .bell::before{
+            content: ".";
+            font-size: 1em;
+            background-color: black;
+            width: 2em;
+            height: 2em;
+            top: 25%;
+            left: -.8em;
+            position: absolute;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;            
+            transform: rotate(140deg);
+            color: white;
+        }
+
+        #opdr6 .bell::before::content{
+            position: absolute;
+            top: 3em;
+            left: 3em;
+        }
+
+        /* Right cup */
+        #opdr6 .bell::after{
+            content: ".";
+            background-color: black;
+            width: 1.8em;
+            height: 1.8em;
+            top: 25%;
+            left: 3.1em;
+            position: absolute;
+            border-radius: 50%;
+            color: whitesmoke;
+            padding-left: 9px;
+            box-sizing: border-box;
+            transform: rotate(-80deg);
+        }
+
+        #opdr6 .bell p{
+            color: whitesmoke;
+            font-size: 1.6em;
+            top: 0.8em;
+            left: 1em;
+            position: absolute;
+        }
+
+        #opdr6 #second{
+            left: 7.6em;
+        }
+
+        #opdr6 #third{
+            left: 15em;
+        }
+
+        /* Opdracht 7 */
+        #opdr7{
+            background-color: #41138ac9;
+            height: 10em;
+            width: 10em;
+            transform: rotate(10deg);
+            position: relative;          
+        }
+
+        #opdr7::before{
+            content: "."; 
+            height: 10em;
+            width: 10em;
+            background-color: #41138ac9;
+            color: pink;
+            top: 0;
+            left: .2em;
+            transform: rotate(-20deg);
+            position: absolute;      
+        }
+
+        #opdr7::after{
+            content: "."; 
+            height: 10em;
+            width: 10em;
+            background-color: #41138ac9;
+            color: purple;
+            top: 0;
+            left: .2em;
+            transform: rotate(-60deg);
+            position: absolute;      
         }
 
     </style>
@@ -70,19 +268,24 @@
                     </p>
                 </div>
                 <div class="results">
-                    <!-- ::after -->
+                    <!-- ::after (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::after</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p>Hier wordt na het geselcteerd element dit CSS uitgevoerd</p>
+                            <p>Hier wordt na het geselecteerd element een nieuw element aangemaakt</p>
                         </div>
-                    <div id="after" class="pseudo_example">
-                            <p></p>                          
+                        <div class="pseudo_example after">                       
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <pre>
+                                .after::after{
+                                    content: "Ik ben toegevoegd door CSS pseudo element \"After\" ";
+                                }
+                            </pre>                            
                         </div>
                     </article>
-                    <!-- ::backdrop -->
+                    <!-- ::backdrop (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::backdrop</p>
@@ -90,7 +293,15 @@
                         <div class="pseudo_definition">
                             <p>Deze code wordt uitgevoerd op het moment dat er een element in fullscreen mode word geplaatst en die is even groot als de viewport</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example backdrop">
+                            <video src="../../HTML/media/file_example_WEBM_480_900KB.webm" controls></video>
+
+                            <pre>
+                                video::backdrop{
+                                    background: rgba(86, 204, 219, 0.842);
+                                }
+                            </pre>
+                        </div>
                     </article>
                     <!-- ::cue -->
                     <article>
@@ -102,69 +313,7 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::before</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::placeholder</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::part()</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::cue</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::marker</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::grammar-error</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::file-selector</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
+                    <!-- ::cue-region -->
                     <article>
                         <div class="pseudo_term">
                             <p>::cue-region</p>
@@ -174,57 +323,17 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p><article>
-                        <div class="pseudo_term">
-                            <p>::after</p></div>
-                        <div class="pseudo_definition">
-
-                        </div>
-                        <div class="pseudo_example">
-
-                        </div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::backdrop</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p>Deze code wordt uitgevoerd op het moment dat er een element in fullscreen mode word geplaatst en die is even groot als de viewport</p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::cue</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
+                    <!-- ::before -->
                     <article>
                         <div class="pseudo_term">
                             <p>::before</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Hier wordt voor het geselecteerd element een nieuw element aangemaakt</p>
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
+                    <!-- ::placeholder -->
                     <article>
                         <div class="pseudo_term">
                             <p>::placeholder</p>
@@ -234,6 +343,7 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
+                    <!-- ::part() -->
                     <article>
                         <div class="pseudo_term">
                             <p>::part()</p>
@@ -243,15 +353,7 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::cue</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
+                    <!-- ::marker -->
                     <article>
                         <div class="pseudo_term">
                             <p>::marker</p>
@@ -261,6 +363,7 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
+                    <!-- ::grammar-error -->
                     <article>
                         <div class="pseudo_term">
                             <p>::grammar-error</p>
@@ -270,79 +373,45 @@
                         </div>
                         <div class="pseudo_example"></div>
                     </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::file-selector</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::cue-region</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p>::first-line</p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p>Dit stukje CSS wordt uitgevoerd op de eerste lijn (zin) van het element</p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
+                    <!-- ::first-letter (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::first-letter</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p>CSS wordt uitgevoerd op de eerste letter in het geselecteerd element</p>
+                            <p>Het eerste letter van een element wordt geselecteerd en gestyled door de hierop volgende code</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example first_letter">
+                            <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            <pre>
+                                .first_letter::first-letter{
+                                    background-color: rgba(199, 5, 5, 0.377);
+                                }
+                            </pre>
+
+                        </div>
                     </article>
+                    <!-- ::first-line (done) -->
                     <article>
                         <div class="pseudo_term">
-                            <p></p>
+                            <p>::first-line</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Dit CSS wordt uitgevoerd op de eerste lijn in een block element</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example first_line">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Cum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, illo?
+                            </p>
+                            <pre>
+                                .first_line::first-line{
+                                    color: rgb(28, 155, 2);
+                                    text-transform: uppercase;
+                                    background-color: rgba(231, 26, 26, 0.295);
+                                }
+                            </pre>
+                        </div>
                     </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>
-                    <article>
-                        <div class="pseudo_term">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_definition">
-                            <p></p>
-                        </div>
-                        <div class="pseudo_example"></div>
-                    </article>                                        
+                        
                 </div>
             </section>
             <!-- Opdracht 4  -->
@@ -355,9 +424,63 @@
                     <figure><img src="../res/img/ond4_opdr4_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
                 </div>
                 <div id="opdr4" class="results">
-                    <div id="before" class="orange_bg"></div>
+                    <div class="orange_bg before"></div>
                     <div id="button"><p>Button</p></div>
-                    <div id="after" class="orange_bg"></div>
+                    <div class="orange_bg after"></div>
+                    
+                </div>
+            </section>
+            <!-- Opdracht 5  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 5</h3>
+                    <p>
+                        Hieronder vind je nog eens een voorbeeld van het gebruik van een pseudo-element ::before. 
+                        Kun jij dit namaken? Zoek een afbeelding op internet.
+                    </p>
+                    <figure><img src="../res/img/ond4_opdr5_fig.png" alt="Onderdeel 4 Opdracht 7 fig"></figure>
+                </div>
+                <div class="results">
+                    <div id="opdr5">
+                        <img src="../res/img/hk-artworks-suprialsppc.jpg" alt="Large image of Spiderman">
+                    </div>                  
+                </div>
+            </section>
+            <!-- Opdracht 6  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 6</h3>
+                    <p>Hieronder vind je wederom een voorbeeld van het gebruik van een pseudo-element. 
+                        Kun jij dit namaken? 
+                    </p>
+                    <figure><img src="../res/img/ond4_opdr6_fig.png" alt="Onderdeel 4 Opdracht 6 fig"></figure>
+                </div>
+                <div id="opdr6" class="results">
+
+                    <div id="first" class="bell">
+                        <p>1</p>
+                    </div>
+                    <div id="second" class="bell">
+                        <p>2</p>
+                    </div>
+                    <div id="third" class="bell">
+                        <p>3</p>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- Opdracht 7  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 7</h3>
+                    <p>
+                        De laatste opdracht vergt wat creativiteit. 
+                        Zie het onderstaande voorbeeld en maak het na.
+                    </p>
+                    <figure><img src="../res/img/ond4_opdr7_fig.png" alt="Onderdeel 4 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr7" class="results">
+                    <div></div>                   
                 </div>
             </section>
         </main>

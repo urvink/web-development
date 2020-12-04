@@ -48,10 +48,6 @@ figure img{
     background-color: seagreen;
 }
 
-.orange_bg{
-    background-color: rgb(221, 81, 16);
-}
-
 /* Body Section */
 
 #wrapper{
@@ -67,7 +63,7 @@ figure img{
 main div .assignments, main section .assignments{
     /* border-bottom: 2px solid blue; */
     margin-top:10px;
-    background-color: blanchedalmond;
+    background-color: rgba(255, 235, 205, 0.466);
 }
 
 .assignments{
