@@ -58,6 +58,176 @@
             align-items: baseline;
         }
 
+        #opdr5 #aie{
+            align-items: flex-end;
+        }
+
+        /* Opdracht 6 */
+        #opdr6, #opdr7{
+            flex-direction: column;
+            justify-content: space-between;            
+            width: 19em;
+        }
+
+        #opdr6 .bar,#opdr7 .bar{
+            background-color: tomato;
+            width: 1em;
+            height: .1em;
+            padding: .3em;
+            border: 1px solid white;;
+        }
+
+        #opdr6 .bar:first-child{
+            width: 18.8em;
+        }
+
+        #opdr6 .bar:nth-child(2){
+            width: 7.3em;
+        }
+
+        #opdr6 .bar:nth-child(3){
+            width: 9.5em;
+        }
+
+        #opdr6 .bar:nth-child(4){
+            width: 12em;
+        }
+
+        #opdr6 .bar:nth-child(5){
+            width: 3em;
+        }
+
+        #opdr6 .bar:nth-child(6){
+            width: 5em;
+        }
+
+        /* Opdracht 7 */
+        #opdr7{
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+        }
+
+        #opdr7 .bar:first-child{
+            height: 18.8em;
+        }
+
+        #opdr7 .bar:nth-child(2){
+            height: 7.3em;
+        }
+
+        #opdr7 .bar:nth-child(3){
+            height: 9.5em;
+        }
+
+        #opdr7 .bar:nth-child(4){
+            height: 12em;
+        }
+
+        #opdr7 .bar:nth-child(5){
+            height: 3em;
+        }
+
+        #opdr7 .bar:nth-child(6){
+            height: 5em;
+        }
+
+        /* Opdracht 8 */
+        #opdr8{
+            flex-wrap: wrap;
+            width: 22em;
+        }
+
+        #opdr8 .blocks{
+            border-radius: .4em;
+            border: 1px solid black;
+            padding: 1.4em;
+            width: 1em;
+            height: 1em;
+            /* background-color: turquoise; */
+            font-size: 1.7em;
+        }
+
+        #opdr8:first-child{
+            background-color: beige;
+        }
+
+        #opdr8 .blocks:nth-child(2){
+            background-color: #abd2e9;
+        }
+        #opdr8 .blocks:nth-child(3){
+            background-color: #a9eca9;
+        }
+        #opdr8 .blocks:nth-child(4){
+            background-color: white;
+        }
+        #opdr8 .blocks:nth-child(5){
+            background-color: black;
+            color: whitesmoke;
+        }
+        #opdr8 .blocks:nth-child(6){
+            background: rgb(2,0,36);
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,120,0.9198767334360555) 49%, rgba(0,212,255,1) 62%);
+        }
+
+        /* Opdracht 9 */
+        #opdr9{
+            justify-content: space-around;
+            /* align-content: space-around; */
+            padding: 1em;
+            width: 59em;
+            background-color: lightgray;
+        }
+
+        #opdr9 .card{
+            justify-content: space-evenly;
+            align-items: stretch;
+
+            width: 15em;
+            height: 20em;
+            flex-direction: column;
+        }
+
+        #opdr9 .card .card_header img, #opdr9 .card .card_body, #opdr9 .card .card_footer{
+            width: 13em;
+            height: 11em;
+        }
+
+        #opdr9 .card .card_body{
+            background-color: rgb(139, 87, 87);
+            /* padding: 3em; */
+            width: 13em;
+
+        }
+
+        #opdr9 .card .card_body h3{
+            color: blue;
+        }
+
+        #opdr9 .card .card_body, #opdr9 .card .card_footer{            
+            text-align: center;
+            justify-content: center;
+        }
+
+        #opdr9 .card .card_footer .footer_btn a{
+            text-decoration: none;
+            /* background-color: #fff; */
+            color: white;
+        }
+        
+        #opdr9 .card .card_footer{
+            background-color: #1408bb;
+            padding: 0.8em;            
+            align-content: center;
+            box-sizing: border-box;
+            height: 2em;
+            width: 13em;
+        }
+        
+
+        #opdr9 .card .card_footer .footer_btn a::first-letter{
+            text-transform: capitalize;
+        }
 
     </style>
 </head>
@@ -180,32 +350,37 @@
                     </div>
                     <h2>Align items stretch</h2>
                     <div id="ais" class="cubes flex">
-                        <small>1</small>
-                        <p>2</p>
-                        <h1>3</h1>
+                        <p>1</p>
+                        <small>2</small>
+                        <h5>3</h5>
                     </div>
                     <h2>Align items baseline</h2>
                     <div id="aib" class="cubes flex">
-                        <small>1</small>
-                        <h4>2</h4>
-                        <p>3</p>
+                        <p>1</p>
+                        <small>2</small>
+                        <h5>3</h5>
                     </div>
                     <h2>Align items start</h2>
                     <div id="aist" class="cubes flex">
                         <p>1</p>
-                        <h2>2</h2>
-                        <small>3</small>
-                    </div>                                        
+                        <small>2</small>
+                        <h5>3</h5>
+                    </div>
+                    <h2>Align items end</h2>
+                    <div id="aie" class="cubes flex">
+                        <p>1</p>
+                        <small>2</small>
+                        <h5>3</h5>
+                    </div>         
                 </div>
             </section>
-
             <!-- Opdracht 6  -->
             <section>
                 <div class="assignments">
                     <h3>Opdracht 6</h3>
                     <p>
                         Maak het onderstaande na met flexbox. 
-                        Properties die je o.a dient te gebruiken zijn: 
+                        Properties die je o.a dient te gebruiken zijn:
                         <ul>
                             <li>display</li>
                             <li>justify-content</li>
@@ -214,22 +389,49 @@
                     </p>
                     <figure><img src="../res/img/ond5_opdr6_fig.png" alt="Onderdeel 5 Opdracht 6 fig"></figure>
                 </div>
-                <div id="opdr6" class="results">
-
+                <div id="opdr6" class="results flex cubes">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
             </section>
-
             <!-- Opdracht 7  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 7</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld en maak het na met flexbox.
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr7_fig.png" alt="Onderdeel 5 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr7" class="results flex cubes">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>                                        
+                </div>
+            </section>
+            <!-- Opdracht 9  -->
             <section>
                 <div class="assignments">
                     <h3>Opdracht 8</h3>
                     <p>
                         Zie het onderstaande voorbeeld en maak het na met flexbox.
                     </p>
-                    <figure><img src="../res/img/ond5_opdr7_fig.png" alt="Onderdeel 5 Opdracht 7 fig"></figure>
+                    <figure><img src="../res/img/ond5_opdr8_fig.png" alt="Onderdeel 5 Opdracht 8 fig"></figure>
                 </div>
-                <div id="opdr7" class="results">                  
-                                        
+                <div id="opdr8" class="results flex">
+                    <div class="blocks">1</div>
+                    <div class="blocks">2</div>
+                    <div class="blocks">3</div>
+                    <div class="blocks">4</div>
+                    <div class="blocks">5</div>
+                    <div class="blocks">6</div>
                 </div>
             </section>
 
@@ -242,10 +444,45 @@
                     </p>
                     <figure><img src="../res/img/ond5_opdr9_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
                 </div>
-                <div id="opdr9" class="results">              
+                <div id="opdr9" class="results flex">
+                    <div class="card flex">
+                        <div class="card_header"><img src="../res/img/Super_Mario_Run_logo.svg.png" alt="Super mario run"></div>
+                        <div class="card_body">
+                            <h3>Super Mario Run</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, commodi!</p>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_btn"><a href="#">play Super Mario Run</a></div>
+                        </div>
+                    </div>
+                    <div class="card flex"><div class="card_header"><img src="../res/img/mario_paper_maker.jpg" alt="Super Mario Maker"></div>
+                        <div class="card_body">
+                            <h3>Super Mario maker</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, rerum?</p>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_btn"><a href="#">play Super Mario Maker</a></div>
+                        </div></div>
+                    <div class="card flex"><div class="card_header"><img src="../res/img/super-mario-bros-3.jpg" alt="Super Mario 3"></div>
+                        <div class="card_body">
+                            <h3>Super Mario 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto necessitatibus adipisci illo fuga?</p>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_btn"><a href="#">play Super Mario 3</a></div>
+                        </div>
+                    </div>
+                    <div class="card flex"><div class="card_header"><img src="../res/img/yoshi_s_island.webp" alt="Yoshi's island image"></div>
+                        <div class="card_body">
+                            <h3>Yoshi's Island</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius!</p>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_btn"><a href="#">play Yoshi's Island</a></div>
+                        </div>
+                    </div>
                 </div>
             </section>
-
         </main>
         <footer></footer>
     </div>

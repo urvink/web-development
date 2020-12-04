@@ -18,3 +18,5 @@ div#wrapper>(header>div.logo>img+(nav>ul>li*3))+main+footer
                                         
                 </div>
             </section>
+
+            ((div.card_header>img)+(div.card_body>h3+p)+(div.card_footer>(div.footer_btn>a[href="#"]{play $})))*4
