@@ -48,6 +48,10 @@ figure img{
     background-color: seagreen;
 }
 
+.flex{
+    display: flex;
+}
+
 /* Body Section */
 
 #wrapper{

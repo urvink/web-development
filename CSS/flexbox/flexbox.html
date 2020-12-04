@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - CSS (Week 2)</title>
+    <link rel="stylesheet" href="../res/css/style.css">
+    <style>
+
+        .cubes{
+            background-color: rgba(248, 248, 9, 0.438);
+            padding: .5em;
+        }
+
+        .cubes p, small, h5, h1, h2, h4{
+            background-color: #aaf1b4;
+            padding: .7em;
+            margin: .3em;
+        }
+
+        /* Opdracht 2 */
+        #opdr2{            
+            justify-content: flex-end;
+        }
+
+        /* Opdracht 3 */
+        #opdr3 .grow{
+            flex-grow: 3;
+        }
+
+        /* Opdracht 4 */
+        #opdr4 #jcc{
+            justify-content: center;
+        }
+
+        #opdr4 #jcsb{
+            justify-content: space-between;
+        }
+
+        #opdr4 #jcsa{
+            justify-content: space-around;
+        }
+
+        /* Opdracht 5 */
+        #opdr5 #aic{
+            align-items: center;
+        }
+
+        #opdr5 #ais{
+            align-items: stretch;
+        }
+
+        #opdr5 #aist{
+            align-items: flex-start;
+        }
+
+        #opdr5 #aib{
+            align-items: baseline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="logo">
+                <img src="../../resources/img/css3.svg" alt="CSS3 Logo">
+                <nav>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Flexbox - CSS</h1>
+            <!-- Opdracht 1 (done)  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 1</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld en maak het na met flex. Gebruik geen width, height of line-height.
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr1_fig.png" alt="Onderdeel 5 Opdracht 1 fig"></figure>
+                </div>
+                <div id="opdr1" class="results flex cubes">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                </div>
+            </section>
+            <!-- Opdracht 2 (done) -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 2</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld, de items staan nu anders uitgelijnd. Maak het na met flex. Gebruik geen width, height of line-height.
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr2_fig.png" alt="Onderdeel 5 Opdracht 2 fig"></figure>
+                </div>
+                <div id="opdr2" class="results flex cubes">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>                                                            
+                </div>
+            </section>
+            <!-- Opdracht 3 (done)-->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 3</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld, een van de items is breder dan de rest. Maak het na met flex. Gebruik geen width, height of line-height. 
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr3_fig.png" alt="Onderdeel 5 Opdracht 3 fig"></figure>
+                </div>
+                <div id="opdr3" class="results flex cubes">
+                    <p>1</p>
+                    <p class="grow">2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                </div>
+            </section>
+             <!-- Opdracht 4  (done)-->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 4</h3>
+                    <p>
+                        De property ‘justify-content’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door gebruik te maken van de justify-content property.
+                    </p>
+                </div>
+                <div id="opdr4" class="results">
+                    <h2>Justify Content: Center</h2>
+                    <div id="jcc" class="cubes flex">
+                        
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <h2>Justify Content: Space Around</h2>
+                    <div id="jcsa" class="cubes flex">
+                        
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                    <h2>Justify Content: Space Between</h2>
+                    <div id="jcsb" class="cubes flex">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Opdracht 5  ???-->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 5</h3>
+                    <p>
+                        De property ‘align-items’ is een property die door flex gebruikt wordt. 
+                        Maak verschillende voorbeelden door gebruik te maken van de align-items property
+                    </p>
+                </div>
+                <div id="opdr5" class="results">
+                    <h2>Align items center</h2>
+                    <div id="aic" class="cubes flex">
+                        <p>1</p>
+                        <small>2</small>
+                        <h5>3</h5>
+                    </div>
+                    <h2>Align items stretch</h2>
+                    <div id="ais" class="cubes flex">
+                        <small>1</small>
+                        <p>2</p>
+                        <h1>3</h1>
+                    </div>
+                    <h2>Align items baseline</h2>
+                    <div id="aib" class="cubes flex">
+                        <small>1</small>
+                        <h4>2</h4>
+                        <p>3</p>
+                    </div>
+                    <h2>Align items start</h2>
+                    <div id="aist" class="cubes flex">
+                        <p>1</p>
+                        <h2>2</h2>
+                        <small>3</small>
+                    </div>                                        
+                </div>
+            </section>
+
+            <!-- Opdracht 6  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 6</h3>
+                    <p>
+                        Maak het onderstaande na met flexbox. 
+                        Properties die je o.a dient te gebruiken zijn: 
+                        <ul>
+                            <li>display</li>
+                            <li>justify-content</li>
+                            <li>flex-direction</li>
+                        </ul>
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr6_fig.png" alt="Onderdeel 5 Opdracht 6 fig"></figure>
+                </div>
+                <div id="opdr6" class="results">
+
+                </div>
+            </section>
+
+            <!-- Opdracht 7  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 8</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld en maak het na met flexbox.
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr7_fig.png" alt="Onderdeel 5 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr7" class="results">                  
+                                        
+                </div>
+            </section>
+
+            <!-- Opdracht 9  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 9</h3>
+                    <p>
+                        Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat. Optioneel: gebruik .gif bestanden als images voor een levendig effect. 16
+                    </p>
+                    <figure><img src="../res/img/ond5_opdr9_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
+                </div>
+                <div id="opdr9" class="results">              
+                </div>
+            </section>
+
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
