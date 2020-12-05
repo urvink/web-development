@@ -173,68 +173,94 @@
         /* Opdracht 9 */
         #opdr9{
             justify-content: space-around;
-            /* align-content: space-around; */
+            flex-direction: row;
+            flex-wrap: wrap;
             margin: 0 auto;
-            padding: 1em;
-            max-width: 85%;
+            padding: 50px;
+            width: 80%;
             background-color: rgba(211, 211, 211, 0.397);
         }
 
             /* Card */
         #opdr9 .card{
-            justify-content: space-evenly;
             align-items: center;
-            width: 15em;
-            height: 20em;
+            box-sizing: border-box;
+            background-color: white;
+            text-align: center;
+            justify-content: stretch;
             flex-direction: column;
-        }
-
-        #opdr9 .card .card_header, 
-        #opdr9 .card .card_body, 
-        #opdr9 .card .card_footer{
-            width: 13em;
-            height: 11em;
+            margin: 5px;
+            width: 16rem;            
+            overflow: hidden;
+            position: relative;
         }
 
         #opdr9 .card .card_header img{
-            width: inherit;
+            width: 16em;
+            height: 16em;
         }
 
-        #opdr9 .card .card_body{
-            background-color: rgb(139, 87, 87);
-            padding: 1.3em;
-            box-sizing: border-box;
-            width: inherit;
+        #opdr9 .card .card_header .static{
+            position: absolute;
+            background-color: #fff;
+        }
 
+        #opdr9 .card .card_header img:hover{
+            width: 16em;
+            height: 16em;
+            opacity: 0;
+        }
+
+        /* card body */
+        #opdr9 .card .card_body{
+            background-color: #fff;
+            height: 70px;
+            box-sizing: 50px;
+            padding: 5px;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         #opdr9 .card .card_body h3{
             color: blue;
-            /* margin: 0.4em; */
-        }
-        #opdr9 .card .card_body p{
-            /* margin-top: 1.5em; */
-            font-size: .7em;
+            font-size: 1em;
         }
 
-        #opdr9 .card .card_body, 
-        #opdr9 .card .card_footer{            
-            text-align: center;
+        #opdr9 .card .card_body p{
+            font-size: .8em;
+            
+        }
+        
+        #opdr9 .card .card_footer{
+            text-decoration: none;
+            color: white;
+            font-size: 1em;
+            background-color: #1408bb;
+            width: 100%;
+        }
+
+        #opdr9 .card .card_footer .footer_btn{
+            height: 100%;
+            align-items: center;
             justify-content: center;
+            height: 50px;
+        }
+        #opdr9 .card .card_footer .footer_btn:hover{
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            background-color: crimson;
         }
 
         #opdr9 .card .card_footer .footer_btn a{
             text-decoration: none;
             color: white;
+            align-items: center;
+            font-size: 1em;
+            
         }
         
-        #opdr9 .card .card_footer{
-            background-color: #1408bb;
-            padding: 0.8em;            
-            align-content: center;
-            height: 2em;
-            width: 10em
-        }
     </style>
 </head>
 <body>
@@ -422,7 +448,7 @@
                     <div class="bar"></div>                                        
                 </div>
             </section>
-            <!-- Opdracht 9  -->
+            <!-- Opdracht 8  -->
             <section>
                 <div class="assignments">
                     <h3>Opdracht 8</h3>
@@ -440,53 +466,73 @@
                     <div class="blocks">6</div>
                 </div>
             </section>
-
             <!-- Opdracht 9  -->
             <section>
                 <div class="assignments">
                     <h3>Opdracht 9</h3>
                     <p>
-                        Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat. Optioneel: gebruik .gif bestanden als images voor een levendig effect. 16
+                        Zie het onderstaande voorbeeld en maak het na met flexbox. Zorg voor een leuk effect als je met de muis over de ‘play’ knop heen gaat. Optioneel: gebruik .gif bestanden als images voor een levendig effect.
                     </p>
                     <figure><img src="../res/img/ond5_opdr9_fig.png" alt="Onderdeel 3 Opdracht 7 fig"></figure>
                 </div>
                 <div id="opdr9" class="results flex">
+
                     <div class="card flex">
-                        <div class="card_header"><img src="../res/img/Super_Mario_Run_logo.svg.png" alt="Super mario run"></div>
-                        <div class="card_body">
+                        <div class="card_header">
+                            <img class="static" src="../res/img/Super_Mario_Run_logo.svg.png" alt="Super mario run"><img class="active" src="../res/img/mario_run.gif" alt="Super mario run animation">
+                        </div>
+                        <div class="card_body flex">
                             <h3>Super Mario Run</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, commodi!</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">Play Super Mario Run</a></div>
+                            <div class="footer_btn flex">
+                                <a href="#opdr9">Play Super Mario Run</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card flex"><div class="card_header"><img src="../res/img/mario_paper_maker.jpg" alt="Super Mario Maker"></div>
-                        <div class="card_body">
+                    <div class="card flex">
+                        <div class="card_header">
+                            <img class="static" src="../res/img/mario_paper_maker.jpg" alt="Super Mario Maker"><img class="active" src="../res/img/mario_maker.gif" alt="Super mario maker animation">
+                        </div>
+                        <div class="card_body flex">
                             <h3>Super Mario maker</h3>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, rerum?</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">Play Super Mario Maker</a></div>
-                        </div></div>
-                    <div class="card flex"><div class="card_header"><img src="../res/img/super-mario-bros-3.jpg" alt="Super Mario 3"></div>
-                        <div class="card_body">
-                            <h3>Super Mario 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto necessitatibus adipisci illo fuga?</p>
-                        </div>
-                        <div class="card_footer">
-                            <div class="footer_btn"><a href="#">Play Super Mario 3</a></div>
+                            <div class="footer_btn flex">
+                                <a href="#opdr9">Play Super Mario Maker</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card flex"><div class="card_header"><img src="../res/img/yoshi_s_island.webp" alt="Yoshi's island image"></div>
-                        <div class="card_body">
+                    <div class="card flex">
+                        <div class="card_header">
+                            <img class="static" src="../res/img/super-mario-bros-3.jpg" alt="Super Mario 3"><img class="active" src="../res/img/mario3.gif" alt="Super mario 3 animation">
+                        </div>
+                        <div class="card_body flex">
+                            <h3>Super Mario 3</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_btn flex">
+                                <a href="#opdr9">Play Super Mario 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card flex">
+                        <div class="card_header">
+                            <img class="static" src="../res/img/yoshi_s_island.webp" alt="Yoshi's island image"><img class="active" src="../res/img/yoshis_world.gif" alt="Yoshi's World animation">
+                        </div>
+                        <div class="card_body flex">
                             <h3>Yoshi's Island</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius!</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">Play Yoshi's Island</a></div>
+                            <div class="footer_btn flex">
+                                <a href="#opdr9">Play Yoshi's Island</a>
+                            </div>
                         </div>
-                    </div>
+                    </div>                
                 </div>
             </section>
         </main>
