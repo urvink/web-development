@@ -174,44 +174,57 @@
         #opdr9{
             justify-content: space-around;
             /* align-content: space-around; */
+            margin: 0 auto;
             padding: 1em;
-            width: 59em;
-            background-color: lightgray;
+            max-width: 85%;
+            background-color: rgba(211, 211, 211, 0.397);
         }
 
+            /* Card */
         #opdr9 .card{
             justify-content: space-evenly;
-            align-items: stretch;
-
+            align-items: center;
             width: 15em;
             height: 20em;
             flex-direction: column;
         }
 
-        #opdr9 .card .card_header img, #opdr9 .card .card_body, #opdr9 .card .card_footer{
+        #opdr9 .card .card_header, 
+        #opdr9 .card .card_body, 
+        #opdr9 .card .card_footer{
             width: 13em;
             height: 11em;
         }
 
+        #opdr9 .card .card_header img{
+            width: inherit;
+        }
+
         #opdr9 .card .card_body{
             background-color: rgb(139, 87, 87);
-            /* padding: 3em; */
-            width: 13em;
+            padding: 1.3em;
+            box-sizing: border-box;
+            width: inherit;
 
         }
 
         #opdr9 .card .card_body h3{
             color: blue;
+            /* margin: 0.4em; */
+        }
+        #opdr9 .card .card_body p{
+            /* margin-top: 1.5em; */
+            font-size: .7em;
         }
 
-        #opdr9 .card .card_body, #opdr9 .card .card_footer{            
+        #opdr9 .card .card_body, 
+        #opdr9 .card .card_footer{            
             text-align: center;
             justify-content: center;
         }
 
         #opdr9 .card .card_footer .footer_btn a{
             text-decoration: none;
-            /* background-color: #fff; */
             color: white;
         }
         
@@ -219,16 +232,9 @@
             background-color: #1408bb;
             padding: 0.8em;            
             align-content: center;
-            box-sizing: border-box;
             height: 2em;
-            width: 13em;
+            width: 10em
         }
-        
-
-        #opdr9 .card .card_footer .footer_btn a::first-letter{
-            text-transform: capitalize;
-        }
-
     </style>
 </head>
 <body>
@@ -452,7 +458,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, commodi!</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">play Super Mario Run</a></div>
+                            <div class="footer_btn"><a href="#">Play Super Mario Run</a></div>
                         </div>
                     </div>
                     <div class="card flex"><div class="card_header"><img src="../res/img/mario_paper_maker.jpg" alt="Super Mario Maker"></div>
@@ -461,7 +467,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, rerum?</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">play Super Mario Maker</a></div>
+                            <div class="footer_btn"><a href="#">Play Super Mario Maker</a></div>
                         </div></div>
                     <div class="card flex"><div class="card_header"><img src="../res/img/super-mario-bros-3.jpg" alt="Super Mario 3"></div>
                         <div class="card_body">
@@ -469,7 +475,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto necessitatibus adipisci illo fuga?</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">play Super Mario 3</a></div>
+                            <div class="footer_btn"><a href="#">Play Super Mario 3</a></div>
                         </div>
                     </div>
                     <div class="card flex"><div class="card_header"><img src="../res/img/yoshi_s_island.webp" alt="Yoshi's island image"></div>
@@ -478,7 +484,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius!</p>
                         </div>
                         <div class="card_footer">
-                            <div class="footer_btn"><a href="#">play Yoshi's Island</a></div>
+                            <div class="footer_btn"><a href="#">Play Yoshi's Island</a></div>
                         </div>
                     </div>
                 </div>
