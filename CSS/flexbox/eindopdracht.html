@@ -6,8 +6,33 @@
     <title>Eindopdracht Flexbox - CSS (Week 2)</title>
     <link rel="stylesheet" href="../res/css/style.css">
     <style>
-        .card{
-            border: 2px double black;
+        .months{
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .month{
+            /* border: 2px solid black; */
+            width: 100px;
+            margin: 10px;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+            /* background-color: hotpink; */
+        }
+
+        .month p:first-child{
+            background-color: cadetblue;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .month p:nth-child(2),.month p:nth-child(3){
+            background-color: cornflowerblue;
         }
     </style>
 </head>
@@ -26,7 +51,80 @@
             </div>
         </header>
         <main>
-            section>(div.logo+)            
+            <div id="wrapper">
+                <section id="calendar">
+                <div class="year">
+                    <div>
+                        <h2>2020</h2>
+                        <div class="months flex">
+                            <div class="month">
+                                <p class="month_number">1</p>
+                                <p class="month_name">January</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">2</p>
+                                <p class="month_name">February</p>
+                                <p class="total_days_in_month">28</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">3</p>
+                                <p class="month_name">March</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">4</p>
+                                <p class="month_name">April</p>
+                                <p class="total_days_in_month">30</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">5</p>
+                                <p class="month_name">May</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">6</p>
+                                <p class="month_name">June</p>
+                                <p class="total_days_in_month">30</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">7</p>
+                                <p class="month_name">July</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">8</p>
+                                <p class="month_name">August</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">9</p>
+                                <p class="month_name">September</p>
+                                <p class="total_days_in_month">30</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">10</p>
+                                <p class="month_name">October</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">11</p>
+                                <p class="month_name">November</p>
+                                <p class="total_days_in_month">30</p>
+                            </div>
+                            <div class="month">
+                                <p class="month_number">12</p>
+                                <p class="month_name">December</p>
+                                <p class="total_days_in_month">31</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </section>
+            </div>
+            
         </main>
         <footer></footer>
     </div>

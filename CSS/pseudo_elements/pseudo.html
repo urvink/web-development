@@ -8,14 +8,17 @@
     <style>
         article{
             margin-bottom: 20px;
+            margin: 10px;
+            border: .5px solid rgba(178, 34, 34, 0.068) ;
         }
 
         pre{
             white-space: pre-line ;
             border: 2px dashed black;
             background-color: rgba(180, 176, 176, 0.26);
-            /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2); */
+            box-shadow: 8px 9px 6px 4px rgba(76, 76, 214, 0.507);
             margin-top: 2em;
+            margin-bottom: 30px;
             width: fit-content;
             padding: 5px;
         }
@@ -28,7 +31,7 @@
         }
 
         article .pseudo_definition{
-            background-color: rgba(168, 199, 224, 0.212);
+            background-color: rgba(135, 78, 241, 0.116);
             width: 100%;
             text-align: center;
         }
@@ -36,6 +39,10 @@
         article .pseudo_example{
             /* background-color: rgba(182, 157, 211, 0.315); */
             width: 100%;
+        }
+
+        ol li{
+            margin-left: 40px;
         }
 
         /* Opdracht 1, 2 en 3 */
@@ -59,9 +66,39 @@
             background-color: yellow;
         }
 
+        /* ::before */
+        .before_element::before{
+            content: "Ik ben een product van het ::before pseudo element ";
+            text-decoration: underline;
+            background-color: rgb(34, 202, 188);
+        }
+
         /* ::backdrop */
         video::backdrop{
             background: rgba(86, 204, 219, 0.842);
+        }
+
+        /* ::placeholder */
+        .placeholder textarea::placeholder{
+            color: dodgerblue;
+            background-color: rgba(226, 91, 37, 0.349);
+        }
+
+        /* ::marker */
+        .marker ul>li::marker{
+            font-weight: bold;
+            color: forestgreen;
+        }
+
+        .marker ol li::marker{
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        /* ::selection */
+        .selection p::selection{
+            background-color: violet;
+            color: turquoise;
         }
 
         /* Opdracht 4 */
@@ -302,75 +339,162 @@
                             </pre>
                         </div>
                     </article>
-                    <!-- ::cue -->
+                    <!-- ::cue (done)-->
                     <article>
                         <div class="pseudo_term">
                             <p>::cue</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Deze pseudo element wordt gebruikt om de ondertiteling in media met een VTT tracks te stylen</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example">
+                            <pre>
+                                ::cue{
+                                    text-decoration: italic;
+                                    text-decoration: underline;
+                                    background-color: hotpink;
+                                }
+                            </pre>
+                            <p>Hierdoor wordt de ondertiteling schuingedrukt, onderlijnd en met een "hotpink" achtergrond</p>
+                        </div>
                     </article>
-                    <!-- ::cue-region -->
+                    <!-- ::cue-region (done) -->
                     <article>
                         <div class="pseudo_term">
-                            <p>::cue-region</p>
+                            <p>::cue-region (Experimental)</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>De ::cue-region gebruikt bestaande cues om een groepering te maken en deze te stylen. Overigens nog geen browser ondersteuning!</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example">
+                            <pre>
+                                ::cue-region{
+                                    font-size: 4px;
+                                    color: red;
+                                }
+                            </pre>
+                            <p>De ondertiteling krijgt een rode letterkleur en is 4px groot</p>
+                        </div>
                     </article>
-                    <!-- ::before -->
-                    <article>
+                    <!-- ::before (done) -->
+                    <article id="before">
                         <div class="pseudo_term">
                             <p>::before</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p>Hier wordt voor het geselecteerd element een nieuw element aangemaakt</p>
+                            <p>Hier wordt v&oacute;&oacute;r het geselecteerd element een nieuw element aangemaakt</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example">
+                           
+                            <pre>
+                                .before::before{
+                                    content: "Ik ben een product van het ::before pseudo element";
+                                    text-decoration: underline;
+                                    background-color: honeydew;
+                                }
+                            </pre>
+
+                            <p class="before_element">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur.</p>
+                        </div>
                     </article>
-                    <!-- ::placeholder -->
+                    <!-- ::placeholder (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::placeholder</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Styling geven aan de placeholder attribuut van bijvoorbeeld een textarea-element</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example placeholder">
+
+                            <pre>
+                                .placeholder textarea::placeholder{
+                                    color: dodgerblue;
+                                    background-color: rgba(226, 91, 37, 0.349);
+                                }
+                            </pre>
+
+                            <textarea name="cheers" id="cheers" cols="10" rows="5" placeholder="Voer hier uw complimenten in!"></textarea>
+                        </div>
                     </article>
-                    <!-- ::part() -->
+                    <!-- ::part() (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::part()</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Dit element wordt gebruikt om styling te geven aan een custom element die in de shadow DOM zit en dus is niet met normale methodiek te stylen. 
+                                De part-attribuut is nodig om de custom-element te kunnen benaderen</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example">
+                            <code>
+                                <pre>
+                                    custon_element::part(waarde_van_part-attr){
+                                        background-color: red;
+                                        color: white;
+                                    }
+                                </pre>                                
+                            </code>
+                        </div>
                     </article>
-                    <!-- ::marker -->
+                    <!-- ::marker (done) -->
                     <article>
                         <div class="pseudo_term">
                             <p>::marker</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Hiermee is het markeer gedeelte van een lijst-item (li) te stylen</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example marker">
+
+                            <pre>
+                                .marker ul li::marker{
+                                    font-weight: bold;
+                                    color: forestgreen;
+                                }
+
+                                .marker ol li::marker{
+                                    font-size: 20px;
+                                    font-style: italic;
+                                }
+                            </pre>
+
+                            <ul>
+                                <li>001</li>
+                                <li>002
+                                    <ol>
+                                        <li>Pizza</li>
+                                        <li>Pizza</li>
+                                        <li>Pizza</li>
+                                        <li>Pizza</li>
+                                        <li>Pizza</li>
+                                    </ol>
+                                </li>
+                                <li>003</li>
+                                <li>004</li>
+                                <li>005</li>
+                            </ul>
+                        </div>
                     </article>
-                    <!-- ::grammar-error -->
+                    <!-- ::grammar-error (done) -->
                     <article>
                         <div class="pseudo_term">
-                            <p>::grammar-error</p>
+                            <p>::grammar-error (Experimental)</p>
                         </div>
                         <div class="pseudo_definition">
-                            <p></p>
+                            <p>Hierdoor kan de visuele representatie van een grammaticale fout worden geselecteerd voor het stylen</p>
                         </div>
-                        <div class="pseudo_example"></div>
+                        <div class="pseudo_example">
+
+                            <pre>
+                                ::grammar-error{
+                                    text-decoration: underline;
+                                    background-color: green;
+                                    color: white;
+                                }
+                            </pre>
+                            <p>Geen ondersteuning door browsers</p>
+                        </div>
                     </article>
                     <!-- ::first-letter (done) -->
                     <article>
@@ -381,12 +505,15 @@
                             <p>Het eerste letter van een element wordt geselecteerd en gestyled door de hierop volgende code</p>
                         </div>
                         <div class="pseudo_example first_letter">
-                            <p>Lorem ipsum dolor sit amet consectetur.</p>
-                            <pre>
-                                .first_letter::first-letter{
-                                    background-color: rgba(199, 5, 5, 0.377);
-                                }
-                            </pre>
+                            <code>
+                                <pre>
+                                    .first_letter::first-letter{
+                                        background-color: rgba(199, 5, 5, 0.377);
+                                    }
+                                </pre>
+                            </code>                            
+
+                            <p class="first_letter">Lorem ipsum dolor sit amet consectetur.</p>
 
                         </div>
                     </article>
@@ -399,15 +526,87 @@
                             <p>Dit CSS wordt uitgevoerd op de eerste lijn in een block element</p>
                         </div>
                         <div class="pseudo_example first_line">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Cum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, illo?
+                            <code>
+                                <pre>
+                                    .first_line::first-line{
+                                        color: rgb(28, 155, 2);
+                                        text-transform: uppercase;
+                                        background-color: rgba(231, 26, 26, 0.295);
+                                    }
+                                </pre>
+                            </code>                           
+
+                            <p class="first_line">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Cum, ex! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, illo?
                             </p>
+                        </div>
+                    </article>
+                    <!-- ::slotted (done) -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::slotted()</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Hiermee kan de slots elementen binnen een template-element geselecteerd worden voor styling</p>
+                        </div>
+                        <div class="pseudo_example">
                             <pre>
-                                .first_line::first-line{
-                                    color: rgb(28, 155, 2);
-                                    text-transform: uppercase;
-                                    background-color: rgba(231, 26, 26, 0.295);
+                                HTML:
+                                &lt;template id=&quot;person-template&quot;&gt;
+                                    &lt;div&gt;
+                                      &lt;h2&gt;Personal ID Card&lt;/h2&gt;
+                                      &lt;slot name=&quot;person-name&quot;&gt;NAME MISSING&lt;/slot&gt;
+                                      &lt;ul&gt;
+                                        &lt;li&gt;&lt;slot name=&quot;person-age&quot;&gt;AGE MISSING&lt;/slot&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;slot name=&quot;person-occupation&quot;&gt;OCCUPATION MISSING&lt;/slot&gt;&lt;/li&gt;
+                                      &lt;/ul&gt;
+                                    &lt;/div&gt;
+                                  &lt;/template&gt;
+
+                                  CSS:
+                                  ::slotted(person-name){
+                                      font-size: 20px;
+                                  }
+
+                            </pre>                            
+                        </div>
+                    </article>
+                    <!-- ::spelling-error (done) -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::spelling-error() - (Experimental)</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Op het moment dat er een spelfout geconstateerd wordt door de browser wordt er visueel duidelijk gemaakt dat er een fout(en) zijn gevonden. De styling van dit visueel kenbaar maken kan door spelling-error gestyled</p>
+                        </div>
+                        <div class="pseudo_example">
+
+                            <pre>
+                                &lt;p spellcheck=&quot;true&quot;&gt;Guiter&lt;/p&gt;
+                            </pre>
+                            <p>Er is geen browser die dit pseudo element ondersteund!</p>
+                            
+                        </div>
+                    </article>
+                    <!-- ::selection (done) -->
+                    <article>
+                        <div class="pseudo_term">
+                            <p>::selection()</p>
+                        </div>
+                        <div class="pseudo_definition">
+                            <p>Hiermee kan een styling gegeven worden aan een geselecteerd tekst</p>
+                        </div>
+                        <div class="pseudo_example selection">
+
+                            <pre>
+                                .selection p::selection{
+                                    background-color: violet;
+                                    color: turquoise;
                                 }
                             </pre>
+
+                            <h3>Maak een selectie op de tekst hieronder</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit nam recusandae suscipit incidunt, possimus facere!</p>
+                            
                         </div>
                     </article>
                         

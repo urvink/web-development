@@ -20,4 +20,7 @@ div#wrapper>(header>div.logo>img+(nav>ul>li*3))+main+footer
             </section>
 
             (div.card>(div.card_header>img)+(div.card_body>h3+p)+(div.card_footer>(div.footer_btn>a[href="#"]{Play $})))*4
-            div
+            
+            //Eindopdracht Flexbox
+            div>div.days>div.day>(p.day_nr+p.day_name+div_tasks>ul>li.task*5)*31
+
