@@ -28,43 +28,79 @@
         #opdr3{
             padding: 3px;
             background-color: gray;
+            width: 450px;
         }
 
         #opdr3 .container{           
             border: 1px solid black;
             padding: 4px;
-            height: 185px;
-            transition-property: justify-content;
-            transition-duration: 1000ms;
-            transition-timing-function: 500ms;
+            height: 100%;
         }
 
         #opdr3 .container .road{
-            margin-bottom: 5px;
-            justify-content: flex-start;            
-        }
-
-        #opdr3 .container .road:hover{
-            margin-bottom: 5px;
-            justify-content: flex-end;
-        }
-
-        #opdr3 .container .road p{
-            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+            margin-bottom: 5px;            
             padding: 5px;
-            width: 20px;
-            height: 20px;
-            justify-content: center;
-            align-items: center;
-            /* text-align: center; */
+            border: 1px solid black;            
+            transition: transform 2s, background-color 2s, border-radius 2s;
         }
-        
 
+        #opdr3 .container:hover .road{
+            transform: translate(400px, 0);
+            transition-timing-function: ease-in-out 4s;
+        }
+
+        /* All blocks get red background color */
+        #opdr3 .container:hover .road{
+            background-color: red;
+        }
+
+        /* Block #1 */
+        #opdr3 .container:hover #een{
+            border-radius: 50%;
+        }
+
+        /* Block #2 */
+
+        #opdr3 .container:hover #twee{
+            transition-timing-function: cubic-bezier(.94,1.88,1,-0.17);
+        }
+
+        #opdr3 .container:hover #twee{
+            border-radius: 10px;
+            transition-timing-function: ease-out;
+        }
+
+        /* Block #3 */
+        #opdr3 .container:hover #drie{
+            transition-timing-function: ease-out;
+        }
+
+        /* Block #4 */
+        #opdr3 .container:hover #vier{
+            transition-timing-function: ease-in;
+        }
+
+        /* Block #5 */
+        #opdr3 .container #vijf{
+            transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
+
+        }
+        #opdr3 .container:hover #vijf{
+            transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
+
+        }
+
+        #opdr3 .container .road p{            
+            text-align: center;
+        }
+
+        
         /* Opdracht 4 */
         #opdr4{
             padding: 3px;
             background-color: gray;
-            position: relative;
             height: 185px;
         }
 
@@ -73,27 +109,9 @@
             border: 1px solid black;
             padding: 4px;
             position: relative;
-            /* transition-property: top, left;
-            transition-duration: 1000ms; */
-        }
-
-        #opdr4 .container>div{
-            position: absolute;
-            background-color: blue;
-            width: fit-content;
-            transition-duration: 1000ms;
-            transition: top, left;
-        }
-
-        #opdr4 .container>div:hover{
-            position: absolute;
-            top: 50%;
-            left: 50%;
         }
 
         #opdr4 .container div .block{
-            justify-items: center;
-            justify-content: center;
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 3px;
@@ -111,7 +129,6 @@
             margin-bottom: 3px;
             width: 10px;
             height: 10px;
-            position: absolute;
             
         }
 
@@ -162,16 +179,16 @@
                 <div class="assignments">
                     <h3>Opdracht 3</h3>
                     <p>
-                        Maak een simpele transition wat de kleur van een tekst aanpast.
+                        Transitions kent verschillende transition-timing. Zie hieronder een voorbeeld. Maak het na.
                     </p>
                 </div>
                 <div id="opdr3" class="results">                    
                     <div class="container">
-                        <div class="road flex"><p class="een">1</p></div>
-                        <div class="road flex"><p class="twee">2</p></div>
-                        <div class="road flex"><p class="drie">3</p></div>
-                        <div class="road flex"><p class="vier">4</p></div>
-                        <div class="road flex"><p class="vijf">5</p></div>
+                        <div id="een" class="road"><p>1</p></div>
+                        <div id="twee" class="road"><p>2</p></div>
+                        <div id="drie" class="road"><p>3</p></div>
+                        <div id="vier" class="road"><p>4</p></div>
+                        <div id="vijf" class="road"><p>5</p></div>
                     </div>                    
                 </div>
             </section>
@@ -189,13 +206,12 @@
                 </div>
                 <div id="opdr4" class="results">
                     <div class="container">
-                        <p>1</p>
                         <div>
-                            <div class="block flex"><p>1</p></div>
-                            <div class="block flex"><p>2</p></div>
-                            <div class="block flex"><p>3</p></div>
-                            <div class="block flex"><p>4</p></div>
-                            <div class="block flex"><p>5</p></div>
+                            <div class="block"><p>1</p></div>
+                            <div class="block"><p>2</p></div>
+                            <div class="block"><p>3</p></div>
+                            <div class="block"><p>4</p></div>
+                            <div class="block"><p>5</p></div>
                         </div>
                         
                     </div>                                        
@@ -246,9 +262,7 @@
                 <div id="opdr7" class="results">                    
                                         
                 </div>
-            </section>
-
-            
+            </section>            
         </main>
         <footer></footer>
     </div>
