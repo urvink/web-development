@@ -15,13 +15,106 @@
             color: cornflowerblue;
             background-color: #fff;
             width: fit-content;
-            transition: all 2s;
+            transition: color, background-color 1000ms;
             font-size: large;
         }
 
         #opdr2 p:hover{
             color: whitesmoke;
             background-color: purple;
+        }
+
+        /* Opdracht 3 */
+        #opdr3{
+            padding: 3px;
+            background-color: gray;
+        }
+
+        #opdr3 .container{           
+            border: 1px solid black;
+            padding: 4px;
+            height: 185px;
+            position: relative;
+            transition-property: justify-content;
+            transition-duration: 1000ms;
+            transition-timing-function: 500ms;
+        }
+
+        #opdr3 .container .road{
+            margin-bottom: 5px;
+            justify-content: flex-start;
+            
+        }
+
+        #opdr3 .container .road:hover{
+            margin-bottom: 5px;
+            justify-content: flex-end;
+        }
+
+        #opdr3 .container .road p{
+            border: 1px solid black;
+            padding: 5px;
+            width: 20px;
+            height: 20px;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+        }
+        
+
+        /* Opdracht 4 */
+        #opdr4{
+            padding: 3px;
+            background-color: gray;
+            position: relative;
+            height: 185px;
+        }
+
+        #opdr4 .container{
+            height: 175px;            
+            border: 1px solid black;
+            padding: 4px;
+            position: relative;
+            /* transition-property: top, left;
+            transition-duration: 1000ms; */
+        }
+
+        #opdr4 .container>div{
+            position: absolute;
+            background-color: blue;
+            width: fit-content;
+            transition-duration: 1000ms;
+            transition: top, left;
+        }
+
+        #opdr4 .container>div:hover{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        #opdr4 .container div .block{
+            justify-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 3px;
+            width: 10px;
+            height: 10px;
+            transition: top 500ms;
+            transition: left 1000ms;
+        }
+
+        #opdr4 .container div .block{
+            justify-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 3px;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            
         }
 
     </style>
@@ -73,10 +166,15 @@
                     <p>
                         Maak een simpele transition wat de kleur van een tekst aanpast.
                     </p>
-                    
                 </div>
                 <div id="opdr3" class="results">                    
-                                        
+                    <div class="container flex">
+                        <div class="road flex"><p class="een">1</p></div>
+                        <div class="road flex"><p class="twee">2</p></div>
+                        <div class="road flex"><p class="drie">3</p></div>
+                        <div class="road flex"><p class="vier">4</p></div>
+                        <div class="road flex"><p class="vijf">5</p></div>
+                    </div>                    
                 </div>
             </section>
             <!-- Opdracht 4  -->
@@ -88,12 +186,21 @@
                         Zie hieronder een voorbeeld. 
                         Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na.
                     </p>
-
                     <figure><img src="../res/img/ond6_opdr4_fig.png" alt="Onderdeel 6 Opdracht 4 fig"></figure>
                     
                 </div>
-                <div id="opdr4" class="results">                    
-                                        
+                <div id="opdr4" class="results">
+                    <div class="container">
+                        <p>1</p>
+                        <div>
+                            <div class="block flex"><p>1</p></div>
+                            <div class="block flex"><p>2</p></div>
+                            <div class="block flex"><p>3</p></div>
+                            <div class="block flex"><p>4</p></div>
+                            <div class="block flex"><p>5</p></div>
+                        </div>
+                        
+                    </div>                                        
                 </div>
             </section>
             <!-- Opdracht 5  -->
@@ -125,6 +232,20 @@
                     
                 </div>
                 <div id="opdr6" class="results">                    
+                                        
+                </div>
+            </section>
+            <!-- Opdracht 7  -->
+            <section>
+                <div class="assignments">
+                    <h3>Opdracht 7 Extra opdracht (optioneel)</h3>
+                    <p>
+                        Zie de onderstaande animatie en probeer deze na te maken. Hier is gebruik gemaakt van keyframe animatie. 
+                    </p>
+                    <figure><img src="../res/img/ond6_opdr7_fig.png" alt="Onderdeel 6 Opdracht 7 fig"></figure>
+                    
+                </div>
+                <div id="opdr7" class="results">                    
                                         
                 </div>
             </section>
