@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transitions - CSS (Week 2)</title>
     <link rel="stylesheet" href="../res/css/style.css">
-    <style>
+    <style type="text/css">
         /* Opdracht 2 */
         #opdr2{
             position: relative;
@@ -28,7 +28,7 @@
         #opdr3{
             padding: 3px;
             background-color: gray;
-            width: 450px;
+            width: 800px;
         }
 
         #opdr3 .container{           
@@ -43,11 +43,11 @@
             margin-bottom: 5px;            
             padding: 5px;
             border: 1px solid black;            
-            transition: transform 2s, background-color 2s, border-radius 2s;
+            transition: transform 1500ms, background-color 2000ms, border-radius 2s;
         }
 
         #opdr3 .container:hover .road{
-            transform: translate(400px, 0);
+            transform: translate(750px, 0);
             transition-timing-function: ease-in-out 4s;
         }
 
@@ -61,6 +61,7 @@
             border-radius: 50%;
             transition-timing-function: ease;
         }
+
         #opdr3 .container:hover #een{
             border-radius: 50%;
             transition-timing-function: ease;
@@ -68,12 +69,12 @@
 
         /* Block #2 */
         #opdr3 .container #twee{
-            transition-timing-function: cubic-bezier(.94,1.88,1,-0.17);
+            transition-timing-function: ease-in
         }
-
+        
         #opdr3 .container:hover #twee{
             border-radius: 10px;
-            transition-timing-function: ease-out;
+            transition-timing-function: ease-in;
         }
 
         /* Block #3 */
@@ -87,11 +88,11 @@
 
         /* Block #4 */
         #opdr3 .container #vier{
-            transition-timing-function: ease-in;
+            transition-timing-function: ease-in-out;
         }
 
         #opdr3 .container:hover #vier{
-            transition-timing-function: ease-in;
+            transition-timing-function: ease-in-out;
         }
 
         /* Block #5 */
@@ -99,6 +100,7 @@
             transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
 
         }
+
         #opdr3 .container:hover #vijf{
             transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
         }
@@ -106,20 +108,20 @@
         #opdr3 .container .road p{            
             text-align: center;
         }
-
         
         /* Opdracht 4 */
         #opdr4{
             padding: 3px;
             background-color: gray;
             height: fit-content;
+            box-sizing: border-box;
         }
 
         #opdr4 .container{            
             border: 1px solid black;
             padding: 4px;
-
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            height: 396px;
+            position: relative;
         }
 
         #opdr4 .container .block{
@@ -128,12 +130,61 @@
             margin-bottom: 3px;
             width: 25px;
             height: 25px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            /* transition: top 4000ms ease 500ms; */
+            transition: transform 3000ms linear 2000ms;
         }
 
         #opdr4 .container .block{
             border: 1px solid black;
             text-align: center;
         }
+
+        #opdr4 .container:hover #een, #opdr4 .container:hover #twee{
+            /* top: 50px; */
+            transform: translate(350, -180);
+        }
+        
+        #opdr4 .container:hover #drie{
+            /* left: -390px; */
+            /* top: -5px; */
+        }
+
+        #opdr4 .container #een{
+            /* transform: translate(350px, -180px); */
+            /* right: 100px; */
+        }
+
+        #opdr4 .container:hover #een{
+            /* transform: translate(350px, -180px); */
+        }
+
+        .stage {
+    position: relative;
+    height: 4em;
+    background: #efefef;
+    text-align: center;
+  }
+  .box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    background: red;
+    line-height: 2em;
+    color: #fff;
+    -webkit-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    -moz-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    -o-transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+    transition: 1s bottom, 4s 1s left cubic-bezier(0,1,1,1);
+  }
+  #stage:hover #box {
+    left: 100px;
+    bottom: 2em;
+  }
+
 
     </style>
 </head>
@@ -203,18 +254,19 @@
                         Je kunt op verschillende properties transitions aangeven. 
                         Zie hieronder een voorbeeld. 
                         Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na.
-                    </p>
-                    <figure><img src="../res/img/ond6_opdr4_fig.png" alt="Onderdeel 6 Opdracht 4 fig"></figure>
-                    
+                    </p>                    
                 </div>
                 <div id="opdr4" class="results">
                     <div class="container">                        
-                        <div class="block"><p>1</p></div>
-                        <div class="block"><p>2</p></div>
-                        <div class="block"><p>3</p></div>
-                        <div class="block"><p>4</p></div>
-                        <div class="block"><p>5</p></div>
-                    </div>                                        
+                        <div id="een" class="block"><p>1</p></div>
+                        <div id="twee" class="block"><p>2</p></div>
+                        <div id="drie" class="block"><p>3</p></div>
+                    </div>
+
+                    
+                </div>
+                <div class="stage">
+                    <div class="box">.BOX</div>
                 </div>
             </section>
             <!-- Opdracht 5  -->
@@ -231,8 +283,8 @@
                     <figure><img src="../res/img/ond6_opdr5_fig.png" alt="Onderdeel 6 Opdracht 5 fig"></figure>
                     
                 </div>
-                <div id="opdr5" class="results">                    
-                                        
+                <div id="opdr5" class="results">
+
                 </div>
             </section>
             <!-- Opdracht 6  -->
