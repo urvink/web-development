@@ -59,11 +59,15 @@
         /* Block #1 */
         #opdr3 .container:hover #een{
             border-radius: 50%;
+            transition-timing-function: ease;
+        }
+        #opdr3 .container:hover #een{
+            border-radius: 50%;
+            transition-timing-function: ease;
         }
 
         /* Block #2 */
-
-        #opdr3 .container:hover #twee{
+        #opdr3 .container #twee{
             transition-timing-function: cubic-bezier(.94,1.88,1,-0.17);
         }
 
@@ -73,11 +77,19 @@
         }
 
         /* Block #3 */
+        #opdr3 .container #drie{
+            transition-timing-function: ease-out;
+        }
+
         #opdr3 .container:hover #drie{
             transition-timing-function: ease-out;
         }
 
         /* Block #4 */
+        #opdr3 .container #vier{
+            transition-timing-function: ease-in;
+        }
+
         #opdr3 .container:hover #vier{
             transition-timing-function: ease-in;
         }
@@ -89,7 +101,6 @@
         }
         #opdr3 .container:hover #vijf{
             transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
-
         }
 
         #opdr3 .container .road p{            
@@ -101,35 +112,27 @@
         #opdr4{
             padding: 3px;
             background-color: gray;
-            height: 185px;
+            height: fit-content;
         }
 
-        #opdr4 .container{
-            height: 175px;            
+        #opdr4 .container{            
             border: 1px solid black;
             padding: 4px;
-            position: relative;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
         }
 
-        #opdr4 .container div .block{
+        #opdr4 .container .block{
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 3px;
-            width: 10px;
-            height: 10px;
-            transition: top 500ms;
-            transition: left 1000ms;
+            width: 25px;
+            height: 25px;
         }
 
-        #opdr4 .container div .block{
-            justify-items: center;
-            justify-content: center;
+        #opdr4 .container .block{
             border: 1px solid black;
-            padding: 10px;
-            margin-bottom: 3px;
-            width: 10px;
-            height: 10px;
-            
+            text-align: center;
         }
 
     </style>
@@ -205,15 +208,12 @@
                     
                 </div>
                 <div id="opdr4" class="results">
-                    <div class="container">
-                        <div>
-                            <div class="block"><p>1</p></div>
-                            <div class="block"><p>2</p></div>
-                            <div class="block"><p>3</p></div>
-                            <div class="block"><p>4</p></div>
-                            <div class="block"><p>5</p></div>
-                        </div>
-                        
+                    <div class="container">                        
+                        <div class="block"><p>1</p></div>
+                        <div class="block"><p>2</p></div>
+                        <div class="block"><p>3</p></div>
+                        <div class="block"><p>4</p></div>
+                        <div class="block"><p>5</p></div>
                     </div>                                        
                 </div>
             </section>
