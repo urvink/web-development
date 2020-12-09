@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,11 @@
     <link rel="stylesheet" href="../res/css/style.css">
     <style type="text/css">
         /* Opdracht 2 */
-        #opdr2{
+        #opdr2 {
             position: relative;
         }
 
-        #opdr2 p{
+        #opdr2 p {
             color: cornflowerblue;
             background-color: #fff;
             width: fit-content;
@@ -19,105 +20,105 @@
             font-size: large;
         }
 
-        #opdr2 p:hover{
+        #opdr2 p:hover {
             color: whitesmoke;
             background-color: purple;
         }
 
         /* Opdracht 3 */
-        #opdr3{
+        #opdr3 {
             padding: 3px;
             background-color: gray;
             width: 800px;
         }
 
-        #opdr3 .container{           
+        #opdr3 .container {
             border: 1px solid black;
             padding: 4px;
             height: 100%;
         }
 
-        #opdr3 .container .road{
+        #opdr3 .container .road {
             width: 25px;
             height: 25px;
-            margin-bottom: 5px;            
+            margin-bottom: 5px;
             padding: 5px;
-            border: 1px solid black;            
+            border: 1px solid black;
             transition: transform 1500ms, background-color 2000ms, border-radius 2s;
         }
 
-        #opdr3 .container:hover .road{
+        #opdr3 .container:hover .road {
             transform: translate(750px, 0);
             transition-timing-function: ease-in-out 4s;
         }
 
         /* All blocks get red background color */
-        #opdr3 .container:hover .road{
+        #opdr3 .container:hover .road {
             background-color: red;
         }
 
         /* Block #1 */
-        #opdr3 .container:hover #een{
+        #opdr3 .container:hover #een {
             border-radius: 50%;
             transition-timing-function: ease;
         }
 
-        #opdr3 .container:hover #een{
+        #opdr3 .container:hover #een {
             border-radius: 50%;
             transition-timing-function: ease;
         }
 
         /* Block #2 */
-        #opdr3 .container #twee{
+        #opdr3 .container #twee {
             transition-timing-function: ease-in
         }
-        
-        #opdr3 .container:hover #twee{
+
+        #opdr3 .container:hover #twee {
             border-radius: 10px;
             transition-timing-function: ease-in;
         }
 
         /* Block #3 */
-        #opdr3 .container #drie{
+        #opdr3 .container #drie {
             transition-timing-function: ease-out;
         }
 
-        #opdr3 .container:hover #drie{
+        #opdr3 .container:hover #drie {
             transition-timing-function: ease-out;
         }
 
         /* Block #4 */
-        #opdr3 .container #vier{
+        #opdr3 .container #vier {
             transition-timing-function: ease-in-out;
         }
 
-        #opdr3 .container:hover #vier{
+        #opdr3 .container:hover #vier {
             transition-timing-function: ease-in-out;
         }
 
         /* Block #5 */
-        #opdr3 .container #vijf{
-            transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
+        #opdr3 .container #vijf {
+            transition-timing-function: cubic-bezier(.24, 1.08, 1, -0.77);
 
         }
 
-        #opdr3 .container:hover #vijf{
-            transition-timing-function: cubic-bezier(.24,1.08,1,-0.77);
+        #opdr3 .container:hover #vijf {
+            transition-timing-function: cubic-bezier(.24, 1.08, 1, -0.77);
         }
 
-        #opdr3 .container .road p{            
+        #opdr3 .container .road p {
             text-align: center;
         }
-        
+
         /* Opdracht 4 */
-        #opdr4{
+        #opdr4 {
             padding: 3px;
             background-color: gray;
             height: fit-content;
             box-sizing: border-box;
         }
 
-        #opdr4 .container{            
+        #opdr4 .container {
             border: 1px solid black;
             padding: 4px;
             height: 396px;
@@ -125,7 +126,7 @@
             margin: 0 auto;
         }
 
-        #opdr4 .container .block{
+        #opdr4 .container .block {
             border: 1px solid black;
             padding: 10px;
             margin-bottom: 3px;
@@ -137,42 +138,43 @@
             transition: top 2000ms ease 500ms, left 500ms ease 2000ms, transform 1000ms linear 1000ms;
         }
 
-        #opdr4 .container .block{
+        #opdr4 .container .block {
             border: 1px solid black;
             text-align: center;
         }
 
         /* Blok #1 en #2 */
-        #opdr4 .container:hover #een, #opdr4 .container:hover #twee{
+        #opdr4 .container:hover #een,
+        #opdr4 .container:hover #twee {
             top: 5px;
         }
 
         /* Blok #1 */
-        #opdr4 .container:hover #een{
+        #opdr4 .container:hover #een {
             transform: translateX(433px);
             top: 0;
         }
 
         /* Blok #2 */
-        #opdr4 .container:hover #twee{
+        #opdr4 .container:hover #twee {
             transform: translateX(-481px);
             top: 0;
         }
 
         /* Blok 3 */
-        #opdr4 .container:hover #drie{
+        #opdr4 .container:hover #drie {
             transform: translateX(-481px);
         }
 
         /* Opdracht 5 */
-        #opdr5{
+        #opdr5 {
             width: fit-content;
             background-color: #77f;
             padding: 10px;
             box-sizing: border-box;
         }
 
-        #opdr5 .container{
+        #opdr5 .container {
             border: 1px solid black;
             height: 350px;
             width: 350px;
@@ -180,7 +182,7 @@
             z-index: 2;
         }
 
-        #opdr5 .container .curtain{
+        #opdr5 .container .curtain {
             display: inline-block;
             height: 140px;
             width: 140px;
@@ -193,11 +195,11 @@
             transition: transform 1000ms ease;
         }
 
-        #opdr5 .container:hover .curtain{
+        #opdr5 .container:hover .curtain {
             transform: translate(130px, 65px) rotate(30deg);
         }
 
-        #opdr5 .container .content{
+        #opdr5 .container .content {
             position: absolute;
             top: 0;
             width: 150px;
@@ -209,35 +211,35 @@
             transition: background-color 4000ms ease-in;
         }
 
-        #opdr5 .container:hover .content{
+        #opdr5 .container:hover .content {
             background-color: rgb(255, 0, 0);
         }
 
-        #opdr5 .container .content img{
+        #opdr5 .container .content img {
             position: absolute;
             height: 140px;
             top: 0;
             /* background-color: red; */
             box-sizing: border-box;
-            
+
         }
 
         /* Opdracht 6 */
-        #opdr6{
+        #opdr6 {
             display: flex;
             justify-content: center;
         }
 
-        #opdr6 .deck{            
+        #opdr6 .deck {
             width: 900px;
             height: 350px;
-            background-color: #ddd;            
+            background-color: #ddd;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
         }
 
-        #opdr6 .deck .card{
+        #opdr6 .deck .card {
             padding: 5px;
             display: flex;
             border: 1px solid black;
@@ -249,15 +251,16 @@
             background-color: rgba(82, 10, 82, 0.295);
         }
 
-        #opdr6 .deck .card #one{
+        #opdr6 .deck .card #one {
             left: 200px;
         }
-        #opdr6 .deck .card #two{
+
+        #opdr6 .deck .card #two {
             left: 300px;
         }
-
     </style>
 </head>
+
 <body>
     <div id="wrapper">
         <header>
@@ -280,10 +283,11 @@
                     <h3>Opdracht 1</h3>
                     <p>
                         Zoek uit wat transitions zijn en beschrijf met eigen woorden wat het betekent.
-                    </p>                    
+                    </p>
                 </div>
                 <div id="opdr1" class="results">
-                    Het aanpassen van CSS properties en de verandering te vertragen door dit verandering te doen voldoen aan bepaalde eisen, bijvoorbeeld tijd, snelheid, etc
+                    Het aanpassen van CSS properties en de verandering te vertragen door dit verandering te doen voldoen
+                    aan bepaalde eisen, bijvoorbeeld tijd, snelheid, etc
                 </div>
             </section>
             <!-- Opdracht 2  -->
@@ -292,25 +296,31 @@
                     <h3>Opdracht 2</h3>
                     <p>
                         Maak een simpele transition wat de kleur van een tekst aanpast.
-                    </p>                    
+                    </p>
                 </div>
                 <div id="opdr2" class="results">
-                    <p>Lorem ipsum dolor sit amet.</p>                                        
+                    <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </section>
             <!-- Opdracht 3  -->
             <section>
                 <div class="assignments">
-                <div class="assignments">rotate(30deg)ten en maak het ongeveer hetzelfde na.
-                    </p>                    
-                </div>
-                <div id="opdr4" class="results">
-                    <div class="container">                        
-                        <div id="een" class="block"><p>1</p></div>
-                        <div id="twee" class="block"><p>2</p></div>
-                        <div id="drie" class="block"><p>3</p></div>
+                    <div class="assignments">rotate(30deg)ten en maak het ongeveer hetzelfde na.
+                        </p>
                     </div>
-                </div>
+                    <div id="opdr4" class="results">
+                        <div class="container">
+                            <div id="een" class="block">
+                                <p>1</p>
+                            </div>
+                            <div id="twee" class="block">
+                                <p>2</p>
+                            </div>
+                            <div id="drie" class="block">
+                                <p>3</p>
+                            </div>
+                        </div>
+                    </div>
             </section>
             <!-- Opdracht 5  -->
             <section>
@@ -321,7 +331,7 @@
                     </p>
 
                     <figure><img src="../res/img/ond6_opdr5_fig.png" alt="Onderdeel 6 Opdracht 5 fig"></figure>
-                    
+
                 </div>
                 <div id="opdr5" class="results">
                     <div class="container">
@@ -335,8 +345,9 @@
                 <div class="assignments">
                     <h3>Opdracht 6</h3>
                     <p>
-                        Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen creativiteit erop los latenP.
-                    </p>                    
+                        Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen
+                        creativiteit erop los latenP.
+                    </p>
                 </div>
                 <div id="opdr6" class="results">
                     <div class="deck">
@@ -393,17 +404,19 @@
                 <div class="assignments">
                     <h3>Opdracht 7 Extra opdracht (optioneel)</h3>
                     <p>
-                        Zie de onderstaande animatie en probeer deze na te maken. Hier is gebruik gemaakt van keyframe animatie. 
+                        Zie de onderstaande animatie en probeer deze na te maken. Hier is gebruik gemaakt van keyframe
+                        animatie.
                     </p>
                     <figure><img src="../res/img/ond6_opdr7_fig.png" alt="Onderdeel 6 Opdracht 7 fig"></figure>
-                    
+
                 </div>
-                <div id="opdr7" class="results">                    
-                                        
+                <div id="opdr7" class="results">
+
                 </div>
-            </section>            
+            </section>
         </main>
         <footer></footer>
     </div>
 </body>
+
 </html>
