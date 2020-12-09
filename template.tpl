@@ -24,3 +24,6 @@ div#wrapper>(header>div.logo>img+(nav>ul>li*3))+main+footer
             //Eindopdracht Flexbox
             div>div.days>div.day>(p.day_nr+p.day_name+div_tasks>ul>li.task*5)*31
 
+            //Opdracht 6 Transitions
+            .deck>(.card>((.card_head>p>lorem3)+(.card_body>h3>{Title of the article}))+.card_footer>lorem2)*5
+
