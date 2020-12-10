@@ -135,7 +135,7 @@
             top: 50%;
             left: 50%;
             position: absolute;
-            transition: top 2000ms ease 500ms, left 500ms ease 2000ms, transform 1000ms linear 1000ms;
+            transition: top 2000ms ease 500ms, left 500ms ease 2000ms, transform 1000ms linear 1000ms, bottom 2000ms ease 1000ms;
         }
 
         #opdr4 .container .block {
@@ -225,39 +225,102 @@
         }
 
         /* Opdracht 6 */
+
+        /*
         #opdr6 {
             display: flex;
             justify-content: center;
         }
 
         #opdr6 .deck {
-            width: 900px;
+            /* display: flex; 
+            width: 100%;
             height: 350px;
             background-color: #ddd;
             flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            flex-wrap: nowrap;
+            /* justify-content: center; */
+            /* align-items: center; 
+            position: relative;
         }
 
         #opdr6 .deck .card {
-            padding: 5px;
             display: flex;
+            /* margin-left: -50px; 
+            padding: 5px;
             border: 1px solid black;
             border-radius: 10px;
             flex-direction: column;
             justify-content: space-between;
             height: 250px;
             width: 150px;
-            background-color: rgba(82, 10, 82, 0.295);
+            /* background-color: rgba(82, 10, 82, 0.295); */
+            /* position: absolute; */
+            /* transition: left 2000ms ease; 
+        }
+        #opdr6 .deck:not(:first-child) ~ .card{
+            position: absolute;
+            margin-left: -50px;
+            /* z-index: 3; 
         }
 
-        #opdr6 .deck .card #one {
-            left: 200px;
+        /* #opdr6 .deck .card:not(:first-child) ~ .card{
+            margin-left: 30px;
+            display: inline-block;
+            transform: translateX(50px);
+            /* position: absolute; 
+        }        */
+
+        #opdr6{
+            /* display: flex; */
         }
 
-        #opdr6 .deck .card #two {
-            left: 300px;
+        #opdr6 .deck{
+            height: 450px;
+            width: 100%;
+            background-color: #ddd;
+            position: relative;
+            /* padding: 50px; */
         }
+        #opdr6 .deck .card {
+            display: inline-block;
+            /* display: flex; */
+            /* margin-left: -50px;  */
+            /* padding: 5px; */
+            border: 1px solid black;
+            border-radius: 10px;
+            /* flex-direction: column; */
+            /* justify-content: space-between; */
+            height: 250px;
+            /* position: relative; */
+            /* position: absolute; */
+            width: 150px;
+            /* background-color: rgba(82, 10, 82, 0.295); */
+            
+            /* transition: left 2000ms ease; */
+        }
+
+        #opdr6 .deck .card:not(:first-child){
+            margin-left: -40px;
+            /* position: absolute; */
+            /* position: relative; */
+        }
+
+        #opdr6 .deck #two {            
+            background-color: green;
+        }
+
+        #opdr6 .deck #three {
+            background-color: purple;
+        }
+
+        #opdr6 .deck #four {
+            background-color: pink;
+        }
+
+        #opdr6 .deck #five {
+            background-color: red;
+        }       
     </style>
 </head>
 
@@ -346,7 +409,7 @@
                     <h3>Opdracht 6</h3>
                     <p>
                         Zie de onderstaande card deck. Kun jij deze zelf namaken? Je mag uiteraard weer je eigen
-                        creativiteit erop los latenP.
+                        creativiteit erop los laten.
                     </p>
                 </div>
                 <div id="opdr6" class="results">
