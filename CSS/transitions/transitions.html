@@ -135,7 +135,9 @@
             top: 50%;
             left: 50%;
             position: absolute;
-            transition: top 2000ms ease 500ms, left 500ms ease 2000ms, transform 1000ms linear 1000ms, bottom 2000ms ease 1000ms;
+            /* transition: top 2000ms ease 1100ms, transform 1000ms linear 1800ms; */
+            
+
         }
 
         #opdr4 .container .block {
@@ -144,25 +146,34 @@
         }
 
         /* Blok #1 en #2 */
+        #opdr4 .container #een, #opdr4 .container #twee{
+            transition:  top 1500ms ease 500ms, transform 1000ms ease 1000ms;
+        }
+
         #opdr4 .container:hover #een,
         #opdr4 .container:hover #twee {
-            top: 5px;
+            top: 0;
         }
 
         /* Blok #1 */
         #opdr4 .container:hover #een {
             transform: translateX(433px);
-            top: 0;
+            /* top: 0; */
         }
 
         /* Blok #2 */
         #opdr4 .container:hover #twee {
             transform: translateX(-481px);
-            top: 0;
+            /* top: 0; */
         }
 
         /* Blok 3 */
-        #opdr4 .container:hover #drie {
+        #opdr4 .container #drie{
+            transition: transform 1500ms ease 1250ms, top 3500ms ease 2500ms;
+        }
+
+        #opdr4 .container:hover #drie {            
+            top: 358px;
             transform: translateX(-481px);
         }
 
@@ -225,102 +236,78 @@
         }
 
         /* Opdracht 6 */
-
-        /*
-        #opdr6 {
-            display: flex;
-            justify-content: center;
-        }
-
-        #opdr6 .deck {
-            /* display: flex; 
-            width: 100%;
-            height: 350px;
-            background-color: #ddd;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            /* justify-content: center; */
-            /* align-items: center; 
-            position: relative;
-        }
-
-        #opdr6 .deck .card {
-            display: flex;
-            /* margin-left: -50px; 
-            padding: 5px;
-            border: 1px solid black;
-            border-radius: 10px;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 250px;
-            width: 150px;
-            /* background-color: rgba(82, 10, 82, 0.295); */
-            /* position: absolute; */
-            /* transition: left 2000ms ease; 
-        }
-        #opdr6 .deck:not(:first-child) ~ .card{
-            position: absolute;
-            margin-left: -50px;
-            /* z-index: 3; 
-        }
-
-        /* #opdr6 .deck .card:not(:first-child) ~ .card{
-            margin-left: 30px;
-            display: inline-block;
-            transform: translateX(50px);
-            /* position: absolute; 
-        }        */
-
-        #opdr6{
-            /* display: flex; */
-        }
-
         #opdr6 .deck{
             height: 450px;
             width: 100%;
             background-color: #ddd;
             position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             /* padding: 50px; */
         }
+
         #opdr6 .deck .card {
-            display: inline-block;
-            /* display: flex; */
-            /* margin-left: -50px;  */
-            /* padding: 5px; */
+            display: inline-flex;
+            box-sizing: border-box;
+            display: flex;
+            margin-left: -50px; 
+            padding: 35px;
             border: 1px solid black;
-            border-radius: 10px;
-            /* flex-direction: column; */
-            /* justify-content: space-between; */
-            height: 250px;
-            /* position: relative; */
-            /* position: absolute; */
-            width: 150px;
-            /* background-color: rgba(82, 10, 82, 0.295); */
+            border-radius: 35px;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            width: 200px;
+            color: rgb(49, 71, 13);
+            background-color: #3F51B5;
+            border: 1px solid black;
             
-            /* transition: left 2000ms ease; */
+            transition: margin 500ms ease;
         }
 
         #opdr6 .deck .card:not(:first-child){
-            margin-left: -40px;
-            /* position: absolute; */
-            /* position: relative; */
+            margin-left: -80px;
         }
 
-        #opdr6 .deck #two {            
-            background-color: green;
+        #opdr6 .deck .card:hover~.card{
+            color: red;
         }
 
-        #opdr6 .deck #three {
-            background-color: purple;
+        #opdr6 .deck .card:hover{            
+            margin: 0 80px 25px -150px;
         }
 
-        #opdr6 .deck #four {
-            background-color: pink;
+        /* Opdracht 7 (optioneel) */
+        #opdr7 .stage{
+            width: 500px;
+            height: 350px;
+            background-color: black;
+            margin: auto;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
 
-        #opdr6 .deck #five {
-            background-color: red;
-        }       
+        #opdr7 .stage .shape{
+           
+            height: 200px;
+            width: 200px;
+            background-color: rgb(183, 30, 243);
+            border-radius: 50%
+
+            /* transition: ; */
+        }
+
+        #opdr7 .stage p{
+            color: blanchedalmond;
+            font-size: xx-large;margin: 40px;
+
+        }
+
+        #opdr7 .stage:hover .shape{
+        }
     </style>
 </head>
 
@@ -365,10 +352,46 @@
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </section>
-            <!-- Opdracht 3  -->
+            <!-- Opdracht 3 -->
             <section>
                 <div class="assignments">
-                    <div class="assignments">rotate(30deg)ten en maak het ongeveer hetzelfde na.
+                    <div class="assignments">
+                        <h3>Opdracht 3</h3>
+                        <p>
+                            Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. 
+                            Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na.
+
+                        </p>
+                    </div>
+                    <div id="opdr3" class="results">
+                        <div class="container">
+                            <div id="een" class="road">
+                                <p>1</p>
+                            </div>
+                            <div id="twee" class="road">
+                                <p>2</p>
+                            </div>
+                            <div id="drie" class="road">
+                                <p>3</p>
+                            </div>
+                            <div id="vier" class="road">
+                                <p>4</p>
+                            </div>
+                            <div id="vijf" class="road">
+                                <p>5</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- Opdracht 4  -->
+            <section>
+                <div class="assignments">
+                    <div class="assignments">
+                        <h3>Opdracht 4</h3>
+                        <p>
+                            Je kunt op verschillende properties transitions aangeven. Zie hieronder een voorbeeld. 
+                            Zoek uit op welke properties de transitions zitten en maak het ongeveer hetzelfde na.
+
                         </p>
                     </div>
                     <div id="opdr4" class="results">
@@ -392,9 +415,6 @@
                     <p>
                         Hieronder zie je wederom een voorbeeld rotate(30deg)raard toegestaan.
                     </p>
-
-                    <figure><img src="../res/img/ond6_opdr5_fig.png" alt="Onderdeel 6 Opdracht 5 fig"></figure>
-
                 </div>
                 <div id="opdr5" class="results">
                     <div class="container">
@@ -416,12 +436,12 @@
                     <div class="deck">
                         <div id="one" class="card">
                             <div class="card_head">
-                                <p>Lorem, ipsum dolor.</p>
+                                <p>Consequatur, veniam eaque.</p>
                             </div>
-                            <div class="card_body">
+                            <div four class="card_body">
                                 <h3>Title of the article</h3>
                             </div>
-                            <div class="card_footer">Lorem, ipsum.</div>
+                            <div five class="card_footer">Obcaecati, iure.</div>
                         </div>
                         <div id="two" class="card">
                             <div class="card_head">
@@ -470,10 +490,12 @@
                         Zie de onderstaande animatie en probeer deze na te maken. Hier is gebruik gemaakt van keyframe
                         animatie.
                     </p>
-                    <figure><img src="../res/img/ond6_opdr7_fig.png" alt="Onderdeel 6 Opdracht 7 fig"></figure>
-
                 </div>
                 <div id="opdr7" class="results">
+                    <div class="stage">
+                        <p>Wordt aan gewerkt!!</p>
+                        <div class="shape"></div>
+                    </div>
 
                 </div>
             </section>
