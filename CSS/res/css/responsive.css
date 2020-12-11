@@ -97,13 +97,13 @@ nav a {
 /* Opdracht 1 and 5 */
 @media only screen and (max-width: 480px) and (orientation: portrait){
     .page-title{width: 270px;}
-    .logo, p{
-        text-orientation: sideways;
+    .logo, h1{
+        background-color: brown;
     }
 
 }
 
-/* Opdracht 2 and 6 */
+/* Opdracht 2 */
 @media only screen and (min-width: 320px) and (max-width: 480px){
     .gallery-item .thumbnail{
         width: 95%;
@@ -111,10 +111,10 @@ nav a {
 }
 
 /* Opdracht 3 */
-@media only screen and (min-resolution: 96dpi){
+@media only screen and (max-resolution: 90dpi){
     .logo{
         background-color: blue;
-        rotate: 50deg;
+        image-orientation: 90deg;
     }
 }
 
@@ -126,5 +126,16 @@ nav a {
     }
 }
 
-/* Opdracht 5 */
-/* @media only screen and () */
+/* Opdracht 6 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    .page-title, .page-description{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .gallery{
+        display: inline-flex;
+        justify-content: right;
+    }
+}
