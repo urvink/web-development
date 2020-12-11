@@ -8,7 +8,156 @@ Dummy teksten: https://www.lipsum.com/
 Voor responsive design, zie 
  */
 
- *{
-    margin: o;
-    padding: 0;
- }
+*{
+margin: o;
+padding: 0;
+}
+
+body{
+font-family: 'Lobster', cursive;
+}
+
+h2{
+display: flex;
+justify-content: center;
+text-align: center;
+}
+
+h1 {
+    color: rgb(128, 179, 128); 
+} 
+
+h2{
+    /* background-color: #fff; */
+    width: fit-content;
+}
+
+nav ul li{
+list-style-type: none;
+}
+
+/* Utils */
+.flex{
+    display: flex;
+}
+
+.border{
+    border:1px solid black;
+}
+
+.debug{
+    color: red;
+    background-color: hotpink;
+}
+
+.flex_center{
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper{
+width: 85%;
+height: 100%;
+margin: auto;
+background-color: #494848;
+}
+
+section .main_container{
+margin: 0 auto;
+background-color: red;
+/* width: 30px; */
+width: 5%;
+}
+
+section .populair_dishes{
+/* background-color: #fff; */
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+
+section .populair_dishes .card_container{
+    justify-content: space-around;
+}
+
+section .populair_dishes .card{
+    width: 250px;
+    flex-direction: column;
+}
+
+section .populair_dishes .card .card_thumb{
+    background-color: aqua;
+    height: fit-content;
+    width: fit-content;
+}
+
+section .populair_dishes .card .card_thumb a{
+
+}
+
+section .populair_dishes .card .card_thumb img{
+    width: 120px;
+}
+
+.card_footer a{
+
+}
+
+.content{
+    flex-direction: row;
+}
+
+section .menu_container{
+    flex-direction: column;
+    align-items: center;
+}
+
+section .menu_container content .menus{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    /* background-color: aqua; */
+}
+
+.menu_item{
+    height: 120px;
+    width: 80px;
+}
+
+section .cooking { 
+    background: url("../img/cooking.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 310px;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding: 100px;
+} 
+/* img height: 500px; width: 1900px; left: -10px; top: 10px; z-index: -1; */
+
+p ::before {
+    position: absolute; 
+    content: ''; 
+    color: rgb(97, 135, 216); 
+}
+
+button {
+    color: aqua; 
+    opacity: 0, 0; 
+    border: 2px solid black;
+    outline: none;
+    padding: 20px;
+    opacity: 100%;
+}
+
+footer {
+    background-color: rgb(128, 179, 128);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(97, 135, 216);
+    text-align: center;    
+    justify-content: space-around;
+}
