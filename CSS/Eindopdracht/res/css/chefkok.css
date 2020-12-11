@@ -7,3 +7,8 @@ font-family: 'Lobster', cursive;
 Dummy teksten: https://www.lipsum.com/ 
 Voor responsive design, zie 
  */
+
+ *{
+    margin: o;
+    padding: 0;
+ }
