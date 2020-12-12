@@ -17,14 +17,23 @@ body{
 font-family: 'Lobster', cursive;
 }
 
-h2{
-display: flex;
-justify-content: center;
-text-align: center;
+.cooking>div{
+    color: #6187d8;
+    width: 250px;
+    /* font-size: xx-large; */
+    font-size: 10px;    
 }
 
-h1 {
-    color: rgb(128, 179, 128); 
+.cooking>div h2{
+    font-size: xx-large;
+}
+
+.cooking>div p, button{
+
+}
+h1, button{
+    color: #6187d8;
+    font-weight: bold;
 } 
 
 h2{
@@ -67,6 +76,17 @@ margin: 0 auto;
 background-color: red;
 /* width: 30px; */
 width: 5%;
+}
+
+button {
+    /* color: aqua; */
+    /* opacity: 0, 0;  */
+    border: 2px solid black;
+    outline: none;
+    width: 75px;
+    height: 25px;
+    padding: 16px;
+    /* opacity: 100%; */
 }
 
 section .populair_dishes{
@@ -141,15 +161,6 @@ p ::before {
     position: absolute; 
     content: ''; 
     color: rgb(97, 135, 216); 
-}
-
-button {
-    color: aqua; 
-    opacity: 0, 0; 
-    border: 2px solid black;
-    outline: none;
-    padding: 20px;
-    opacity: 100%;
 }
 
 footer {
