@@ -225,9 +225,6 @@ footer {
     height: 250px;
 }
 
-footer .footer{
-    /* width: 65%; */
-}
 footer .footernav{
     flex-direction: column;
     justify-content: flex-start;
