@@ -4,6 +4,10 @@ h1 {
   text-align: center;
 }
 
+h1:hover {
+  background-color: #ddd;
+}
+
 .banner {
   font-family: "Pacifico", cursive;
   height: 400px;

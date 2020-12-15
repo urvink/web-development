@@ -13,6 +13,12 @@ $standard-border: 4px solid black;
 h1 {
     font-family: Roboto, sans-serif;
     text-align: center;
+
+    // Opdracht 4
+    // Maakt een nieuw block aan met de parent-element en daar de :hover-selector erop af
+    &:hover{
+        background-color: #ddd;
+    }
 }
 
 .banner {
@@ -36,6 +42,7 @@ h1 {
         }
     }
 }
+
 .container {
     text-align: center;
     font-family: "Pacifico", cursive;

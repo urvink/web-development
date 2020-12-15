@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACUA,AAAA,MAAM,CAAA;EACF,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EAXb,gBAAgB,EAYM,OAAO;EAX7B,KAAK,EAWmC,OAAO;CAClD;;AAJD,AANI,MAME,AAND,MAAM,CAAA;EACH,gBAAgB,EAQW,OAAO;EAPlC,KAAK,EAOwC,OAAO;CANvD;;ACKL,AAAA,oBAAoB,CAAA;EAChB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EAbZ,gBAAgB,EAeK,OAAO;CAK/B;;AATD,AATI,oBASgB,AATf,MAAM,CAAA;EACH,gBAAgB,EAYU,OAAO;EAVjC,UAAU,EAAE,gBAAgB,CAUO,MAAM;CAR5C",
+    "sources": [
+        "style.scss",
+        "_button.scss",
+        "_block.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

@@ -1,0 +1,22 @@
+@mixin block-trans($start_color, $end_color, $duration) {
+    background-color: $start_color;
+
+    &:hover{
+        background-color: $end_color;
+
+        transition: background-color $duration;
+        
+    }
+}
+
+
+.colorChangingSquare{
+    width: 450px;
+    height: 80px;
+    // background-color: #000;
+    @include block-trans(#ef7a22, #2296ef, 1000ms);
+
+    
+
+    
+}

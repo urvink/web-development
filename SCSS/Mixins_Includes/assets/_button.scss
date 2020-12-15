@@ -1,0 +1,15 @@
+@mixin button-color($button-color, $button-hover-color, $text-color, $text-hover-color) {
+    background-color: $button-color;
+    color: $text-color;
+
+    &:hover{
+        background-color: $button-hover-color;
+        color: $text-hover-color;
+    }
+}
+
+button{
+    width: 250px;
+    height: 100px;
+    @include button-color(#2A3611, #2B1F4C, #1d1136, #223E4D);
+}
