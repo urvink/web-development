@@ -1,23 +1,11 @@
 button {
-  width: 250px;
-  height: 100px;
-  background-color: #2A3611;
-  color: #1d1136;
+  height: 50px;
+  width: 90px;
+  background-color: #1BDC89;
+  margin: 50px;
 }
 
 button:hover {
-  background-color: #2B1F4C;
-  color: #223E4D;
-}
-
-.colorChangingSquare {
-  width: 450px;
-  height: 80px;
-  background-color: #ef7a22;
-}
-
-.colorChangingSquare:hover {
-  background-color: #2296ef;
-  transition: background-color 1000ms;
+  background-color: #D223A7;
 }
 /*# sourceMappingURL=style.css.map */
