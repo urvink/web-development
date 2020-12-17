@@ -1,0 +1,12 @@
+@import "./variables";
+
+button{
+    height: 50px;
+    width: 90px;
+    background-color: $button-color;
+    margin: 50px;
+
+    &:hover{
+        background-color: $button-hover-color;
+    }
+}

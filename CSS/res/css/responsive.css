@@ -8,7 +8,7 @@ body {
   color: GhostWhite;
 }
 body {
-  background-image: url("/CSS-test/space.jpg");
+  background-image: url("../img/space.jpg");
   height: 100%;
   background-attachment: fixed;
   background-size: cover;

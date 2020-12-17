@@ -1,31 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eindopdracht - CSS | The Chefkok</title>
     <link rel="stylesheet" href="./res/css/chefkok.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 </head>
+
 <body>
     <div id="wrapper">
-        <header>
+        <header class="flex">
             <div class="logo">
                 <img src="" alt="">
-                <nav>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </nav>
             </div>
+            <nav >
+                <ul class="flex">
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
         </header>
         <main>
-
+            <section class="cooking flex">
+                <img src="./res/img/cooking.jpg" alt="Cooking image">
+                <div class="cooking_content flex">
+                    <h2>Cooking</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nam facilis aliquid expedita. Aspernatur, voluptas!</p>
+                    <div class="cooking_btns flex">
+                        <a href="#"><div class="button"><p>buy</p></div></a>
+                        <a href="#"><div class="button"><p>show more</p></div></a>
+                    </div>
+                </div>
+                    
+            </section>
+            <section class="main_container ">                
+                <div class="populair_dishes flex">
+                    <h2>Populaire gerechten</h2>
+                    <div class="card_container flex">
+                        <div class="card flex">
+                            <div class="card_thumb flex">
+                                <img src="./res/img/dish1.jpg" alt="Dish image">
+                            </div>
+                            <div class="card_body">
+                                <div class="dish_head flex">
+                                    <h3 class="dish_title">Pasta</h3>
+                                    <p class="dish_price">&euro; 12,-</p>
+                                </div>                                
+                                <p class="dish_body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+                                    repudiandae blanditiis numquam, nobis praesentium tempora dolores maiores laborum a
+                                    officia amet modi, maxime atque deleniti possimus commodi sed vitae fugit!
+                                </p>
+                            </div>
+                            <div class="card_footer flex">
+                                <a href="#">
+                                    <p>Show more..</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card flex">
+                            <div class="card_thumb flex">
+                                <img src="./res/img/dish1.jpg" alt="Dish image">
+                            </div>
+                            <div class="card_body">
+                                <div class="dish_head flex">
+                                    <h3 class="dish_title">Pasta</h3>
+                                    <p class="dish_price">&euro; 12,-</p>
+                                </div>                                
+                                <p class="dish_body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+                                    repudiandae blanditiis numquam, nobis praesentium tempora dolores maiores laborum a
+                                    officia amet modi, maxime atque deleniti possimus commodi sed vitae fugit!
+                                </p>
+                            </div>
+                            <div class="card_footer flex">
+                                <a href="#">
+                                    <p>Show more..</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card flex">
+                            <div class="card_thumb flex">
+                                <img src="./res/img/dish1.jpg" alt="Dish image">
+                            </div>
+                            <div class="card_body">
+                                <div class="dish_head flex">
+                                    <h3 class="dish_title">Pasta</h3>
+                                    <p class="dish_price">&euro; 12,-</p>
+                                </div>                                
+                                <p class="dish_body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+                                    repudiandae blanditiis numquam, nobis praesentium tempora dolores maiores laborum a
+                                    officia amet modi, maxime atque deleniti possimus commodi sed vitae fugit!
+                                </p>
+                            </div>
+                            <div class="card_footer flex">
+                                <a href="#">
+                                    <p>Show more..</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu_container ">
+                    <h2>Menu</h2>
+                    <div class="content  flex">
+                        <div class="chef_thumb flex">
+                            <img src="./res/img/chef1.webp" alt="Chef foto">
+                        </div>
+                        <div class="menus flex">
+                            <div class="menu_item ">
+                                <div class="menu_head flex">
+                                    <h3 class="menu_title">Pasta</h3>
+                                    <p class="menu_price">&euro; 18,-</p>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item ">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item ">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                            <div class="menu_item">
+                                <div class="menu_head flex">
+                                        <h3 class="menu_title">Pasta</h3>
+                                    <div class="menu_price">
+                                        <p>&euro; 18,-</p>
+                                    </div>
+                                </div>                                
+                                <div class="menu_desc">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugiat architecto vel dolor aliquid accusantium, ea ipsa delectus optio id?</p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer>
-            
+        <footer class="flex ">
+            <div class="footer">
+                <h3>Contact</h3>
+                <p>Osdorpplein 16</p>
+                <p>1234 AB Amsterdam</p>
+                <p>Tel.nr: 0612345678</p>
+                <p>Openingstijden ma t/m vr 10:00 t/m 22:00</p>
+                <i class="lni lni-instagram"></i>
+                <i class="lni lni-twitter-original"></i>
+                <i class="lni lni-facebook-original"></i>
+            </div>
+            <div class="footernav flex">
+                <h3>Navigation</h3>
+                <a href="#home">News</a>
+                <a href="#menu">Contact</a>
+                <a href="#contact">About</a>
+            </div>
         </footer>
-    </div>    
+    </div>
 </body>
 </html>
