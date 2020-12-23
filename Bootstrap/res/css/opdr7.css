@@ -1,0 +1,23 @@
+/***** Globals ******/
+*{
+    padding: 0;
+    margin: 0;box-sizing: border-box;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+/****** Locals ******/
+
+/* Utils */
+.flex{
+    display: flex;
+}
+
+
+/* Classes */
+.wrapper{
+    width: 80%;    
+}
+
