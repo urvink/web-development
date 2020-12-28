@@ -1,6 +1,6 @@
 # Web-development
 
-## Week 1: HTML
+## Week 1 - HTML
 
     * Onderdeel 1
     - Intro
@@ -22,19 +22,15 @@
     * Eindopdracht (Onderdeel 3)
     - 
 
-## Week 2: CSS
+## Week 2 & 3 - CSS
 
 Coming soon....
 
-## Week 3
+## Week 4 - SaSS & Bootstrap
 
 Coming soon....
 
-## Week 4
-
-Coming soon....
-
-## Week 5
+## Week 5 - JavaScript
 
 Coming soon....
 

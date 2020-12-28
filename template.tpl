@@ -1,4 +1,4 @@
-div#wrapper>(header>div.logo>img+(nav>ul>li*3))+main+footer
+div#wrapper>(header>(div.logo>img+)(nav>ul>li*3))+main+footer
 
 <!-- Opdracht 7  -->
             <section>
