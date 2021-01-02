@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Eindopdracht | Bootstrap (Week 4)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../res/css/eindopdracht.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between p-0 pl-3 pr-4">
+            <a class="navbar-brand" href="./index.html">Superstore</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./overview.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+            <img class="img-fluid" src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png" alt="techgrounds logo">
+          </nav>
+    </header>
+    <main class="bg-secondary">
+        <div class="container text-light justify-content-center">
+            <h1 class="display-5 text-center">TechGrounds x Shop</h1>
+            <div class="row">
+                <form action="/" method="get" class="col-12">
+                    <!-- Name -->
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control-plaintext bg-light" id="name">
+                        </div>
+                      </div>
+    
+                    <!-- Email -->
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control-plaintext bg-light" id="email">
+                        </div>
+                      </div>
+    
+                    <!-- Message -->
+                    <div class="form-group row">
+                        <label for="message" class="col-sm-2 col-form-label">Message</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="msg" id="message" class="form-control-plaintext bg-light p-4">
+                        </div>                    
+                    </div>
+    
+                    <!-- Support type -->
+                    <div class="form-group row">
+                        <label for="support-type" class="col-sm-2 col-form-label">Support type</label>
+                        <div class="flex-column">
+                            <div class="form-check">
+                                <input type="radio" name="support-type" id="lost-item" class="form-check-input" checked>
+                                <label for="lost-item" class="form-check-label">Lost item</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="support-type" id="order-help" class="form-check-input">
+                                <label for="order-help" class="form-check-label">Help making an order</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="support-type" id="track-info" class="form-check-input">
+                                <label for="track-info" class="form-check-label">Tracking information</label>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary">Send</button>    
+                </form>
+            </div>
+            
+            <div class="map row mt-3">
+                <div class="col-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6291042791036!2d4.804532715862318!3d52.359011879784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5e39f61f5149f%3A0xae753d6c3373091c!2sTechGrounds!5e0!3m2!1sen!2snl!4v1609622347260!5m2!1sen!2snl" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="w-100 h-100"></iframe>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
