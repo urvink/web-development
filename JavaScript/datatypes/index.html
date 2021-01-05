@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - JavaScript (Week 5)</title>
+    <!-- <link rel="stylesheet" href="../../resources/css/main.css"> -->
+</head>
+<body>
+    <h1>Introduction to JavaScript!</h1>
+    <section>
+        <h2>Datatypes</h2>
+        <div class="opdracht1">
+            <h4>Opdracht 1</h4>
+            <p class="questions">
+                <ol>
+                    <li>Maak een variable aan met let en noem het “getal1”.</li>
+                    <li>Ken geen waarde toe aan de variable. </li>
+                    <li>Print vervolgens de variable met console.log(“getal1 ” + getal1);.</li>
+                </ol>
+                Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan?
+            </p>            
+
+            <p class="answers">Getal1 undefined</p>
+        </div>
+        <hr>
+        <div class="opdracht2">
+            <h4>Opdracht 2</h4>
+            <p class="questions">
+                <ol>
+                    <li>Maak een variable aan met const en noem het getal2.</li>
+                    <li>Ken geen waarde toe aan de variable. </li>
+                    <li>Print vervolgens de variable met console.log(“getal2 ” + getal2);.</li>
+                    Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan? Open dit html bestand in jouw browser en kijk in je console. Wat zie je dan? 
+
+                    <li>Maak een variable aan met const en noem het getal2.</li>
+                    <li>Ken een Number toe aan de variable. </li>
+                    <li>Print vervolgens de variable met console.log(“getal2 ” + getal2);.</li>
+                </ol>
+                
+            </p>
+            <p class="answers">
+                Deel 1: Uncaught SyntaxError: Missing initializer in const declaration.
+                <br>
+                Deel 2: getal2 = 15;
+
+            </p>
+        </div>
+        <hr>
+
+        <div class="opdracht3">
+            <h4>Opdracht 3</h4>
+            <p class="questions">
+                <ol>
+                    <li>Maak een let variable en noem het getal3. Ken gelijk een Number 3 aan toe. Hoe programmeer je dat ?</li>
+                    <li>Print vervolgens de variable met console.log(“getal3 ” + getal3);.</li>
+                </ol> 
+                Open dit html bestand in jouw browser en kijk in je console. Je zult “getal3 3” in console zien. 
+
+
+            </p>
+            <p class="answers">
+                getal3 3              
+            </p>
+        </div>
+        <div class="opdracht4">
+            <h4>Opdracht 4</h4>
+            <p class="questions">
+                <ol>
+                    <li>Hergebruik de variable "getal3 en wijzig de waarde van de variable getal3 naar 5.</li>
+                    <li>Print vervolgens de variable met console.log(“getal3 ” + getal3);</li>
+                </ol>
+                Open dit html bestand in jouw browser en kijk in je console. Je zult “getal3 5” in console zien
+            </p>
+            <p class="answers">
+                getal3 5
+            </p>
+        </div>
+        <div class="opdracht5">
+            <h4>Opdracht 5</h4>
+            <p class="questions">
+                <ol>
+                    <li>Maak een let variable en noem het datatype. </li>
+                    <li>Ken de waarde true aan de variable.</li>
+                    <li>Print vervolgens de variable met console.log(“datatype ” + typeof datatype);</li>
+                </ol>
+                Open dit html bestand in jouw browser en kijk in je console. Je zult “datatype boolean” in console zien.
+
+                4. Wat voor type is de waarde false? 
+
+            </p>
+            <p class="answers">
+                Datatype Boolean
+
+            </p>
+        </div>
+        <div class="opdracht6">
+            <h4>Opdracht 6</h4>
+            <p class="questions">
+                <ol>
+                    <li>Herhaal opdracht 5 en geef antwoord op de volgende vragen.</li>
+                    Hoe herken je dat een waarde String is? Geef ook een voorbeeld.
+
+                    <li>Hoe herken je dat een waarde Number is? Geef ook een voorbeeld.</li>
+                    <li>Hoe herken je dat een waarde BigInt is? Geef ook een voorbeeld.</li>
+                    <li>Hoe herken je dat een waarde Symbol is? Geef ook een voorbeeld.</li>
+                </ol>
+                 
+            </p>
+            <p class="answers">
+
+                <h5>Strings staan tussen ""</h5>
+                <h5>Numbers zijn numerieke waardes</h5>
+                <h5>BigInts hebben een groter capaciteit om numerieke waardes op te slaan</h5>
+                <h5>Symbols zijn unieke identifiers die het mogelijk maakt om met dezelfde description toch verschillende instanties te maken bv. Symbol("uniek") === Symbol("uniek") is NIET gelijk aan elkaar</h5>
+
+
+            </p>
+        </div>
+        <div class="opdracht7">
+            <h4>Opdracht 7</h4>
+            <p class="questions">
+                <ol>
+                    <li>Maak twee variables aan met twee verschillende Numbers. Geef de variables een logische naam waaraan je kunt afleiden wat het inhoudt.</li>
+                    <li>Eerste variable heeft de waarde 6.</li>
+                    <li>Tweede variable heeft de waarde 8. </li>
+                </ol>
+                <p>Tel de twee waardes bij elkaar op. Print het antwoord in jouw browser console. Het antwoordt zal 14 moeten zijn.</p>
+                <p>Trek de tweede waarde af van de eerste waarde. Print het antwoord in jouw browser console. Het antwoordt zal 2 moeten zijn. </p>
+                <p>Vermenigvuldig de twee waardes. Print het antwoord in jouw browser console. Het antwoordt zal 48 moeten zijn. </p>
+                <p>Deel de twee waarde met de eerste waarde. Print het antwoord in jouw browser console. Het antwoordt zal 1.33 moeten zijn. </p>
+            </p>
+            <p class="answers">
+                6 + 8 = 14
+                <br>
+                8 - 6 = 2
+                <br>
+                6 * 8 = 48
+                <br>
+                6 / 8 = 1.3333333333333333
+            </p>
+        </div>
+        <div class="opdracht8">
+            <h4>Opdracht 8</h4>
+            <p class="questions">
+                <ol>
+                    <li>Wat is het antwoord van de volgende som: 3 + 5 * 10 / 2?</li>
+                    <li>Print het antwoord in jouw browser console. </li>
+                </ol>
+                Open dit html bestand in jouw browser en kijk in je console.
+            </p>
+            <p class="answers">
+
+            </p>
+        </div>
+        <div class="opdracht9">
+            <h4>Opdracht 9</h4>
+            <p class="questions">
+                Voor deze opdracht is het handig om je in te lezen over increment en decrement.
+                <ol>
+                    <li>Copy de volgende code in jouw VSCode: 
+                ​let​ ​number​ = ​3​; 
+                ​number​++; </li>
+                    <li>Print uitkomst in jouw browser console. 
+                Wat gebeurt er met de uitkomst? </li>
+                    <li>Wijzig number++ naar number--.</li>
+                    <li>Wat is de uitkomst van de som ?
+                Wat gebeurt is de uitkomst? </li>
+                    <li>Copy de volgende code in jouw VSCode: 
+                ​let​ ​number​ = ​3​; 
+                ​const​ ​sum​ = ​number​++ + ​2​; 
+                ​console​.​log​(​sum​); </li>
+                    <li>Wat is de uitkomst van van de som ? 
+                Leg jouw antwoord uit. </li>
+                    <li>Copy de volgende code in jouw VSCode: 
+                ​let​ ​number​ = ​3​; 
+                ​const​ ​sum​ = ++​number​ + ​2​; 
+                ​console​.​log​(​sum​); </li>
+                    <li>Wat is de uitkomst van van de som ?</li>
+                </ol>
+            </p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht10">
+            <h4>Opdracht 10</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht11">
+            <h4>Opdracht 11</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht12">
+            <h4>Opdracht 12</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht13">
+            <h4>Opdracht 13</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht14">
+            <h4>Opdracht 14</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht15">
+            <h4>Opdracht 15</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+        <div class="opdracht16">
+            <h4>Opdracht 16</h4>
+            <p class="questions"></p>
+            <p class="answers"></p>
+        </div>
+
+    </section>
+    <!-- ​hier kun je de antwoorden van de vragen plaatsen.  -->
+    <script>
+        //Opdracht 1
+        let getal1;
+        console.log("Opdracht 1: Getal1 " + getal1);
+
+        //Opdracht 2
+        // const getal2;
+        // console.log("Opdracht 2")
+        // console.log("Getal2 "+ getal2);
+
+        const getal2 = 15;
+        console.log("Opdracht 2: Getal2 "+getal2);
+
+        // Opdracht 3
+        let getal3 = 3;
+        console.log("Opdracht 3: Getal3 " +getal3);
+
+        // Opdracht 4
+        getal3 = 5;
+        console.log("Opdracht 4: getal3 "+getal3);
+
+        // Opdracht 5
+        let datatype = true;
+        console.log("Opdracht 5: Datatype true = "+typeof datatype);
+
+        datatype = false;
+        console.log("Opdracht 5: Datatype false = "+typeof datatype);
+
+        // Odracht 6
+        // Strings
+        datatype = 'Hallo, ik ben een ';
+        // console.log("Opdracht 6 (Strings) " + datatype +" " + typeof datatype);
+        console.log('Opdracht 6 (Strings) datatype \$typeof datatype');
+
+        // Number
+        datatype = 9999999999999999;
+        console.log("Opdracht 6 (Number) " + datatype + " "+ typeof datatype); // → 10000000000000000
+
+        // BigInt
+        datatype = 9999999999999999n
+        console.log("Opdracht 6 (BigInt) " +datatype + " "+ typeof datatype);
+
+        // Symbol
+        if(Symbol("uniek") === Symbol("uniek")){
+            console.log("Opdracht 6 (Symbol): Wij zijn identiek");
+        }else{
+            console.log("Opdracht 6 (Symbol): Wij zijn NIET identiek")
+        }
+
+        // Opdracht 7
+        const cijfer1 = 6;
+        const cijfer2 = 8;
+
+        console.log("Opdracht 7: 6 + 8 = "+(cijfer1+cijfer2));
+        console.log("Opdracht 7: 8 - 6 = "+(cijfer2-cijfer1));
+        console.log("Opdracht 7: 6 * 8 = "+(cijfer1*cijfer2));
+        console.log("Opdracht 7: 6 / 8 = "+(cijfer2/cijfer1));
+
+        // Opdracht 8
+        const som = 3 + 5 * 10 / 2;
+        console.log(`Opdracht 8: 3 + 5 * 10 / 2 = ${som}`);
+
+        // Opdracht 9
+        let number = 3;
+        console.log(`Opdracht 9: number is ${number}`)
+        number++;
+        console.log(`Opdracht 9 (number++): number = ${number}`);
+
+        number = 3;
+        number--;
+        console.log(`Opdracht 9 (number--): number = ${number}`);
+
+        // HUUUUHH???
+        number = 3;
+        const sum = number++ +2;
+        console.log(`Opdracht 9 (number++ +2): sum = ${sum}`);
+
+        number = 3;
+        // const sum = ++number +2;
+        // console.log(`Opdracht 9 (++number +2): sum = ${sum}`);
+    </script>
+</body>
+</html>
