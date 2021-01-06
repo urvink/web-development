@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals | Intro to JavaScript - Week 5</title>
+</head>
+<body>
+    
+    <section>
+        <h2>Conditionals</h2>
+        <input type="number" name="number" id="number">
+        <button id="btn" onclick="checkNumber()">button</button>
+
+        <div>
+            <span id="label"></span>
+        </div>
+
+    </section>
+
+    <script>        
+
+        function checkNumber(){
+            //Hier je code plaatsen
+            const number = document.getElementById("number").value;
+
+            if(number == 3){
+                console.log("Het ingevoerde getal is gelijk aan 3");
+                document.getElementById("label").innerText = "Het ingevoerde getal is gelijk aan 3";
+            }else{
+                console.log("Het ingevoerd getal is GEEN 3");
+            }
+        }
+    </script>
+</body>
+</html>
