@@ -52,7 +52,7 @@
     <script>
         function translateMonth() {
             const input_month_id = document.getElementById("number").value;
-            let month_element = document.getElementsByTagName("button");
+            let month_element = document.getElementsByTagName("button").innerHTML;
             const _prefix = "<strong><h3>";
             const _postfix = "</h3></strong>";
 
@@ -62,7 +62,7 @@
                 console.log(month_element);
             }else if (input_month_id == 2) {
                 console.log(`You entered id ${input_month_id} and that belongs to February`);
-                month_element.innerHtml = `${_prefix}February${_postfix}`;
+                month_element = `${_prefix}February${_postfix}`;
             }else if (input_month_id == 3) {
                 console.log(`You entered id ${input_month_id} and that belongs to March`);
                 month_element = `${_prefix}March${_postfix}`;
