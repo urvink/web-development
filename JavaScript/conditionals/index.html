@@ -6,15 +6,58 @@
     <title>Conditionals | Intro to JavaScript - Week 5</title>
 </head>
 <body>
-    
+    <h1>Introduction to JavaScript</h1>
     <section>
         <h2>Conditionals</h2>
-        <input type="number" name="number" id="number">
-        <button id="btn" onclick="checkNumber()">button</button>
+        <div id="opgave">
+            <input type="number" name="number" id="number">
+            <button id="btn" onclick="checkNumber()">button</button>
 
-        <div>
-            <span id="label"></span>
+            <div>
+                <span id="label"></span>
+            </div>
         </div>
+        
+        <hr>
+
+        <!-- Opdracht 5 -->
+        <div class="opdracht5">
+            <h3>Opdracht 5</h3>
+            <div class="questions">
+                <div class="p">We hebben nu verschillende comparison operators gehad. Wat is het verschil tussen &lt; en &lt;=?</div>
+            </div>
+            <div class="answers">
+                <p>De <strong> <u>&lt; - operator</u></strong> kijkt niet naar de cijfer waarmee je het vergelijkt en de <strong> <u>&gt;= - operator</u></strong> doet dat <em>wel</em>.</p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Opdracht 6 -->
+        <div class="opdracht5">
+            <h3>Opdracht 6</h3>
+            <div class="questions">
+                <div class="p">
+                    We hebben nog een comparison operator niet gehad, namelijk ​!​ comparison. Wat doet een ​!comparison ? Maak een voorbeeld van een ​! ​comparison
+                </div>
+            </div>
+            <div class="answers">
+                <p></p>
+            </div>
+        </div>
+        <hr>
+        <!-- Opdracht 8  -->
+        <div class="opdracht5">
+            <h3>Opdracht 8</h3>
+            <div class="questions">
+                <div class="p">Wat is een strict equality comparison ?</div>
+            </div>
+            <div class="answers">
+                <p>Dat houdt in dat een vergelijking wordt gemaakt tussen  twee waardes op basis van <u>waarde</u> <strong>EN</strong> <u>type</u>! Er vindt dus <u>geen</u> omvorming plaats tot dezelfde type, voordat er een vergelijking wordt gemaakt zoals bij de == -operator</p>
+            </div>
+        </div>
+        
+
+        
 
     </section>
 
@@ -23,14 +66,54 @@
         function checkNumber(){
             //Hier je code plaatsen
             const number = document.getElementById("number").value;
+            let label = document.getElementById("label");
 
+            // Opdracht 3
+            if(number >= 11){
+                console.log(number);
+                label.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11";
+            }else
+
+            // Opdracht 1
             if(number == 3){
-                console.log("Het ingevoerde getal is gelijk aan 3");
-                document.getElementById("label").innerText = "Het ingevoerde getal is gelijk aan 3";
-            }else{
-                console.log("Het ingevoerd getal is GEEN 3");
+                console.log(number);
+                label.innerText = "Het ingevoerde getal is gelijk aan 3";
+            }else
+
+            // Opdracht 4
+            if(number< 3){
+                console.log(number);
+                label.innerText = "Het ingevoerde getal is kleiner dan 3"
+            }else
+
+            //Opdracht 2
+            if(number > 4){
+                console.log(number);
+                label.innerText = "Het ingevoerde getal is groter dan 4";
             }
+            // Opdracht 7
+            else{
+                console.log("Geen invoer");
+                label.innerText = "";
+            }
+
+            
         }
+        // Opdracht 6: ! Operator
+        const a = 2;
+        const b = 4
+
+        console.log("\nOpdracht 6 (!-operator)");
+        console.log(`Getal a = ${a}\nGetal b = ${b}`)
+        
+
+        if(a != b){
+            console.log(`Het getal ${a} is NIET gelijk aan ${b}`);
+        }else{
+            console.log(`Het`)
+        }
+
+
     </script>
 </body>
 </html>

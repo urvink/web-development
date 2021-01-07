@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators | Intro to JavaScript - week 5</title>
+</head>
+<body>
+    <h1>Introduction to Javascript</h1>
+    <section>
+        <h2>Logical Operators</h2>
+        <div class="opgave">
+            <input type="number" name="number" id="number">
+            <button id="btn" onclick="checkNumber()">button</button>
+
+            <div>
+                <span id="label"></span>
+            </div>
+        </div>
+
+        <!-- Opdracht 9 -->
+        <div class="opdracht9">
+            <h3>Opdracht 9</h3>
+            <div class="questions">
+                <p>
+                    Programmeer de volgende logica in de checkNumber functie:
+                    Als het ingevoerde getal ​is groter dan​ 5 ​en​ ​is kleiner dan​ 10, 
+                    dan toon je op het label:“Het ingevoerde getal is tussen 5 en 10”.
+                </p>
+            </div>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Opdracht 10 -->
+        <div class="opdracht10">
+            <h3>Opdracht 10</h3>
+            <div class="questions">
+                <p>Deze opdracht is een uitbreiding van opdracht 7.
+                    Programmeer de volgende logica in de checkNumber functie:
+                    Als het ingevoerde getal ​is gelijk aan​ 13 ​of​ ​is groter dan​ 13 en het ingevoerde getal ​is gelijk aan​ 20 of ​kleiner dan​ 20, dan toon je op het label: 
+                    “Het ingevoerde getal isgelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20.”</div>
+                </p>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+        <hr>
+        <!-- Opdracht 11 -->
+        <div class="opdracht11">
+            <h3>Opdracht 11</h3>
+            <div class="questions">
+                <div>
+                    <p>Deze opdracht is een uitbreiding van opdracht 7.
+        Programmeer de volgende logica in de checkNumber functie:
+        Als het ingevoerde getal ​is gelijk aan​ 21 ​of ​het ingevoerde getal ​is gelijk aan​ 23 , dantoon je op het label: 
+        “Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.”.</p>
+                </div>
+            </div>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+        <hr>
+        <!-- Opdracht 12 -->
+        <div class="opdracht12">
+            <h3>Opdracht 12</h3>
+            <div class="questions">
+                <div>
+                    <p>Deze opdracht is een uitbreiding van opdracht 7.
+                        Programmeer de volgende logica in de checkNumber functie:
+                        Als het ingevoerde getal ​groter is dan​ 30 ​en​ ​kleiner is dan​ 35 ​of​ als het ingevoerdegetal groter is dan ​40 ​of kleiner is dan​ 45, toon dan op het label: 
+                        “het getal is tussen30 en 35 of het getal is tussen 40 en 45.”</p>
+                </div>
+            </div>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+        <hr>
+
+
+
+        <script>
+            function checkNumber(){
+                const input_number = document.getElementById("number").value;
+                let output_label = document.getElementById("label");
+
+                // Opdracht 10: >= 13 en <=20
+                if(input_number >= 13 && input_number<=20){
+                    console.log("Opdracht 10");
+                    console.log(input_number);
+                    output_label.innerText = "Het ingevoerde getal is gelijk aan 11 of groter dan 11 en is gelijk aan 20 of kleiner dan 20";
+                }else
+
+                // Opdracht 9: >5 en <10
+                if(input_number > 5 && input_number < 10){
+                    console.log("Opdracht 9");
+                    console.log(input_number);
+                    output_label.innerText = "Het ingevoerde getal is tussen 5 en 10";
+                }else
+
+                // Opdracht 11: == 20 of == 23
+                if(input_number == 21 || input_number == 23){
+                    console.log("Opdracht 11");
+                    console.log(input_number);
+                    output_label.innerText = "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23.";
+                }else
+
+                // Opdracht 12: (>30 en <35) of (>40 of <45)
+                if((input_number>30 && input_number <35) || (input_number>40 || input_number<45)){
+                    console.log("Opdracht 12");
+                    console.log(input_number);
+                    output_label.innerText = "het getal is tussen 30 en 35 of het getal is tussen 40 en 45.";
+                }
+
+            }
+        </script>
+    </section>
+</body>
+</html>

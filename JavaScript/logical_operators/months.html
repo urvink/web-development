@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translated Months | Logical Conditionals | Intro to JavaScript (Week 5)</title>
+</head>
+
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <section>
+        <h2>Translated Months | Logical Conditionals</h2>
+
+        <div class="opgrave">
+            <input type="number" name="number" id="number" autofocus>
+            <button onclick="translateMonth()">translate</button>
+            <div id="translatedMonth"></div>
+        </div>
+
+        <!-- Opdracht 13 -->
+        <div class="opdracht13">
+            <h3>Opdracht 13</h3>
+            <div class="questions">
+                <p> Deze applicatie moet het volgende kunnen doen:
+                    Het vertalen van getallen naar maanden.
+                    Bijvoorbeeld, als je het getal 1 invoert dan
+
+                <ul>
+                    <li>1 => January</li>
+                    <li>2 => February</li>
+                    <li>3 => Maart</li>
+                    <li>4 => April</li>
+                    <li>5 => Mei</li>
+                    <li>6 => Juni</li>
+                    <li>7 => Juli</li>
+                    <li>8 => Augustus</li>
+                    <li>9 => September</li>
+                    <li>10 => Oktober</li>
+                    <li>11 => November</li>
+                    <li>12 => December</li>
+                </ul>
+                </p>
+            </div>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function translateMonth() {
+            const input_month_id = document.getElementById("number").value;
+            let month_element = document.getElementsByTagName("button");
+            const _prefix = "<strong><h3>";
+            const _postfix = "</h3></strong>";
+
+            if (input_month_id == 1) {
+                console.log(`You entered id ${input_month_id} and that belongs to January`);
+                month_element.innerText = `${_prefix}January${_postfix}`;
+                console.log(month_element);
+            }else if (input_month_id == 2) {
+                console.log(`You entered id ${input_month_id} and that belongs to February`);
+                month_element.innerHtml = `${_prefix}February${_postfix}`;
+            }else if (input_month_id == 3) {
+                console.log(`You entered id ${input_month_id} and that belongs to March`);
+                month_element = `${_prefix}March${_postfix}`;
+            }else if (input_month_id == 4) {
+                console.log(`You entered id ${input_month_id} and that belongs to April`);
+                month_element = `${_prefix}April${_postfix}`;
+            }else if (input_month_id == 5) {
+                console.log(`You entered id ${input_month_id} and that belongs to Mei`);
+                month_element = `${_prefix}Mei${_postfix}`;
+            }else if (input_month_id == 6) {
+                console.log(`You entered id ${input_month_id} and that belongs to Juni`);
+                month_element = `${_prefix}Juni${_postfix}`;
+            }else if (input_month_id == 7) {
+                console.log(`You entered id ${input_month_id} and that belongs to Juli`);
+                month_element = `${_prefix}Juli${_postfix}`;
+            }else if (input_month_id == 8) {
+                console.log(`You entered id ${input_month_id} and that belongs to Augustus`);
+                month_element = `${_prefix}Augustus${_postfix}`;
+            }else if (input_month_id == 9) {
+                console.log(`You entered id ${input_month_id} and that belongs to September`);
+                month_element = `${_prefix}September${_postfix}`;
+            }else if (input_month_id == 10) {
+                console.log(`You entered id ${input_month_id} and that belongs to Oktober`);
+                month_element = `${_prefix}Oktober${_postfix}`;
+            }else if (input_month_id == 11) {
+                console.log(`You entered id ${input_month_id} and that belongs to November`);
+                month_element = `${_prefix}November${_postfix}`;
+            }else if (input_month_id == 12) {
+                console.log(`You entered id ${input_month_id} and that belongs to December`);
+                month_element = `${_prefix}December${_postfix}`;
+            }else{
+                console.log("Try again between 1 and 12");
+                alert("Voer een waarde tussen de 1 en de 12 in, probeer OPNIEUW!")
+            }
+        }
+    </script>
+</body>
+
+</html>

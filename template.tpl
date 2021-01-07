@@ -19,6 +19,8 @@ div#wrapper>(header>(div.logo>img+)(nav>ul>li*3))+main+footer
                 </div>
             </section>
 
+            .opdracht5>h3{Opdracht 5}+(.questions>div>p)+(.answers>p)
+
             (div.card>(div.card_header>img)+(div.card_body>h3+p)+(div.card_footer>(div.footer_btn>a[href="#"]{Play $})))*4
             
             //Eindopdracht Flexbox
