@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word! | Logical Operators - Intro to JavaScript</title>
+
+    <style>
+        .words button{
+            position: relative;
+            border: 1px solid black;
+            border-radius: .5em;
+            background-color: #fff;
+            padding: 0.5em;
+            cursor: pointer;
+            transition: background-color .3s ease-in-out;
+            z-index: 1;
+        }
+
+        .words button:focus{
+            outline: none;
+            background-color: grey;
+        }
+
+        .words .fg{
+            position: absolute;
+            content: '';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-color: #fff;
+            z-index: 2;
+            transition: width .3s ease-out;
+            overflow: hidden;
+        }
+
+        .words button:hover .fg{
+            width: 0;
+            z-index: 1;
+        }
+
+        .words button:focus .fg{
+            width: 0;
+        }
+
+        .answer{
+            font-size: 2em;
+            font-weight: 900;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <section>
+        <h2>Guess the word | Logical Operators</h2>
+        <div class="words">
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Together</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Teamwork</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Scrum</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Individual</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Moments</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Like</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Money</span>
+            </button>
+            <button onclick="guess(this)">
+                <div class="fg">Show</div>
+                <span>Important</span>
+            </button>
+        </div>
+    </section>
+
+    <div><span>The number of wrong guessing: <span id="count">0</span></span>
+        <p id="label"></p>
+    </div>
+
+    <script>
+        const words = ["Together","Teamwork","Scrum","Individual","Moments","Like","Dislike","Money","Important"];
+        const guessingWord = words[Math.round(Math.random()*8)];
+        const _newGame = `<button onclick="new_game()">New Game</button>`;
+        const _game_message = `<h1><strong>${guessingWord}</strong></h1> ${_newGame}`;
+
+        let counter = document.getElementById("count");
+        let msg = document.getElementById("label");
+        let guesses = 0;
+
+        console.log(`To be guessed word! ${guessingWord}`);
+
+        function guess(obj) {
+            const _chosen_word = obj.getElementsByTagName("span")[0].innerText;
+            
+            guesses++;
+
+            // console.log(obj.getElementsByTagName("span")[0]);
+            // console.log(obj);
+            
+            console.log(`You guessed: ${_chosen_word}`);
+            if (guesses >3) {
+                console.log("GAME OVER!!");
+                msg.innerHTML = `Game Over. The correct word was ${_game_message}`;
+            }else if(_chosen_word !== guessingWord){
+                counter.innerHTML = guesses;
+                console.log(guesses);
+            }else if (_chosen_word === guessingWord) {
+                msg.innerHTML = `You have guessed the correct word! ${_game_message}`;
+            } else {
+                
+            }
+
+        }
+
+        //Reload the page
+        function new_game(){location.reload()};
+    </script>
+</body>
+
+</html>

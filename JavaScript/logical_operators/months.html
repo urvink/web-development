@@ -47,55 +47,143 @@
             </div>
         </div>
 
+        <!-- Opdracht 14 -->
+        <div class="opdracht14">
+            <h3>Opdracht 14</h3>
+            <div class="questions">
+                <div>
+                    <p>Maak opdracht 13 opnieuw, maar gebruik nu ​Switch​ statement om dezelfde resultaten temaken.</p>
+                </div>
+            </div>
+            <div class="answers">
+                <p>Zie CONSOLE</p>
+            </div>
+        </div>
+
     </section>
 
     <script>
         function translateMonth() {
-            const input_month_id = document.getElementById("number").value;
-            let month_element = document.getElementsByTagName("button").innerHTML;
-            const _prefix = "<strong><h3>";
+            const input_month_id = parseInt(document.getElementById("number").value);
+            let month_element = document.getElementById("translatedMonth");
+            const _prefix = "<strong><h3 style=\"color:red\">";
             const _postfix = "</h3></strong>";
+
+            /** 
+             * IF-ELSE - METHODE 
 
             if (input_month_id == 1) {
                 console.log(`You entered id ${input_month_id} and that belongs to January`);
-                month_element.innerText = `${_prefix}January${_postfix}`;
+                month_element.innerHTML = `${_prefix}January${_postfix}`;
                 console.log(month_element);
             }else if (input_month_id == 2) {
                 console.log(`You entered id ${input_month_id} and that belongs to February`);
-                month_element = `${_prefix}February${_postfix}`;
+                month_element.innerHTML= `${_prefix}February${_postfix}`;
             }else if (input_month_id == 3) {
                 console.log(`You entered id ${input_month_id} and that belongs to March`);
-                month_element = `${_prefix}March${_postfix}`;
+                month_element.innerHTML = `${_prefix}March${_postfix}`;
             }else if (input_month_id == 4) {
                 console.log(`You entered id ${input_month_id} and that belongs to April`);
-                month_element = `${_prefix}April${_postfix}`;
+                month_element.innerHTML = `${_prefix}April${_postfix}`;
             }else if (input_month_id == 5) {
                 console.log(`You entered id ${input_month_id} and that belongs to Mei`);
-                month_element = `${_prefix}Mei${_postfix}`;
+                month_element.innerHTML = `${_prefix}Mei${_postfix}`;
             }else if (input_month_id == 6) {
                 console.log(`You entered id ${input_month_id} and that belongs to Juni`);
-                month_element = `${_prefix}Juni${_postfix}`;
+                month_element.innerHTML = `${_prefix}Juni${_postfix}`;
             }else if (input_month_id == 7) {
                 console.log(`You entered id ${input_month_id} and that belongs to Juli`);
-                month_element = `${_prefix}Juli${_postfix}`;
+                month_element.innerHTML = `${_prefix}Juli${_postfix}`;
             }else if (input_month_id == 8) {
                 console.log(`You entered id ${input_month_id} and that belongs to Augustus`);
-                month_element = `${_prefix}Augustus${_postfix}`;
+                month_element.innerHTML = `${_prefix}Augustus${_postfix}`;
             }else if (input_month_id == 9) {
                 console.log(`You entered id ${input_month_id} and that belongs to September`);
-                month_element = `${_prefix}September${_postfix}`;
+                month_element .innerHTML= `${_prefix}September${_postfix}`;
             }else if (input_month_id == 10) {
                 console.log(`You entered id ${input_month_id} and that belongs to Oktober`);
-                month_element = `${_prefix}Oktober${_postfix}`;
+                month_element.innerHTML = `${_prefix}Oktober${_postfix}`;
             }else if (input_month_id == 11) {
                 console.log(`You entered id ${input_month_id} and that belongs to November`);
-                month_element = `${_prefix}November${_postfix}`;
+                month_element.innerHTML = `${_prefix}November${_postfix}`;
             }else if (input_month_id == 12) {
                 console.log(`You entered id ${input_month_id} and that belongs to December`);
-                month_element = `${_prefix}December${_postfix}`;
+                month_element.innerHTML = `${_prefix}December${_postfix}`;
             }else{
                 console.log("Try again between 1 and 12");
+                month_element.innerHTML = "";
                 alert("Voer een waarde tussen de 1 en de 12 in, probeer OPNIEUW!")
+            }
+
+            **/
+
+            switch (input_month_id) {
+                case 1:
+                    console.log(`You entered id ${input_month_id} and that belongs to January`);
+                    month_element.innerHTML = `${_prefix}January${_postfix}`;
+                    console.log(month_element);
+                    break;
+
+                case 2:
+                    console.log(`You entered id ${input_month_id} and that belongs to February`);
+                    month_element.innerHTML = `${_prefix}February${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 3:
+                    console.log(`You entered id ${input_month_id} and that belongs to March`);
+                    month_element.innerHTML = `${_prefix}March${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 4:
+                    console.log(`You entered id ${input_month_id} and that belongs to April`);
+                    month_element.innerHTML = `${_prefix}April${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 5:
+                    console.log(`You entered id ${input_month_id} and that belongs to May`);
+                    month_element.innerHTML = `${_prefix}May${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 6:
+                    console.log(`You entered id ${input_month_id} and that belongs to June`);
+                    month_element.innerHTML = `${_prefix}June${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 7:
+                    console.log(`You entered id ${input_month_id} and that belongs to July`);
+                    month_element.innerHTML = `${_prefix}July${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 8:
+                    console.log(`You entered id ${input_month_id} and that belongs to August`);
+                    month_element.innerHTML = `${_prefix}August${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 9:
+                    console.log(`You entered id ${input_month_id} and that belongs to September`);
+                    month_element.innerHTML = `${_prefix}September${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 10:
+                    console.log(`You entered id ${input_month_id} and that belongs to October`);
+                    month_element.innerHTML = `${_prefix}October${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 11:
+                    console.log(`You entered id ${input_month_id} and that belongs to November`);
+                    month_element.innerHTML = `${_prefix}November${_postfix}`;
+                    console.log(month_element);
+                    break;
+                case 12:
+                    console.log(`You entered id ${input_month_id} and that belongs to December`);
+                    month_element.innerHTML = `${_prefix}December${_postfix}`;
+                    console.log(month_element);
+                    break;            
+                default:
+                    console.log("Try again between 1 and 12");
+                    month_element.innerHTML = "";
+                    alert("Voer een waarde tussen de 1 en de 12 in, probeer OPNIEUW!")
+                    break;
             }
         }
     </script>
