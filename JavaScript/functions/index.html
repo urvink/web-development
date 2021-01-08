@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions | JavaScript - Week 5</title>
+</head>
+<body>
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+
+    <script>
+        function answer() {
+            const input_text = "Opdracht 2: Wat zal een parameter zijn??";
+            const input_num = 34;
+            // let random_name = "";
+
+            //Hier kun je coderen
+            console.log("\n")
+            //Opdracht 1: Print Hello World in console
+            console.log(print_hello_world());
+            
+            //Opdracht 2: Text input param
+            print_out(text_param_assignment(input_text));
+
+            //Opdracht 3: Number input param
+            print_out(num_param_assignment(input_num)); 
+
+            //Opdracht 4: Multiplication function
+            print_out(multiplication(2,3)); 
+
+            //Opdracht 5: Name checker function
+            // print_out(name_check("Mo")); 
+            
+            
+            let random_name = name_check_v2(Math.round(Math.random()*8));
+            print_out(name_check(random_name));
+            // print_out(name_check_v2(Math.round(Math.random()*8))); //Opdracht 5 v2: Name checker evolved
+        }
+
+        // Print functie
+        function print_out(data) {
+            console.log(data);
+        }
+
+        // Plaats hieronder alle antwoorden van de opdrachten.
+        // Opdracht 1
+        function print_hello_world() {
+            return"Opdracht 1: Hello World";
+        }
+
+        // Opdracht 2
+        function text_param_assignment(txt) {
+            return txt;
+        }
+
+        // Opdracht 3
+        function num_param_assignment(num) {
+            return`Opdracht 3: ${num}`;
+        }
+
+        // Opdracht 4
+        function multiplication(a, b) {
+            calc = a*b;
+            output = `${a} * ${b} = ${calc}`;
+
+            return `Opdracht 4: ${output}`;            
+        }
+
+        // Opdracht 5
+        function name_check(entered_name) {
+
+            if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
+                return succes(entered_name);                
+            } else {
+                return fail();               
+            }
+
+            function succes(gotcha) {
+                return `Opdracht 5: Dit is een bekende van ons: ${gotcha}`;
+            }
+
+            function fail() {
+                return `Opdracht 5: Onbekend in ons systeem`;
+            }
+        }
+
+        // Opdracht 5 v2
+        function name_check_v2(name_id) {
+            const _prefix = `Opdracht 5 v2: `;
+            let return_name = `${_prefix} `;
+            let _name;
+
+            switch (name_id) {
+                case 1:
+                    _name = "John";
+                    break;
+                case 2:
+                    _name = "Oly";
+                    break;
+                case 3:
+                    _name = "Mo";
+                    break;
+                case 4:
+                    _name = "Hendrik";
+                    break;
+                case 5:
+                    _name = "Tony";
+                    break;
+                case 6:
+                    _name = "Irus";
+                    break;
+                case 7:
+                    _name = "Jan";
+                    break;
+                default:
+                    _name = "Peter";
+                    break;
+            }
+            return _name;
+        }
+
+        // Opdracht 6
+        name_check(entered_name)=>{
+            if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
+                return succes(entered_name);                
+            } else {
+                return fail();               
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>
