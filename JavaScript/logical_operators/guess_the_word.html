@@ -7,7 +7,7 @@
     <title>Guess the Word! | Logical Operators - Intro to JavaScript</title>
 
     <style>
-        .words button{
+        .words button {
             position: relative;
             border: 1px solid black;
             border-radius: .5em;
@@ -18,12 +18,12 @@
             z-index: 1;
         }
 
-        .words button:focus{
+        .words button:focus {
             outline: none;
             background-color: grey;
         }
 
-        .words .fg{
+        .words .fg {
             position: absolute;
             content: '';
             display: flex;
@@ -40,21 +40,21 @@
             overflow: hidden;
         }
 
-        .words button:hover .fg{
+        .words button:hover .fg {
             width: 0;
             z-index: 1;
         }
 
-        .words button:focus .fg{
+        .words button:focus .fg {
             width: 0;
         }
 
-        .answer{
+        .answer {
             font-size: 2em;
             font-weight: 900;
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -102,8 +102,8 @@
     </div>
 
     <script>
-        const words = ["Together","Teamwork","Scrum","Individual","Moments","Like","Dislike","Money","Important"];
-        const guessingWord = words[Math.round(Math.random()*8)];
+        const words = ["Together", "Teamwork", "Scrum", "Individual", "Moments", "Like", "Dislike", "Money", "Important"];
+        const guessingWord = words[Math.round(Math.random() * 8)];
         const _newGame = `<button onclick="new_game()">New Game</button>`;
         const _game_message = `<h1><strong>${guessingWord}</strong></h1> ${_newGame}`;
 
@@ -114,6 +114,8 @@
         console.log(`To be guessed word! ${guessingWord}`);
 
         function guess(obj) {
+
+            console.log("HEEY IK BEN HIEERRR");
             const _chosen_word = obj.getElementsByTagName("span")[0].innerText;
             
             guesses++;
@@ -136,8 +138,8 @@
 
         }
 
-        //Reload the page
-        function new_game(){location.reload()};
+            //Reload the page
+            function new_game() { location.reload() };
     </script>
 </body>
 

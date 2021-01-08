@@ -33,7 +33,7 @@
             // print_out(name_check("Mo")); 
             
             
-            let random_name = name_check_v2(Math.round(Math.random()*8));
+            let random_name = name_check_v3(Math.round(Math.random()*8));
             print_out(name_check(random_name));
             // print_out(name_check_v2(Math.round(Math.random()*8))); //Opdracht 5 v2: Name checker evolved
         }
@@ -71,9 +71,9 @@
         function name_check(entered_name) {
 
             if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
-                return succes(entered_name);                
+                return succes(entered_name);
             } else {
-                return fail();               
+                return fail();
             }
 
             function succes(gotcha) {
@@ -86,7 +86,7 @@
         }
 
         // Opdracht 5 v2
-        function name_check_v2(name_id) {
+        function name_check_v3(name_id) {
             const _prefix = `Opdracht 5 v2: `;
             let return_name = `${_prefix} `;
             let _name;
@@ -121,13 +121,16 @@
         }
 
         // Opdracht 6
-        /**name_check(entered_name)=>{
+        const name_check = (entered_name)=>{
             if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
                 return succes(entered_name);                
             } else {
                 return fail();               
             }
-        }**/
+        }
+
+        // Opdracht 7
+        
 
 
 
