@@ -36,6 +36,14 @@
             let random_name = name_check_v3(Math.round(Math.random()*8));
             print_out(name_check(random_name));
             // print_out(name_check_v2(Math.round(Math.random()*8))); //Opdracht 5 v2: Name checker evolved
+            
+            // Opdracht 7            
+            print_out(berekening(12,"/",6)); //3 parameters
+            print_out(berekening);
+
+            print_out(alfabet("a", "b", ["REST: ","c ", "d ", "e ", "f ", "g "]));
+            print_out(alfabet); //Rest paramets
+
         }
 
         // Print functie
@@ -121,7 +129,7 @@
         }
 
         // Opdracht 6
-        const name_check = (entered_name)=>{
+        const name_check_arrow = (entered_name)=>{
             if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
                 return succes(entered_name);                
             } else {
@@ -130,9 +138,41 @@
         }
 
         // Opdracht 7
-        
+        /**
+         * 
+         * 
+         * 
+         * **/
 
+         //Twee paramets voorbeeld
+        const berekening = (cijfer1, operand, cijfer2)=>{
+            const som = cijfer1+operand+cijfer2;
 
+            switch (operand) {
+                case "-":
+                    uitkomst = cijfer1 - cijfer2;
+                    break;
+                case "*":
+                    uitkomst = cijfer1 * cijfer2;
+                    break;
+                case "/":
+                    uitkomst = cijfer1 / cijfer2;
+                    break;
+            
+                default:
+                    uitkomst = cijfer1 + cijfer2;
+                    break;
+            }
+            return `Opdracht 7 (2 parameters): ${som} = ${uitkomst}`;
+        }
+
+        // Rest parameters Voorbeeld
+        const alfabet = (a, b, ...rest)=>{
+            let full_string=`Opdracht 7 (Rest parameters) `;
+            full_string += `${a}, ${b}, ${rest}`;            
+            return full_string;
+
+        }
 
 
     </script>
