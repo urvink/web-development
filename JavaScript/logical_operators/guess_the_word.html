@@ -111,21 +111,22 @@
         let msg = document.getElementById("label");
         let guesses = 0;
 
-        console.log(`To be guessed word! ${guessingWord}`);
+        console.log(`Secret word! ${guessingWord}`);
 
         function guess(obj) {
 
-            console.log("HEEY IK BEN HIEERRR");
-            const _chosen_word = obj.getElementsByTagName("span")[0].innerText;
+            // console.log(obj);
+            // const _chosen_word = obj.getElementsByTagName("span")[0].innerText;
+            const _chosen_word = obj.querySelector('span').innerText;
+            // console.log(`${_chosen_word}`);
             
             guesses++;
-
-            // console.log(obj.getElementsByTagName("span")[0]);
-            // console.log(obj);
             
             console.log(`You guessed: ${_chosen_word}`);
-            if (guesses >3) {
-                console.log("GAME OVER!!");
+            if (guesses >=3) {
+                counter.innerHTML = guesses;
+                console.log(`GAME OVER!!`);
+                console.log(guesses)
                 msg.innerHTML = `Game Over. The correct word was ${_game_message}`;
             }else if(_chosen_word !== guessingWord){
                 counter.innerHTML = guesses;
