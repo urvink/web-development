@@ -1,11 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Grades | Functions - JS (Week 5)</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        h1{
+            margin-bottom: 20px;
+        }
+
+        main{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .subjects h3{
+            margin-bottom: 10px;
+        }
+
+        table, th, td{
+            border: 1px solid gray;
+            padding: 2px;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: limegreen;
+        }
+
+        .dark_green{
+            background-color: darkgreen;
+        }
+
+
+    </style>
 </head>
+
 <body>
-    
+    <h1>Student Grades | JS</h1>
+    <main>       
+
+        <div class="subjects">
+            <h3>Wiskunde</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Willem</td>
+                        <td class="grade" contenteditable="true">3</td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td class="grade" contenteditable="true">7</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td class="grade" contenteditable="true">10</td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td class="grade" contenteditable="true">4</td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td class="grade" contenteditable="true">6.5</td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td class="grade" contenteditable="true">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="subjects">
+            <h3>Nederlands</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Willem</td>
+                        <td class="grade" contenteditable="true">7</td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td class="grade" contenteditable="true">7</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td class="grade" contenteditable="true">4</td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td class="grade" contenteditable="true">8</td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td class="grade" contenteditable="true">8.5</td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td class="grade" contenteditable="true">4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="subjects">
+            <h3>Natuurkunde</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Willem</td>
+                        <td class="grade" contenteditable="true">7</td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td class="grade" contenteditable="true">5</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td class="grade" contenteditable="true">8</td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td class="grade" contenteditable="true">6</td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td class="grade" contenteditable="true">9</td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td class="grade" contenteditable="true">5.5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="subjects">
+            <h3>Engels</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Cijfer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Willem</td>
+                        <td class="grade" contenteditable="true">6</td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td class="grade" contenteditable="true">6</td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td class="grade" contenteditable="true">5.5</td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td class="grade" contenteditable="true">4.3</td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td class="grade" contenteditable="true">5.5</td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td class="grade" contenteditable="true">8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="">
+            <h3>Resultaat gemiddeld</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Naam</th>
+                        <th>Talen</th>
+                        <th>Beta vakken</th>
+                        <th>Volgende klas? >6.5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Willem</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Jan</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Kim Sing</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Samantha</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Joyce</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Gareth</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        const tr_content = document.getElementsByClassName("grade").innerText;
+        const grade;
+        console.log(tr_content);
+        /**
+         * 
+         * Kleuren toekennen aan elementen gebasseerd op cijfer
+         * 
+         **/
+
+        // Cijfer < 5.5 --> Rood        
+        if(grade < 5.5){
+            //Add Class .red
+        }else 
+        // Cijfer >= 5.5 --> Groen
+        if(grade >= 5.5){
+            // Add class .green
+        }else
+        // Cijfer > 7.5 --> Donker groen
+        if (grade > 7.5) {
+            // Add class .dark_green
+        }
+        
+        /**
+         * isContentEditable?
+         * 
+         */
+
+        /**
+         * gemiddelde (Math.avg)
+         *  
+         * Gemiddelde NL + EN (Talen)
+         * Gemiddelde Natuurkunde + Wiskunde (Beta)
+         * ---------
+         * Gemiddelde Talen + Beta >=6.5  VOLGENDE KLAS!
+         * */
+        
+
+
+    </script>
 </body>
+
 </html>
