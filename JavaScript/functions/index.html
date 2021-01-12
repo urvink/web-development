@@ -30,19 +30,21 @@
             print_out(multiplication(2,3)); 
 
             //Opdracht 5: Name checker function
-            // print_out(name_check("Mo")); 
-            
-            
+            // print_out(name_check("Mo"));            
             let random_name = name_check_v3(Math.round(Math.random()*8));
+            print_out(random_name);
+
             print_out(name_check(random_name));
             // print_out(name_check_v2(Math.round(Math.random()*8))); //Opdracht 5 v2: Name checker evolved
             
-            // Opdracht 7            
+            // Opdracht 7
+            
             print_out(berekening(12,"/",6)); //3 parameters
             print_out(berekening);
 
             print_out(alfabet("a", "b", ["REST: ","c ", "d ", "e ", "f ", "g "]));
             print_out(alfabet); //Rest paramets
+            
 
         }
 
@@ -78,11 +80,34 @@
         // Opdracht 5
         function name_check(entered_name) {
 
-            if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
-                return succes(entered_name);
-            } else {
-                return fail();
+            // if (entered_name == "John"|| entered_name == "Olly"|| entered_name == "Mo"|| entered_name == "Hendrik"|| entered_name == "Tony") {
+            //     return succes(entered_name);
+            // } else {
+            //     return fail();
+            // }
+
+            switch (entered_name) {
+                case "John":
+                    output = succes(entered_name);
+                    break;
+                case "Olly":
+                    output = succes(entered_name);
+                    break;
+                case "Mo":
+                    output = succes(entered_name);
+                    break;
+                case "Hendrik":
+                    output = succes(entered_name);
+                    break;
+                case "Tony":
+                    output = succes(entered_name);
+                    break;            
+                default:
+                    output =fail();
+                    break;
             }
+
+            return output;
 
             function succes(gotcha) {
                 return `Opdracht 5: Dit is een bekende van ons: ${gotcha}`;
@@ -95,7 +120,7 @@
 
         // Opdracht 5 v2
         function name_check_v3(name_id) {
-            const _prefix = `Opdracht 5 v2: `;
+            const _prefix = `Opdracht 5 v3: `;
             let return_name = `${_prefix} `;
             let _name;
 
@@ -125,7 +150,7 @@
                     _name = "Peter";
                     break;
             }
-            return _name;
+            return `${_prefix} ${_name}`;
         }
 
         // Opdracht 6

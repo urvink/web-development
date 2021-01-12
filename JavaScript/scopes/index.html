@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scopes - JavaScript (Week 6)</title>
 </head>
+
 <body>
     <h1>Introduction to JavaScript</h1>
     <main>
         <h2>Scopes | JS</h2>
+
+        <div class="opdracht1">
+            <h3>Opdracht 1</h3>
+            <div class="questions">
+                <p>Wat wordt er in de console gelogt? Wat voor scoping heb je hier te maken?</p>
+                <code>function ​​printCar​() {​const​​carBrand​ = ​"Volvo"​;       }​console​.​log​(​carBrand​);</code>
+            </div>
+            <div class="answers">
+                <p>Uncaught ReferenceError: carBrand is not defined</p>
+            </div>
+        </div>
+        <div class="opdracht2">
+            <h3>Opdracht 2</h3>
+            <div class="questions">
+                <p>Wat wordt er in de console gelogt?</p>
+                <code>let​​ carName​;​function ​​printCar​() {​carBrand​ = ​"Volvo"​;       }​console​.​log​(​carBrand​);</code>
+            </div>
+            <div class="answers">
+                <p>Uncaught SyntaxError: Invalid or unexpected token</p>
+            </div>
+        </div>
+        <div class="opdracht3">
+            <h3>Opdracht 3</h3>
+            <div class="questions">
+                <p>Wat wordt er in de console gelogt?</p>
+                <code>function ​​printCar​() {​carBrand ​= ​"Volvo"​;       }​printCar​();​console​.​log​(​carBrand​);</code>
+            </div>
+            <div class="answers">
+                <p>Uncaught SyntaxError: Invalid or unexpected token</p>
+            </div>
+        </div>
+        <div class="opdracht4">
+            <h3>Opdracht 4</h3>
+            <div class="questions">
+                <p>Wat wordt er in de console gelogt? Hoe is dit anders voorgaande opdrachten? Leesje meer over
+                    closures:
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures</a>
+                </p>
+                <code>function​​ printCar​() {​carBrand​ = ​"Volvo"​;​return​​function​(​type​) {​console​.​log​(​carBrand​ + ​" "​ + ​type​);}}​const​​car​ = ​printCar​();​car​(​"v40"​);</code>
+            </div>
+            <div class="answers">
+                <p>Uncaught SyntaxError: Invalid or unexpected token</p>
+            </div>
+        </div>
     </main>
-    
+
     <script>
-        const carBrand = "Volvo";
-        function printCar(type) {
-            console.log(carBrand +" " +type);
-        }
 
-        const car = printCar();
+        //Opdracht 1
+        // function printCar() { const carBrand = "Volvo"; } console.log(carBrand);
 
-        car("v40");
+        //Opdracht 2
+        // let​​ carName​;​function​​ printCar​() {​carBrand​ = ​"Volvo"​;       }​console​.​log​(​carBrand​);
+
+        // Opdracht 3
+        // function​​ printCar​() {​carBrand ​= ​"Volvo"​;       }​ printCar​();​console​.​log​(​carBrand​);
+
+        // Opdracht 4
+        // function​​ printCar​() {​carBrand​ = ​"Volvo"​;​return​​function​(​type​) {​console​.​log​(​carBrand​ + ​" "​ + ​type​);}}​const​​car​ = ​printCar​();​car​(​"v40"​);
+
+
+
     </script>
 </body>
+
 </html>
