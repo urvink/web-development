@@ -59,30 +59,30 @@
                         <th>Cijfer</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="wiskunde">
                     <tr>
                         <td>Willem</td>
-                        <td class="grade" contenteditable="true">3</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">3</td>
                     </tr>
                     <tr>
                         <td>Jan</td>
-                        <td class="grade" contenteditable="true">7</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">7</td>
                     </tr>
                     <tr>
                         <td>Kim Sing</td>
-                        <td class="grade" contenteditable="true">10</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">10</td>
                     </tr>
                     <tr>
                         <td>Samantha</td>
-                        <td class="grade" contenteditable="true">4</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">4</td>
                     </tr>
                     <tr>
                         <td>Joyce</td>
-                        <td class="grade" contenteditable="true">6.5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">6.5</td>
                     </tr>
                     <tr>
                         <td>Gareth</td>
-                        <td class="grade" contenteditable="true">1</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">1</td>
                     </tr>
                 </tbody>
             </table>
@@ -96,30 +96,30 @@
                         <th>Cijfer</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="nederlands">
                     <tr>
                         <td>Willem</td>
-                        <td class="grade" contenteditable="true">7</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">7</td>
                     </tr>
                     <tr>
                         <td>Jan</td>
-                        <td class="grade" contenteditable="true">7</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">7</td>
                     </tr>
                     <tr>
                         <td>Kim Sing</td>
-                        <td class="grade" contenteditable="true">4</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">4</td>
                     </tr>
                     <tr>
                         <td>Samantha</td>
-                        <td class="grade" contenteditable="true">8</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">8</td>
                     </tr>
                     <tr>
                         <td>Joyce</td>
-                        <td class="grade" contenteditable="true">8.5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">8.5</td>
                     </tr>
                     <tr>
                         <td>Gareth</td>
-                        <td class="grade" contenteditable="true">4</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">4</td>
                     </tr>
                 </tbody>
             </table>
@@ -133,30 +133,30 @@
                         <th>Cijfer</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="natuurkunde">
                     <tr>
                         <td>Willem</td>
-                        <td class="grade" contenteditable="true">7</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">7</td>
                     </tr>
                     <tr>
                         <td>Jan</td>
-                        <td class="grade" contenteditable="true">5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">5</td>
                     </tr>
                     <tr>
                         <td>Kim Sing</td>
-                        <td class="grade" contenteditable="true">8</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">8</td>
                     </tr>
                     <tr>
                         <td>Samantha</td>
-                        <td class="grade" contenteditable="true">6</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">6</td>
                     </tr>
                     <tr>
                         <td>Joyce</td>
-                        <td class="grade" contenteditable="true">9</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">9</td>
                     </tr>
                     <tr>
                         <td>Gareth</td>
-                        <td class="grade" contenteditable="true">5.5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">5.5</td>
                     </tr>
                 </tbody>
             </table>
@@ -170,30 +170,30 @@
                         <th>Cijfer</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="engels">
                     <tr>
                         <td>Willem</td>
-                        <td class="grade" contenteditable="true">6</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">6</td>
                     </tr>
                     <tr>
                         <td>Jan</td>
-                        <td class="grade" contenteditable="true">6</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">6</td>
                     </tr>
                     <tr>
                         <td>Kim Sing</td>
-                        <td class="grade" contenteditable="true">5.5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">5.5</td>
                     </tr>
                     <tr>
                         <td>Samantha</td>
-                        <td class="grade" contenteditable="true">4.3</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">4.3</td>
                     </tr>
                     <tr>
                         <td>Joyce</td>
-                        <td class="grade" contenteditable="true">5.5</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">5.5</td>
                     </tr>
                     <tr>
                         <td>Gareth</td>
-                        <td class="grade" contenteditable="true">8</td>
+                        <td class="grade" contenteditable="true" onchange="formatCheck()">8</td>
                     </tr>
                 </tbody>
             </table>
@@ -252,26 +252,30 @@
     </main>
 
     <script>
-        const tr_content = document.getElementsByClassName("grade").innerText;
-        const grade;
-        console.log(tr_content);
-        /**
-         * 
-         * Kleuren toekennen aan elementen gebasseerd op cijfer
-         * 
-         **/
 
-        // Cijfer < 5.5 --> Rood        
-        if(grade < 5.5){
-            //Add Class .red
-        }else 
-        // Cijfer >= 5.5 --> Groen
-        if(grade >= 5.5){
-            // Add class .green
-        }else
-        // Cijfer > 7.5 --> Donker groen
-        if (grade > 7.5) {
-            // Add class .dark_green
+const grade = document.getElementsByClassName('grade');
+console.log(grade.innerText);
+        
+        function formatCheck() {
+            const grade = document.getElementsByClassName('grade');
+
+            console.log(grade.innerText);
+            // Cijfer < 5.5 --> Rood        
+            if(grade < 5.5){
+                //Add Class .red
+            }else 
+            // Cijfer >= 5.5 --> Groen
+            if(grade >= 5.5){
+                // Add class .green
+            }else
+            // Cijfer > 7.5 --> Donker groen
+            if (grade > 7.5) {
+                // Add class .dark_green
+            }
+        }
+        
+        function name(params) {
+            
         }
         
         /**

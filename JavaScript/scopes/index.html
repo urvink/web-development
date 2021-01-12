@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopes - JavaScript (Week 6)</title>
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <main>
+        <h2>Scopes | JS</h2>
+    </main>
+    
+    <script>
+        const carBrand = "Volvo";
+        function printCar(type) {
+            console.log(carBrand +" " +type);
+        }
+
+        const car = printCar();
+
+        car("v40");
+    </script>
+</body>
+</html>
