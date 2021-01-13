@@ -1,3 +1,4 @@
+
 // 1. Aan maken van een array. met [] geef je aan dat je eenlege lijst wilt maken.​
 let randomNumbers = [];
 
@@ -58,19 +59,23 @@ console.log(`Opdracht 4: ${ass_fruits_arr[1]} staat op index: ${ass_fruits_arr.i
 
 let random_number = Math.round(Math.random()*9);
 
-// console.log(`\nRandom fruit: ${typeof ass_fruits_arr[randomNumber]}`);
-rand_fruit = ass_fruits_arr[num_arr[(random_number+1)%ass_fruits_arr.length]];
+console.log("\nOpdracht 5");
+let rnd_index = num_arr[random_number];
+
+if (rnd_index >= 5) {
+    rnd_index%=2;
+}
+
+rand_fruit = ass_fruits_arr[rnd_index];
 // console.log(`Before CHECK: ${rand_fruit}`);
-console.log(ass_fruits_arr.length, num_arr[(random_number+1)%ass_fruits_arr.length]);
+// console.log(ass_fruits_arr.length, num_arr[(random_number+1)%ass_fruits_arr.length]);
+
 
 if (rand_fruit == undefined) {
     console.log("\nIK besta NIET!!");
-    console.log(`${num_arr[random_number]}`);
-    // nextIndex = (currentIndex + 1)%array.length
-    // ((a % n ) + n ) % n
-
+    alert("DOOHHHH!!!!! Undefined!!");
 } else {
-    console.log(`Random fruit: ${rand_fruit}`);
+    console.log(`${ass_fruits_arr}\nRandom fruit met key [${rnd_index}]: ${rand_fruit}`);
 }
 
 
@@ -80,7 +85,7 @@ if (rand_fruit == undefined) {
  * Je hebt nu geleerd hoe je arrays kunt aanmaken en de waarde kunt benaderen. 
  * Arrays hebben ook functies die je kunt gebruiken. 
  * Zoek uit wat push(), pop(), shift(), slice(), splice(), sort(). 
- * Maak gebruik van de fruits array en maak voor elke functie een voorbeeld en geef in commentaar wat het doet.
+ * Maak gebruik van de fruits array en maak voor elke functie een voIn in the waiorbeeld en geef in commentaar wat het doet.
  */
 
 example_arr = [1,3,"Linux", "Google", [1,2,3], 300n];
@@ -110,17 +115,15 @@ console.log(`\nsplice() -> example_arr.splice(): \n ${example_arr}`);
 example_arr.sort();
 console.log(`\nsort() -> example_arr.sort(): Sort the items in the array\n ${example_arr}`);
 
-
-
 /**
  * Opdracht 7
  * --------------
- * Naast de functies die je van de array kunt gebruiken heb je ook nog de “length” property dieje kunt gebruiken. 
+ * Naast de functies die je van de array kunt gebruiken heb je ook nog de “length” property die je kunt gebruiken. 
  * Hiermee kan je de grootte van de array opvragen. 
  * Gebruik de lengthproperty en print in de console uit hoe groot de fruits array is.
  */
+console.log(`\nOpdracht 7: De lengte van ass_fruits_arr = ${ass_fruits_arr.length}`);
 
- 
 /**
  * Opdracht 8
  * ------------
@@ -129,6 +132,10 @@ console.log(`\nsort() -> example_arr.sort(): Sort the items in the array\n ${exa
  * Pas de value “Peer” naar “Sinaasappel”.
  */
 
+ console.log(ass_fruits_arr);
+ ass_fruits_arr[ass_fruits_arr.indexOf('Coconut')] ='Squash';
+ console.log(`Opdracht 8: [${ass_fruits_arr}]`);
+ 
 /**
  * Opdracht 9
  * -----------

@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arrays | JS - Week 6</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
     
 </head>
 <body>
     <h1>Introduction to JavaScript</h1>
 
     <main>
-
+        <button type="reset" onclick="refresh()">Refresh!</button>
     </main>
 
     <script>
+        function refresh() {
+            location.reload();
+        }
         // 1. Aan maken van een array. met [] geef je aan dat je eenlege lijst wilt maken
         let products = [];
         // 2. Toevoegen van producten in de array
