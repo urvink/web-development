@@ -56,17 +56,21 @@ console.log(`Opdracht 4: ${ass_fruits_arr[1]} staat op index: ${ass_fruits_arr.i
  * Als resultaat zal er altijd een fruitsoort uitgeprint worden.
  */
 
-let randomNumber = Math.round(Math.random()*9);
+let random_number = Math.round(Math.random()*9);
 
 // console.log(`\nRandom fruit: ${typeof ass_fruits_arr[randomNumber]}`);
-rand_fruit = ass_fruits_arr[num_arr[randomNumber]];
-console.log(`Before CHECK: ${rand_fruit}`);
+rand_fruit = ass_fruits_arr[num_arr[(random_number+1)%ass_fruits_arr.length]];
+// console.log(`Before CHECK: ${rand_fruit}`);
+console.log(ass_fruits_arr.length, num_arr[(random_number+1)%ass_fruits_arr.length]);
 
-if ( rand_fruit == undefined) {
-    console.log("\nIK BEN NIET TE DEFINIEREN");
+if (rand_fruit == undefined) {
+    console.log("\nIK besta NIET!!");
+    console.log(`${num_arr[random_number]}`);
+    // nextIndex = (currentIndex + 1)%array.length
     // ((a % n ) + n ) % n
+
 } else {
-    console.log(`${rand_fruit}`);
+    console.log(`Random fruit: ${rand_fruit}`);
 }
 
 
@@ -79,6 +83,35 @@ if ( rand_fruit == undefined) {
  * Maak gebruik van de fruits array en maak voor elke functie een voorbeeld en geef in commentaar wat het doet.
  */
 
+example_arr = [1,3,"Linux", "Google", [1,2,3], 300n];
+console.log(example_arr);
+
+//  push()
+example_arr.push('Windows');
+console.log(`\npush() -> example_arr.push('Windows'): ADD an item at the END of an array\n ${example_arr}`);
+
+//  pop()
+example_arr.pop();
+console.log(`\npop() -> example_arr.pop(): Removes LAST item in an array\n ${example_arr}`);
+
+//  shift()
+example_arr.shift();
+console.log(`\nshift() -> example_arr.shift(): Removes FIRST item in an array\n ${example_arr}`);
+
+//  slice()
+example_arr.slice(2,4);
+console.log(`\nslice() -> example_arr.slice(2, 4): Makes a new array from items in existing array\n ${example_arr.slice(2,4)}`);
+
+//  splice()
+example_arr.splice(4, 1, "Android", "Instagram");
+console.log(`\nsplice() -> example_arr.splice(): \n ${example_arr}`);
+
+//  sort()
+example_arr.sort();
+console.log(`\nsort() -> example_arr.sort(): Sort the items in the array\n ${example_arr}`);
+
+
+
 /**
  * Opdracht 7
  * --------------
@@ -87,6 +120,7 @@ if ( rand_fruit == undefined) {
  * Gebruik de lengthproperty en print in de console uit hoe groot de fruits array is.
  */
 
+ 
 /**
  * Opdracht 8
  * ------------
