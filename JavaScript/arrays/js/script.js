@@ -139,5 +139,10 @@ console.log(`\nOpdracht 7: De lengte van ass_fruits_arr = ${ass_fruits_arr.lengt
 /**
  * Opdracht 9
  * -----------
- * Kijkend naar de fruits array. Hoe draai je de values “Aardbei” en “Mandarijn” om in de array door gebruik te maken van indices (index).
+ * Kijkend naar de fruits array. Hoe draai je de values “Aardbei”/Dragon Fruit en “Mandarijn”/ Oranges om in de array door gebruik te maken van indices (index).
  */
+console.log(`Opdracht 9: \nOrigineel: [${ass_fruits_arr}]`);
+const tmp = ass_fruits_arr[ass_fruits_arr.indexOf('Dragon Fruit')];
+ass_fruits_arr[ass_fruits_arr.indexOf('Dragon Fruit')] = ass_fruits_arr[ass_fruits_arr.indexOf('Oranges')]
+ass_fruits_arr[ass_fruits_arr.indexOf('Oranges')] = tmp;
+console.log(`Eindresultaat: [${ass_fruits_arr}]`);

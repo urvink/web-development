@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops &amp; Iterators | Intro to JavaScript - Week 6</title>
+</head>
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <main>
+        <h2>Loops &amp; Iterators</h2>
+        <div class="answers"></div>
+    </main>
+    <script>
+        const sports = ["voetbal", "basketball", "volleyball", "hockey", "honkbal", "zwemmen", "korfbal"]
+
+        /**
+         * Opdracht 1 
+         * ------------
+         * Maak gebruik van een loop en itereer de sports array heen. Print het 1 voor 1 uit in jouw console.
+         * */
+        console.log(`Opdracht 1\n-----------`);
+        for (let t = 0; t < sports.length; t++) {
+            const sport = sports[t];
+            console.log(`${sport}`);
+        }
+
+        /**
+         * Opdracht 2
+         * ------------
+         * Maak een for-loop die alleen even getallen van 0 t/m 20 in je console uitprint.
+         * */
+        console.log(`\nOpdracht 2\n------------`);
+        for (let counter = 0; counter <= 20; counter++) {
+            if (counter%2 == 0) {
+                console.log(counter);
+            }else{
+                // console.log("\n");
+            }
+            
+        }
+
+        /**
+         * Opdracht 3
+         * ------------
+         * Maak gebruik van een loop en itereer door de sports array heen. 
+         * Itereer de loop met even getallen en print de waarde in jouw console uit.
+         * */
+        console.log("\nOpdracht 3\n------------");
+        for (let key = 0; key < sports.length; key++) {
+            // console.log(sports[key]);
+            if (key%2 == 0) {
+                console.log(sports[key]);
+            }else{
+                // console.log("\n");
+            }
+        }
+
+        /**
+         * Opdracht 4
+         * -------------
+         * Maak opdracht 1, maar maak nu gebruik van een while loop.
+         * */
+        
+        console.log("\n");
+        t = 0;
+        console.log("Opdracht 4\n-------------");
+        while (t<sports.length) {
+            if (t>7) {
+                break;
+            }else{
+                console.log(sports[t]);
+                t++;
+            }
+        }
+
+        /**
+         * Opdracht 5
+         * -------------
+         * Maak opdracht 1, maar maak nu gebruik van een for...in loop.
+         * */
+
+        for (const sport in sports) {
+            if (Object.hasOwnProperty.call(sports, sport)) {
+                const element = sports[sport];
+                
+            }
+        }
+
+        /**
+         * Opdracht 6
+         * -------------
+         * Maak opdracht 1, maar maak nu gebruik van een for...of loop.
+         * */
+
+
+
+
+
+    </script>
+</body>
+</html>
