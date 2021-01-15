@@ -173,27 +173,27 @@
                 <tbody id="engels">
                     <tr class="willem">
                         <td>Willem</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">6</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">6</td>
                     </tr>
                     <tr class="jan">
                         <td>Jan</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">6</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">6</td>
                     </tr>
                     <tr class="kim_sing">
                         <td>Kim Sing</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">5.5</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">5.5</td>
                     </tr>
                     <tr class="samantha">
                         <td>Samantha</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">4.3</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">4.3</td>
                     </tr>
                     <tr class="joyce">
                         <td>Joyce</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">5.5</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">5.5</td>
                     </tr>
                     <tr class="gareth">
                         <td>Gareth</td>
-                        <td class="grade" contenteditable="true" onchange="formatCheck(this)" role="textbox">8</td>
+                        <td class="grade" contenteditable="true" onchange="changeDetected(this)" role="textbox">8</td>
                     </tr>
                 </tbody>
             </table>
@@ -210,41 +210,41 @@
                     </tr>
                 </thead>
                 <tbody id="conclusion">
-                    <tr>
+                    <tr id="willem">
                         <td>Willem</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
-                    <tr>
+                    <tr id="jan">
                         <td>Jan</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
-                    <tr>
+                    <tr id="kim_sing">
                         <td>Kim Sing</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade">yes</td>
                     </tr>
-                    <tr>
+                    <tr id="samantha">
                         <td>Samantha</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
-                    <tr>
+                    <tr id="joyce">
                         <td>Joyce</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
-                    <tr>
+                    <tr id="gareth">
                         <td>Gareth</td>
-                        <td class="talen"></td>
-                        <td class="beta"></td>
-                        <td class="volgende_klas"></td>
+                        <td class="talen grade"></td>
+                        <td class="beta grade"></td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
                 </tbody>
             </table>
@@ -253,12 +253,9 @@
 
     <script>
 
+        
         const data = document.getElementsByTagName('tbody');
         const grades = document.getElementsByClassName('grade');
-        let wiskunde;
-        let natuurkunde;
-        let engels;
-        let nederlands;
         let willem =[];
         let jan=[];
         let kim_sing=[];
@@ -266,8 +263,7 @@
         let joyce=[];
         let gareth=[];
 
-        for (let subjs_index = 0; subjs_index < data.length; subjs_index++) {            
-
+        for (let subjs_index = 0; subjs_index < data.length; subjs_index++) {
             // Studenten arr samenstellen
             willem[subjs_index] = data[subjs_index].getElementsByClassName('willem')[0];
             jan[subjs_index] = data[subjs_index].getElementsByClassName('jan')[0];
@@ -275,33 +271,60 @@
             samantha[subjs_index] = data[subjs_index].getElementsByClassName('samantha')[0];
             joyce[subjs_index] = data[subjs_index].getElementsByClassName('joyce')[0];
             gareth[subjs_index] = data[subjs_index].getElementsByClassName('gareth')[0];
-
         }
 
         // console.log(jan[3].lastElementChild);
 
         // Beta        
-        let willem_beta = calc_average(willem[0].lastElementChild.innerText, willem[2].lastElementChild.innerText);
-        let jan_beta = calc_average(jan[0].lastElementChild.innerText, jan[2].lastElementChild.innerText);
-        let kim_sing_beta = calc_average(kim_sing[0].lastElementChild.innerText, kim_sing[2].lastElementChild.innerText);
-        let samantha_beta = calc_average(samantha[0].lastElementChild.innerText, samantha[2].lastElementChild.innerText);
-        let joyce_beta = calc_average(joyce[0].lastElementChild.innerText, joyce[2].lastElementChild.innerText);
-        let gareth_beta = calc_average(gareth[0].lastElementChild.innerText, gareth[2].lastElementChild.innerText);
+        let willem_beta_avg = calc_average(willem[0].lastElementChild.innerText, willem[2].lastElementChild.innerText);
+        let jan_beta_avg = calc_average(jan[0].lastElementChild.innerText, jan[2].lastElementChild.innerText);
+        let kim_sing_beta_avg = calc_average(kim_sing[0].lastElementChild.innerText, kim_sing[2].lastElementChild.innerText);
+        let samantha_beta_avg = calc_average(samantha[0].lastElementChild.innerText, samantha[2].lastElementChild.innerText);
+        let joyce_beta_avg = calc_average(joyce[0].lastElementChild.innerText, joyce[2].lastElementChild.innerText);
+        let gareth_beta_avg = calc_average(gareth[0].lastElementChild.innerText, gareth[2].lastElementChild.innerText);
         
         //Talen avg
-        let willem_talen = calc_average(willem[1].lastElementChild.innerText, willem[3].lastElementChild.innerText);
-        let jan_talen = calc_average(jan[1].lastElementChild.innerText, jan[3].lastElementChild.innerText);
-        let kim_sing_talen = calc_average(kim_sing[1].lastElementChild.innerText, kim_sing[3].lastElementChild.innerText);
-        let samantha_talen = calc_average(samantha[1].lastElementChild.innerText, samantha[3].lastElementChild.innerText);
-        let joyce_talen = calc_average(joyce[1].lastElementChild.innerText, joyce[3].lastElementChild.innerText);
-        let gareth_talen = calc_average(gareth[1].lastElementChild.innerText, gareth[3].lastElementChild.innerText);
+        let willem_talen_avg = calc_average(willem[1].lastElementChild.innerText, willem[3].lastElementChild.innerText);
+        let jan_talen_avg = calc_average(jan[1].lastElementChild.innerText, jan[3].lastElementChild.innerText);
+        let kim_sing_talen_avg = calc_average(kim_sing[1].lastElementChild.innerText, kim_sing[3].lastElementChild.innerText);
+        let samantha_talen_avg = calc_average(samantha[1].lastElementChild.innerText, samantha[3].lastElementChild.innerText);
+        let joyce_talen_avg = calc_average(joyce[1].lastElementChild.innerText, joyce[3].lastElementChild.innerText);
+        let gareth_talen_avg = calc_average(gareth[1].lastElementChild.innerText, gareth[3].lastElementChild.innerText);
 
-        
-        
+        //Resultaat
+        conclusion__tbody = document.getElementById('conclusion');
+        // console.log(conclusion__tbody);
+
+        /** 
+         * Set TALEN to HTML-element
+         * */
+        //talen
+        conclusion__tbody.firstElementChild.children[1].textContent = willem_talen_avg;
+        conclusion__tbody.children[1].children[1].textContent = jan_talen_avg;
+        conclusion__tbody.children[2].children[1].textContent = kim_sing_talen_avg;
+        conclusion__tbody.children[3].children[1].textContent = samantha_talen_avg;
+        conclusion__tbody.children[4].children[1].textContent = joyce_talen_avg;
+        conclusion__tbody.children[5].children[1].textContent = gareth_talen_avg;
+
+        // Beta
+        conclusion__tbody.firstElementChild.children[2].textContent = willem_beta_avg;
+        conclusion__tbody.children[1].children[2].textContent = jan_beta_avg;
+        conclusion__tbody.children[2].children[2].textContent = kim_sing_beta_avg;
+        conclusion__tbody.children[3].children[2].textContent = samantha_beta_avg;
+        conclusion__tbody.children[4].children[2].textContent = joyce_beta_avg;
+        conclusion__tbody.children[5].children[2].textContent = gareth_beta_avg;
 
 
-        function calc_average(nr1, nr2) {
-            return (parseInt(nr1)+parseInt(nr2))/2;
+        /**
+         * VOLGENDE KLAS?
+         * ---------------
+         * Datatype: Boolean
+         * Condition: avg(talen + beta) > 6.5 = VOLGENDE KLAS
+         * */
+        if (calc_average(willem_beta_avg, willem_talen_avg)>6.5){
+            console.log("JE BENT OVER");
+        } else {
+            
         }
         
 
@@ -314,24 +337,30 @@
 
         for (let index = 0; index < grades.length; index++) {
             const grade = grades[index];
+            
             // console.log(grade);
             // Cijfer > 7.5 --> Donker groen
             if (grade.innerText > 7.5) {
                 // console.log(`Cijfer > 7.5 (${grade.innerText})`);
                 // Add class .dark_green
-                grade.classList.add("dark_green");
+                addClass(grade, 'dark_green');
+                // grade.classList.add("dark_green");
             }else
             // Cijfer < 5.5 --> Rood        
-            if(grade.innerText < 5.5){
+            if(grade.textContent < 5.5 || grade.textContent == (true || 'yes')){
                 // console.log(`Cijfer < 5.5 (${grade.innerText})`);
                 //Add Class .red
-                grade.classList.add("red");
+                addClass(grade, 'red')
+                // grade.classList.add("red");
             }else 
             // Cijfer >= 5.5 --> Groen
-            if(grade.innerText >= 5.5){
+            if(grade.innerText >= 5.5 || grade.textContent == (false || 'no')){
                 // console.log(`Cijfer >= 5.5 (${grade.innerText})`);
                 // Add class .green
-                grade.classList.add("green");
+                addClass(grade, 'green')
+                // grade.classList.add("green");
+            }else{
+
             }
             
             
@@ -339,9 +368,18 @@
 
         // grades.forEach(grade => {console.log(grade.innerText);});
 
-        
-        function formatCheck() {
-            console.log("CHANGED!!!!!!");
+         /**
+         * Functions
+         * --------------
+         * */
+         function calc_average(nr1, nr2) {
+            return (parseInt(nr1)+parseInt(nr2))/2;
+        }
+
+        function changeDetected(data) {
+            console.log(`${data}`);
+
+
             /**
             // const grade = document.getElementsByClassName('grade');
             console.log(grade.innerText);
@@ -357,6 +395,15 @@
             if (grade > 7.5) {
                 // Add class .dark_green
             }*/
+        }
+
+        function addClass(_element, _class) {
+            _element.classList.add(_class);
+            console.log(`Class: ${_class}`);
+        }
+
+        function removeClass(_element, _class) {
+            _element.classList.remove(_class);
         }
         
         /**
