@@ -25,6 +25,10 @@
             console.log(`${sport}`);
         }
 
+        const arr = [1,2,3];
+        arr[3]=1;
+
+        console.log(arr);
         /**
          * Opdracht 2
          * ------------
@@ -80,21 +84,87 @@
          * Maak opdracht 1, maar maak nu gebruik van een for...in loop.
          * */
 
-        for (const sport in sports) {
-            if (Object.hasOwnProperty.call(sports, sport)) {
-                const element = sports[sport];
+        // for (const key in object) {
+        //     if (Object.hasOwnProperty.call(object, key)) {
+        //         const element = object[key];
                 
-            }
-        }
+        //     }
+        // }
 
         /**
          * Opdracht 6
          * -------------
          * Maak opdracht 1, maar maak nu gebruik van een for...of loop.
          * */
+        
+        
+        /**
+         * Opdracht 7
+         * -----------
+         * Maak een while loop die 3x itereert
+         * ●Binnen de while loop maak je een for-loop die 10x itereert
+         * ●Bij de eerste while iteratie wil ik dat de getallen 1,2,3,4,5,6,7,8,9,10 in je consoleuitgeprint wordt
+         * ●Bij de tweede while iteratie wil ik dat de getallen 2,4,6,8,10,12,14,16,18,20 in jeconsole uitgeprint wordt
+         * ●Bij de derde while iteratie wil ik dat de getallen 3,6,9,12,15,18,21,24,27,30 in je consoleuitgeprint wordt
+         * */
 
+        let whileTeller = 1;
+        console.log("\nOpdracht 7\n------------");
+        while (whileTeller <= 3) {
+            switch (whileTeller) {
+                case 2:
+                    console.log("\nEven\n");
+                    for (let index = 1; index <= 20; index++) {
+                        if (index%2 == 0) {
+                            console.log(index);
+                        }                                    
+                    }
+                    break;
+                    case 3:
+                        console.log(`\nIndex +3\n`);
+                        for (let index = 3; index <= 30; index+=3) {
+                            console.log(index);
+                        }
+                        break;
+            
+                default:
+                    for (let index = 1; index <= 10; index++) {
+                        console.log(index);                
+                    }
+                    break;
+            }            
+            whileTeller++;
+        }
 
+        /**
+         * Opdracht 8
+         * -------------
+         * Maak een for loop die van 0 t/m 50 itereert. Een hele bekende oefening is de fibonaccireeks. 
+         * Lees je in hoe fibonacci reeks werkt: ​https://www.fibonicci.com/nl/rij-van-fibonacci/​.
+         * Neem zelf eerst de tijd om dit uit te coderen, want op internet staat letterlijk het antwoord.
+         * Het gaat hier om het aanleren van bepaalde denkwijze om dit op te lossen. 
+         * Maak hiervooreen stappenplan en werkt dit uit in code.
+         * ------------
+         * t=0
+         * getal = 0
+         * getal+=t++
+         * ---------
+         * new getal = oudgetal + t
+         * 
+         * 
+         *
+         * */
 
+        console.log(`\nOpdracht 8 (Fibonacci)\n-----------------`);
+        
+        let result = 0;
+        let mem = 1;
+        let index = 0;
+
+        while (result <=50) {            
+            console.log(`Happy Gilmore: ${result}`);
+            // result = index+mem;
+        }
 
 
     </script>
