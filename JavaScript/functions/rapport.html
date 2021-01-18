@@ -321,11 +321,6 @@
          * Datatype: Boolean
          * Condition: avg(talen + beta) > 6.5 = VOLGENDE KLAS
          * */
-        if (calc_average(willem_beta_avg, willem_talen_avg)>6.5){
-            console.log("JE BENT OVER");
-        } else {
-            
-        }
         
 
         /**
@@ -343,21 +338,21 @@
             if (grade.innerText > 7.5) {
                 // console.log(`Cijfer > 7.5 (${grade.innerText})`);
                 // Add class .dark_green
-                addClass(grade, 'dark_green');
+                addClassToElement(grade, 'dark_green');
                 // grade.classList.add("dark_green");
             }else
             // Cijfer < 5.5 --> Rood        
             if(grade.textContent < 5.5 || grade.textContent == (true || 'yes')){
                 // console.log(`Cijfer < 5.5 (${grade.innerText})`);
                 //Add Class .red
-                addClass(grade, 'red')
+                addClassToElement(grade, 'red')
                 // grade.classList.add("red");
             }else 
             // Cijfer >= 5.5 --> Groen
             if(grade.innerText >= 5.5 || grade.textContent == (false || 'no')){
                 // console.log(`Cijfer >= 5.5 (${grade.innerText})`);
                 // Add class .green
-                addClass(grade, 'green')
+                addClassToElement(grade, 'green')
                 // grade.classList.add("green");
             }else{
 
@@ -397,12 +392,12 @@
             }*/
         }
 
-        function addClass(_element, _class) {
+        function addClassToElement(_element, _class) {
             _element.classList.add(_class);
-            console.log(`Class: ${_class}`);
+            // console.log(`Class: ${_class}`);
         }
 
-        function removeClass(_element, _class) {
+        function removeClassFromElement(_element, _class) {
             _element.classList.remove(_class);
         }
         
