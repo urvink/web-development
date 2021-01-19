@@ -174,8 +174,7 @@
             console.log(result);
             result = a+b;
             a = b;
-            b = result;
-            
+            b = result;            
         }
         
 
@@ -192,15 +191,23 @@
         console.log(`\nOpdracht 9: Bubble Sort algorithm\n------------------------------------`);
 
         const bubbleArr = [2,7,5,10,4,9,3,1,8,6];
-        let oldBub = 0;
-        for (let currBub = 0; currBub <= bubbleArr.length; currBub++) {
+        let oldBub = 0; 
 
+        console.log(bubbleArr);
+        for (let currBub = 1; currBub <= bubbleArr.length; currBub+=2) {
+            
+            
+            console.log(`Old: ${bubbleArr[oldBub]}`);
+            console.log(`Current: ${bubbleArr[currBub]}`);
+            oldBub+=2;
+
+            /**
             if (currBub < oldBub) {
                 oldBub=currBub;
                 console.log(bubbleArr);
             }else{
                 console.log("niet kleiner"+bubbleArr);
-            }
+            }*/
         }
         
 

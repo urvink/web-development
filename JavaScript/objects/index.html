@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects | Intro to JavaScript - Week 7</title>
+</head>
+
+<body>
+    <h1>Introduction to JavaScript</h1>
+    <main>
+        <h2>Objects</h2>
+        <div id="clubs" class="clubs"></div>
+    </main>
+    <script>
+
+        /**
+         * Opdracht 1
+         * ------------
+         * Maak een Object die club informatie bijhoudt:
+         * ●Naam van de club
+         * ●Type sport
+         * ●Aantal leden
+         * */
+        const Club = function (name, type_sport, members_amount) {
+            this.name = name;
+            this.type_sport = type_sport;
+            this.members_amount = members_amount;
+        }
+
+        /**
+         * Opdracht 2
+         * -----------
+         * Maak een Object van contactgegevens en voeg dat ook toe aan de club object:
+         * ●Contactgegevens
+         *      ○Adres
+         *      ○Telefoonnr
+         *      ○Contactpersoon
+         * */
+
+        const Contact_Info = function (address, telnr, contact_person) {
+            this.address = address;
+            this.telnr = telnr;
+            this.contact_person = contact_person;
+        }
+
+        /**
+         * Opdracht 3
+         * -----------
+         * Het is heel gebruikelijk dat dezelfde objecten in een lijst staan. 
+         * Maak een lijst aan en voeg 4 Club objecten toe aan de lijst. 
+         * Itereer over de lijst heen en print de verschillende ​clubnamen uit op jouw pagina.
+         * */
+
+        console.log("\nOpdracht 3\n--------------");
+        const clubs = [
+            baya = new Club("Baya Beach Club", "Dancing", 50),
+            mambo = new Club("Mambo Beach", "Kite Surfing", 25),
+            med = new Club("Club Med", "Networking", 150),
+            techgrounds = new Club("Techgrounds", "Coding", 200),
+        ];
+
+        for (let index = 0; index < clubs.length; index++) {
+            console.log(clubs[index].name);
+        }
+
+        /**
+         * Opdracht 4
+         * ----------
+         * Sorteer persons op leeftijd van klein naar groot.
+         * */
+
+        console.log("\nOpdracht 4\n--------------");
+        const Person = function (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        const persons = [
+            new Person("Jan", 24),
+            new Person("Klaas", 15),
+            new Person("Yanis", 42),
+            new Person("Rupel", 55),
+            new Person("Hendrik", 32),
+            new Person("Mono", 28),
+            new Person("West", 23),
+        ]
+
+        persons.sort(function (a, b) {
+            return a.age - b.age;
+        });
+        for (const person of persons) {
+            console.log(person);
+        }
+
+
+        /**
+         * Opdracht 5
+         * -----------
+         * Maak nu een Person object door gebruik te maken van Object initializers. 
+         * Wat zou eventueelde voor en nadelen t.o.v Object constructors?
+         * */
+
+        console.log(`\nOpdracht 5\n-------------`);
+        const Person = {
+                name: "Tino",
+                age: 4
+            }
+        console.log(person);
+        console.log(`Voordeel: zelf structuur aanbrengen, makkelijker te manipuleren\nNadelen: Onoverzichtelijker, onveiliger (geen constructor die sanitation uitvoert), niet foutgevoelig, niet uniform`);
+
+        /**
+         * Opdracht 6
+         * -----------
+         * De nieuwe manier van objecten creëren kan je ook gebruik maken van classes. 
+         * Lees je inover classes:
+         * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#:~:text=Classes%20are%20a%20template%20for,shared%20with%20ES5%20classalike%20semantics.
+         * Zet opdracht 4 om in classes i.p.v object constructors.
+         * */
+
+        class Person{
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
