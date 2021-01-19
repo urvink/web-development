@@ -82,22 +82,28 @@
          * Opdracht 5
          * -------------
          * Maak opdracht 1, maar maak nu gebruik van een for...in loop.
+         * -----------------------
+         *  for (let t = 0; t < sports.length; t++) {
+            const sport = sports[t];
+            console.log(`${sport}`);
+        }
          * */
 
-        // for (const key in object) {
-        //     if (Object.hasOwnProperty.call(object, key)) {
-        //         const element = object[key];
-                
-        //     }
-        // }
+         console.log(`\nOpdracht 5\n---------------`);
+        for (const sport in sports) {
+            console.log(`${sports[sport]}`);
+        }
 
         /**
          * Opdracht 6
          * -------------
          * Maak opdracht 1, maar maak nu gebruik van een for...of loop.
          * */
+        console.log(`\nOpdracht 6\n------------`);
         
-        
+        for (const sport of sports) {
+            console.log(sport);
+        }
         /**
          * Opdracht 7
          * -----------
@@ -157,14 +163,48 @@
 
         console.log(`\nOpdracht 8 (Fibonacci)\n-----------------`);
         
+        
+        let a = 0;
+        let b = 1;
         let result = 0;
-        let mem = 1;
-        let index = 0;
+        console.log(result);
 
-        while (result <=50) {            
-            console.log(`Happy Gilmore: ${result}`);
-            // result = index+mem;
+        for (let fib_t = 0; fib_t <= 50; fib_t++) {
+            result = b;
+            console.log(result);
+            result = a+b;
+            a = b;
+            b = result;
+            
         }
+        
+
+        /**
+         * Opdracht 9
+         * --------------
+         * Stel je hebt het volgende array met random getallen:
+         * ●[2,7,5,10,4,9,3,1,8,6]Bubble sort is een hele bekende sorterings algoritme. 
+         * Hiermee kun je de array met randomgetallen sorteren van klein naar groot. 
+         * Je mag bij deze oefening geen gebruik maken van desort() functie. 
+         * Lees je in hoe Bubble sort werkt: ​https://en.wikipedia.org/wiki/Bubble_sort​ encodeer de sorterings algoritme uit.
+         * 
+         * */
+        console.log(`\nOpdracht 9: Bubble Sort algorithm\n------------------------------------`);
+
+        const bubbleArr = [2,7,5,10,4,9,3,1,8,6];
+        let oldBub = 0;
+        for (let currBub = 0; currBub <= bubbleArr.length; currBub++) {
+
+            if (currBub < oldBub) {
+                oldBub=currBub;
+                console.log(bubbleArr);
+            }else{
+                console.log("niet kleiner"+bubbleArr);
+            }
+        }
+        
+
+
 
 
     </script>
