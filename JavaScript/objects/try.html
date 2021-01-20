@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Contact_Info = function (address, telnr, contact_person) {
+            this.address = address;
+            this.telnr = telnr;
+            this.contact_person = contact_person;
+        }
+        const Club = function (name, type_sport, members_amount, contact_info_adr, telnr, contact) {
+            this.name = name;
+            this.type_sport = type_sport;
+            this.members_amount = members_amount;
+            this.contact_info = new Contact_Info(contact_info_adr, telnr, contact);
+        }
+
+        const club = new Club("Test", "Sport", 23, "wrt", "342345", "Debbie");
+        console.log(club);
+
+        const club2 = new Club;
+        club2.name = "Ford";
+        club2.type_sport = "Surfing";
+        club2.contact_info.address = ""
+
+    </script>
+</body>
+</html>

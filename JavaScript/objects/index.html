@@ -22,12 +22,15 @@
          * ●Naam van de club
          * ●Type sport
          * ●Aantal leden
-         * */
-        const Club = function (name, type_sport, members_amount) {
+         * 
+        const Club = function (name, type_sport, members_amount, contact_info) {
             this.name = name;
             this.type_sport = type_sport;
             this.members_amount = members_amount;
-        }
+            this.contact_info = new Contact_Info(contact_info);
+        }*/
+
+        // console.log(Club);
 
         /**
          * Opdracht 2
@@ -45,6 +48,17 @@
             this.contact_person = contact_person;
         }
 
+        /**
+         * TRY
+         * */
+
+         const Club = function (name, type_sport, members_amount, contact_info) {
+            this.name = name;
+            this.type_sport = type_sport;
+            this.members_amount = members_amount;
+            this.contact_info = new Contact_Info(contact_info);
+        }
+        console.log(Club);
         /**
          * Opdracht 3
          * -----------
@@ -73,10 +87,7 @@
 
         console.log("\nOpdracht 4\n--------------");
         const Person = function (name, age) {
-            this.name = name;
-            this.age = age;
-        }
-
+            this.name = name;            
         const persons = [
             new Person("Jan", 24),
             new Person("Klaas", 15),
@@ -103,30 +114,29 @@
          * */
 
         console.log(`\nOpdracht 5\n-------------`);
-        const Person = {
-                name: "Tino",
-                age: 4
-            }
-        console.log(person);
+        // const Person = {
+        //         name: "Tino",
+        //         age: 4
+        //     }
+        // console.log(person);
         console.log(`Voordeel: zelf structuur aanbrengen, makkelijker te manipuleren\nNadelen: Onoverzichtelijker, onveiliger (geen constructor die sanitation uitvoert), niet foutgevoelig, niet uniform`);
 
         /**
          * Opdracht 6
-         * -----------
+         * --------
          * De nieuwe manier van objecten creëren kan je ook gebruik maken van classes. 
          * Lees je inover classes:
          * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#:~:text=Classes%20are%20a%20template%20for,shared%20with%20ES5%20classalike%20semantics.
          * Zet opdracht 4 om in classes i.p.v object constructors.
          * */
 
-        class Person{
-            constructor(name, age){
-                this.name = name;
-                this.age = age;
-            }
-        }
-
-
+        // class Person{
+        //     constructor(name, age){
+        //         this.name = name;
+        //         this.age = age;
+        //     }
+            
+        // }
     </script>
 </body>
 
