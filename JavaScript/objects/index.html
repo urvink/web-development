@@ -52,7 +52,7 @@
          * TRY
          * */
 
-         const Club = function (name, type_sport, members_amount, contact_info) {
+        const Club = function (name, type_sport, members_amount, contact_info) {
             this.name = name;
             this.type_sport = type_sport;
             this.members_amount = members_amount;
@@ -87,16 +87,17 @@
 
         console.log("\nOpdracht 4\n--------------");
         const Person = function (name, age) {
-            this.name = name;            
-        const persons = [
-            new Person("Jan", 24),
-            new Person("Klaas", 15),
-            new Person("Yanis", 42),
-            new Person("Rupel", 55),
-            new Person("Hendrik", 32),
-            new Person("Mono", 28),
-            new Person("West", 23),
-        ]
+            this.name = name;
+            const persons = [
+                new Person("Jan", 24),
+                new Person("Klaas", 15),
+                new Person("Yanis", 42),
+                new Person("Rupel", 55),
+                new Person("Hendrik", 32),
+                new Person("Mono", 28),
+                new Person("West", 23),
+            ]
+        }
 
         persons.sort(function (a, b) {
             return a.age - b.age;
@@ -124,7 +125,7 @@
         /**
          * Opdracht 6
          * --------
-         * De nieuwe manier van objecten creëren kan je ook gebruik maken van classes. 
+         * De nieuwe manier van objecten creëren kan je ook gebruik maken van classes.
          * Lees je inover classes:
          * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#:~:text=Classes%20are%20a%20template%20for,shared%20with%20ES5%20classalike%20semantics.
          * Zet opdracht 4 om in classes i.p.v object constructors.
@@ -135,7 +136,7 @@
         //         this.name = name;
         //         this.age = age;
         //     }
-            
+
         // }
     </script>
 </body>
