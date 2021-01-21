@@ -12,26 +12,63 @@
             margin: 0;
         }
 
+        h1{
+            text-align: center;
+        }
+
         main{
             width: 85%;
+            height: 400px;
             margin: 0px auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #000;
+        }
+
+        button{
+            margin-bottom: 20px;
+            outline:none;
+            padding: 20px;
+        }
+
+        .board{
+            height: 100px;
+            background-color: #fff;
+            width: 200px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
 
         .player{
             background-color: grey;
-            width: 50%;
-            height: 50%;
+            width: 25%;
+            height: 25%;
         }
 
-        
+        #msg{
+            background-color: #fff;
+            border: 2px dotted white;
+            margin-top: 150px;
+            width: 300px;
+            height: 50px;
+        }
 
     </style>
 </head>
 <body>
     <h1>Rock, Paper, Scissor Game</h1>
     <main>
-        <div class="player"></div>
-        <div class="player"></div>
+        <button onclick="start()">Start Game!</button>
+        <div class="board">
+            <div id="player1" class="player"><div class="score"></div></div>
+            <div id="computer" class="player"><div class="score"></div></div>
+        </div>
+        
+        <div id="msg"></div>
     </main>
     
     
