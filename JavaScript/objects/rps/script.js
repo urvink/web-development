@@ -44,7 +44,7 @@ class Game{
                     }
                     break;
                 default:
-                    return
+                //
                     break;
             }
             
