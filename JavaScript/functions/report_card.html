@@ -211,7 +211,7 @@
                 <tbody id="conclusion">
                     <tr id="willem">
                         <td>Willem</td>
-                        <td class="talen grade" on></td>
+                        <td class="talen grade"></td>
                         <td class="beta grade"></td>
                         <td class="volgende_klas grade"></td>
                     </tr>
@@ -255,12 +255,13 @@
          * VARS
          * ------
          */
-        let willem = {"name":"Willem", "grades":{}};
-        let jan = {"name":"Jan","grades":{}};
-        let kimSing = {"name":"Kim_Sing","grades":{}};
-        let samantha = {"name":"Samantha","grades":{}};
-        let joyce = {"name":"Joyce","grades":{}};
-        let gareth = {"name":"Gareth","grades":{}};
+        let tbody__conslusion = document.getElementById('conclusion');
+        let willem = {"name":"Willem", "number": 0, "grades":{}};
+        let jan = {"name":"Jan", "number": 1, "grades":{}};
+        let kimSing = {"name":"Kim_Sing", "number": 2, "grades":{}};
+        let samantha = {"name":"Samantha", "number": 3, "grades":{}};
+        let joyce = {"name":"Joyce", "number": 4, "grades":{}};
+        let gareth = {"name":"Gareth", "number": 5, "grades":{}};
         const students = [
             willem, jan, kimSing, samantha, joyce, gareth
         ];        
@@ -330,19 +331,9 @@
         joyce.advance = checkAdvance(joyce.grades.beta, joyce.grades.talen);
         gareth.advance = checkAdvance(gareth.grades.beta, gareth.grades.talen);
         
-        
-        students.forEach(student => {
-            // console.log(student);
-        //    for (const key in student) {
-        //        if (Object.hasOwnProperty.call(student, key)) {
-        //            const element = student[key];
-        //            console.log(element);
-        //        }
-        //    }
-                fillGrade2Element(student);
-            });
-        
-        // console.log(students);
+        students.forEach(element => {
+            fillGrade2Element(tbody__conslusion, element);
+        });
         
         /** 
          * AddEventlistener to all grade classes to detect change
@@ -354,9 +345,6 @@
         //     console.log(element.textContent);
         // });
 
-        
-
-        // console.log(document.getElementsByClassName('grade')[0]); 
         /**
          * Function: getGrade
          * ---------------------
@@ -377,10 +365,13 @@
          * --------
          * Write out to element
          * */
-        function fillGrade2Element(studentData) {
+        function fillGrade2Element(element, studentData) {
+
+            console.log(studentData.name.toLowerCase());
+            console.log(element.getElementById(studentData.name.toLowerCase()));
             //Wiskunde
             // document.getElementById('wiskunde').getElementsByClassName(studentData.name).getElementsByClassName('grade').textContent = studentData.grades.wiskunde
-            // console.log(document.getElementById('wiskunde'));
+            // element.getElementsByClassName(studentData.name).getElementsByClassName('grade')
             //Nederlands
             studentData.grades.nederlands
 
