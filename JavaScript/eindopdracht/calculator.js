@@ -27,7 +27,7 @@ btns.forEach(element => {
                 break;
             case '+/-':
                 //Flips the number from positive to negative or neg to pos
-                show(flipDigit(element.textContent));
+                //show(flipDigit(element.textContent));
                 break;
         
             default:
@@ -39,11 +39,22 @@ btns.forEach(element => {
     });
    
 });
+
+/**
+ * flipDigit()
+ * @param  {...any} params 
+ */
 function flipDigit(...params) {
     return -(params);
 }
 
-function calc(calculation) {
+/**
+ * 
+ * @param {Number} num1 
+ * @param {String} op 
+ * @param {Number} num2 
+ */
+function calc(num1, op, num2) {
     
     console.log(calculation.textContent);
 }
