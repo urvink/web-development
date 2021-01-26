@@ -1,25 +1,23 @@
 // console.log(Array.from(document.getElementsByTagName('button')));
-reset();
+// reset();
 
 const btns = Array.from(document.getElementsByTagName('button'));
-// document.getElementById('equals').addEventListener('click', function(){
-//     const calculation = document.getElementById('display').textContent;
-//     console.log(calculation);
-//     console.log("OOPS!");
-// });
 
-// btns.addEventListener('click', function(obj){
-//     document.getElementById('display').innerText = element.textContent;
-//     console.log(element.textContent);
-// });
+if (document.getElementById('display').innerText == false) {
+    reset();
+}
 
 btns.forEach(element => {
-    element.addEventListener('click', function(){
-        checkInput(element);
+    element.addEventListener('click', function () {
+        // checkInput(element);
+        // console.log("display: "+document.getElementById('display').innerText);
 
         switch (element.textContent) {
             case 'AC':
-                reset();               
+                reset();
+                break;
+            case 'C':
+                reset();
                 break;
             case '=':
                 //doe de berekening van je #display
@@ -27,17 +25,17 @@ btns.forEach(element => {
                 break;
             case '+/-':
                 //Flips the number from positive to negative or neg to pos
-                //show(flipDigit(element.textContent));
+                console.log("Flip:"+document.getElementById('display').textContent);
+                show(flipDigit(document.getElementById('display').textContent));
                 break;
-        
+            case '%':
+                break
             default:
+                // appendElement(element);
                 show(element.textContent);
                 break;
         }
-    // show(element.textContent);
-    // console.log(element.textContent);
     });
-   
 });
 
 /**
@@ -45,36 +43,48 @@ btns.forEach(element => {
  * @param  {...any} params 
  */
 function flipDigit(...params) {
+    console.log(params);
+    if (params[0] == '-') {
+        return
+    }
     return -(params);
 }
 
 /**
  * 
- * @param {Number} num1 
- * @param {String} op 
- * @param {Number} num2 
+ * 
  */
-function calc(num1, op, num2) {
-    
-    console.log(calculation.textContent);
+function calc(displayElement) {
+    //parse calculation
+    console.log(displayElement.textContent);
+    show(eval(displayElement.textContent));
+}
+
+function appendElement(element) {
+    let number = [];
+    console.log(element);
+    switch (element.getAttribute('class')) {
+        case 'number':
+            number= number.push(Number(element.textContent));
+            console.log(number);
+            show(number);          
+            break;
+        case 'operator':
+            console.log("Operator used: " + element.textContent);
+        default:
+            break;
+    }
 }
 
 function checkInput(inputVal) {
-    // console.log(inputVal.querySelector('numbers'));
-    console.log(inputVal);
-
-    if (inputVal) {
-        console.log(`NUMBER: ${inputVal.textContent}`);
-    } else {
-        console.log(`Input value: ${inputVal.textContent}`);
-    }
-    
+    // console.log(inputVal.getArtribute('numbers'));
+    console.log(inputVal.getAttribute('class'));
 }
 
 function reset() {
     document.getElementById('display').textContent = 0;
 }
 
-function show(element) {    
+function show(element) {
     document.getElementById('display').innerText += element;
 }
