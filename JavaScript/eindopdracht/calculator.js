@@ -2,8 +2,10 @@
 // reset();
 
 const btns = Array.from(document.getElementsByTagName('button'));
+const display = document.getElementById('display');
+let outputArr = [];
 
-if (document.getElementById('display').innerText == false) {
+if (display.innerText == false) {
     reset();
 }
 
@@ -11,7 +13,13 @@ btns.forEach(element => {
     element.addEventListener('click', function () {
         // checkInput(element);
         // console.log("display: "+document.getElementById('display').innerText);
+        /**
+         * Change AC to C: When there is an input clicked
+         */
 
+        /**
+         * Checks which button is pressed
+         */
         switch (element.textContent) {
             case 'AC':
                 reset();
@@ -21,20 +29,23 @@ btns.forEach(element => {
                 break;
             case '=':
                 //doe de berekening van je #display
-                calc(document.getElementById('display'));
+                calc(display);
                 break;
             case '+/-':
                 //Flips the number from positive to negative or neg to pos
-                console.log("Flip:"+document.getElementById('display').textContent);
-                show(flipDigit(document.getElementById('display').textContent));
+                console.log("Flip:"+display.textContent);
+                // outputArr.unshift(flipDigit(display.textContent));
+                outputArr.unshift('-');
                 break;
             case '%':
                 break
             default:
                 // appendElement(element);
-                show(element.textContent);
+                outputArr.push(appendElement(element));
+                document.getElementById('reset').textContent = 'C';
                 break;
         }
+        show(outputArr);
     });
 });
 
@@ -43,11 +54,8 @@ btns.forEach(element => {
  * @param  {...any} params 
  */
 function flipDigit(...params) {
-    console.log(params);
-    if (params[0] == '-') {
-        return
-    }
-    return -(params);
+    console.log('FlipDigit()'+params);
+    return params.unshift('-');
 }
 
 /**
@@ -57,17 +65,18 @@ function flipDigit(...params) {
 function calc(displayElement) {
     //parse calculation
     console.log(displayElement.textContent);
-    show(eval(displayElement.textContent));
+    console.log(eval(displayElement.textContent));
 }
 
 function appendElement(element) {
     let number = [];
+
     console.log(element);
     switch (element.getAttribute('class')) {
-        case 'number':
-            number= number.push(Number(element.textContent));
-            console.log(number);
-            show(number);          
+        case 'numbers':
+            outputArr = number.push(Number(element.textContent));
+            console.log(outputArr);
+            // show(outputArr);          
             break;
         case 'operator':
             console.log("Operator used: " + element.textContent);
@@ -82,9 +91,15 @@ function checkInput(inputVal) {
 }
 
 function reset() {
-    document.getElementById('display').textContent = 0;
+    display.textContent = 0;
+    document.getElementById('reset').textContent = 'AC';
 }
 
-function show(element) {
-    document.getElementById('display').innerText += element;
+function show(output) {
+    if (typeof output == Array) {
+        console.log(`output is een ARRAY`);
+    }else{
+        console.log(`output NOT an ARRAY`);
+    }element
+    display.innerText = output;
 }
