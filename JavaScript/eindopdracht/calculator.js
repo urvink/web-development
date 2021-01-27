@@ -74,12 +74,16 @@ function appendElement(element) {
     console.log(element);
     switch (element.getAttribute('class')) {
         case 'numbers':
-            outputArr = number.push(Number(element.textContent));
-            console.log(outputArr);
+            console.log(element.getAttribute('class'));
+            console.log(element.textContent);
+            console.log(`Number b4: ${number}`);
+            outputArr = number.push(element.textContent);
+            console.log(`Number after: ${number}`);
+            // console.log(outputArr);
             // show(outputArr);          
             break;
         case 'operator':
-            console.log("Operator used: " + element.textContent);
+            console.log(`Operator used: ${element.textContent}`);
         default:
             break;
     }
@@ -100,6 +104,6 @@ function show(output) {
         console.log(`output is een ARRAY`);
     }else{
         console.log(`output NOT an ARRAY`);
-    }element
+    }
     display.innerText = output;
 }

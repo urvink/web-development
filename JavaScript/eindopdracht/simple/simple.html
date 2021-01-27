@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <main class="flex flex_jcc aic">
+        <div class="container">
+            <div id="display" class="flex aic bold">
+                <div id="memory"></div>
+            </div>
+            <div class="buttonsContainer flex">
+                <div>
+                    <div class="genericButtons flex border">
+                        <button id="reset" onclick="resetInput()">AC</button>
+                        <button id="numberToggle" onclick="flipDigit()" >+/-</button>
+                        <button id="mod" class="operators" onclick="checkInput(this)">%</button>
+                    </div>
+                    <div class="numbersContainer flex border">
+                        <button class="numbers" id="one" onclick="checkInput(this)">1</button>
+                        <button class="numbers" id="two" onclick="checkInput(this)">2</button>
+                        <button class="numbers" id="three" onclick="checkInput(this)">3</button>
+                        <button class="numbers" id="four" onclick="checkInput(this)">4</button>
+                        <button class="numbers" id="five" onclick="checkInput(this)">5</button>
+                        <button class="numbers" id="six" onclick="checkInput(this)">6</button>
+                        <button class="numbers" id="seven" onclick="checkInput(this)">7</button>
+                        <button class="numbers" id="eight" onclick="checkInput(this)">8</button>
+                        <button class="numbers" id="nine" onclick="checkInput(this)">9</button>
+                        <button class="numbers" id="zero" onclick="checkInput(this)">0</button>
+                        <button class="numbers" id="period" onclick="checkInput(this)">.</button>
+                    </div>
+                </div>
+                <div class="opContainer flex border">
+                    <button id="divide" class="operators" onclick="checkInput(this)">/</button>
+                    <button id="multiply" class="operators" onclick="checkInput(this)">*</button>
+                    <button id="minus" class="operators" onclick="checkInput(this)">-</button>
+                    <button id="plus" class="operators" onclick="checkInput(this)">+</button>
+                    <button id="equals" class="operators" onclick="checkInput(this)">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./simpleCalc.js"></script>
+</body>
+</html>
