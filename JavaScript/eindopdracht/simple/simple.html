@@ -14,12 +14,12 @@
             </div>
             <div class="buttonsContainer flex">
                 <div>
-                    <div class="genericButtons flex border">
+                    <div class="genericButtons flex">
                         <button id="reset" onclick="resetInput()">AC</button>
                         <button id="numberToggle" onclick="flipDigit()" >+/-</button>
-                        <button id="mod" class="operators" onclick="checkInput(this)">%</button>
+                        <button id="mod" class="mod" onclick="checkInput(this)">%</button>
                     </div>
-                    <div class="numbersContainer flex border">
+                    <div class="numbersContainer flex">
                         <button class="numbers" id="one" onclick="checkInput(this)">1</button>
                         <button class="numbers" id="two" onclick="checkInput(this)">2</button>
                         <button class="numbers" id="three" onclick="checkInput(this)">3</button>
@@ -33,7 +33,7 @@
                         <button class="numbers" id="period" onclick="checkInput(this)">.</button>
                     </div>
                 </div>
-                <div class="opContainer flex border">
+                <div class="opContainer flex">
                     <button id="divide" class="operators" onclick="checkInput(this)">/</button>
                     <button id="multiply" class="operators" onclick="checkInput(this)">*</button>
                     <button id="minus" class="operators" onclick="checkInput(this)">-</button>
