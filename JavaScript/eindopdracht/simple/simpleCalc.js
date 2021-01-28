@@ -5,35 +5,52 @@ let som = 0;
 display.textContent = 0;
 
 function checkInput(inputElement) {
+    console.log(inputElement);
+
     if (display.textContent === '0') {
         display.textContent = null;
     }
-    
+
     switch (inputElement.textContent) {
         case '=':
-            display.textContent = calc(som);
+            display.textContent = calc(display.textContent);
             break;
-            case 'AC':
-                reset();
-                break;
+        case 'AC':
+            reset();
+            break;
         case '+/-':
-            display.textContent=flip(display.textContent);
-            break;
-
-            case '+':
-                number1 = display.textContent;
-                som += number1;
             
+            flip(inputElement);
+            break;
+        case '+':
+            appendToScreen(inputElement);
+            break;
+        case '-':
+            appendToScreen(inputElement);
+            break;
+        case '*':
+            appendToScreen(inputElement);
+            break;
+        case '/':
+            appendToScreen(inputElement);
+            break;
         default:
-            display.textContent+=inputElement.textContent;
-            number1 = Number(display.textContent);
-            console.log(inputElement.textContent);
+            appendToScreen(inputElement);
             break;
     }
 }
-    
+
+function appendToScreen(obj) {
+    display.textContent+=obj.textContent;
+    logger(obj.textContent);
+}
+
+function logger(data) {
+    console.log(data);
+}
 
 function calc(equation) {
+    logger(equation);
     return eval(equation);
 }
 function resetDisplay() {
