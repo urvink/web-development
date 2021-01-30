@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <main class="flex flex_jcc aic">
         <div class="container">
-            <div id="display" class="flex aic bold">
+            <div id="displayContainer" class="flex aic bold">
                 <div id="memory"></div>
+                <div id="display"></div>
             </div>
             <div class="buttonsContainer flex">
                 <div>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="opContainer flex">
                     <button id="divide" class="operators" onclick="checkInput(this)">/</button>
-                    <button id="multiply" class="operators" onclick="checkInput(this)">*</button>
+                    <button id="multiply" class="operators" onclick="checkInput(this)">x</button>
                     <button id="minus" class="operators" onclick="checkInput(this)">-</button>
                     <button id="plus" class="operators" onclick="checkInput(this)">+</button>
                     <button id="equals" class="operators" onclick="checkInput(this)">=</button>

@@ -12,34 +12,37 @@
     <h1>Calculator - Eindopdracht | JavaScript (Week 8)</h1>
     <main class="flex flex_jcc aic">
         <div class="container">
-            <div id="display" class="flex aic bold"></div>
+            <div id="displayContainer" class="flex aic bold">
+                <div id="memory"></div>
+                <div id="display"></div>
+            </div>
             <div class="buttonsContainer flex">
                 <div>
-                    <div class="genericButtons flex border">
-                        <button id="reset">AC</button>
-                        <button id="numberToggle">+/-</button>
-                        <button id="mod">%</button>
+                    <div class="genericButtons flex">
+                        <button id="reset" onclick="resetDisplay()">AC</button>
+                        <button id="numberToggle" class="flip" onclick="checkInput(this)" >+/-</button>
+                        <button id="mod" class="mod" onclick="checkInput(this)">%</button>
                     </div>
-                    <div class="numbersContainer flex border">
-                        <button class="numbers" id="one">1</button>
-                        <button class="numbers" id="two">2</button>
-                        <button class="numbers" id="three">3</button>
-                        <button class="numbers" id="four">4</button>
-                        <button class="numbers" id="five">5</button>
-                        <button class="numbers" id="six">6</button>
-                        <button class="numbers" id="seven">7</button>
-                        <button class="numbers" id="eight">8</button>
-                        <button class="numbers" id="nine">9</button>
-                        <button class="numbers" id="zero">0</button>
-                        <button class="numbers" id="period">.</button>
+                    <div class="numbersContainer flex">
+                        <button class="numbers" id="one" onclick="checkInput(this)">1</button>
+                        <button class="numbers" id="two" onclick="checkInput(this)">2</button>
+                        <button class="numbers" id="three" onclick="checkInput(this)">3</button>
+                        <button class="numbers" id="four" onclick="checkInput(this)">4</button>
+                        <button class="numbers" id="five" onclick="checkInput(this)">5</button>
+                        <button class="numbers" id="six" onclick="checkInput(this)">6</button>
+                        <button class="numbers" id="seven" onclick="checkInput(this)">7</button>
+                        <button class="numbers" id="eight" onclick="checkInput(this)">8</button>
+                        <button class="numbers" id="nine" onclick="checkInput(this)">9</button>
+                        <button class="numbers" id="zero" onclick="checkInput(this)">0</button>
+                        <button class="numbers" id="period" onclick="checkInput(this)">.</button>
                     </div>
                 </div>
-                <div class="opContainer flex border">
-                    <button id="divide" class="operators">/</button>
-                    <button id="multiply" class="operators">*</button>
-                    <button id="minus" class="operators">-</button>
-                    <button id="plus" class="operators">+</button>
-                    <button id="equals" class="operators">=</button>
+                <div class="opContainer flex">
+                    <button id="divide" class="operators" onclick="checkInput(this)">/</button>
+                    <button id="multiply" class="operators" onclick="checkInput(this)">x</button>
+                    <button id="minus" class="operators" onclick="checkInput(this)">-</button>
+                    <button id="plus" class="operators" onclick="checkInput(this)">+</button>
+                    <button id="equals" class="operators" onclick="checkInput(this)">=</button>
                 </div>
 
 

@@ -39,7 +39,7 @@ function checkInput(inputElement) {
                         throw new Error('Only 2 digits supported');
                     } else {
                         equation.push(number1.join(''));
-                        show('display', number1);;
+                        show('display', number1);
                         numberToggle = toggler(numberToggle);
                     }                    
                         //Operator Toggle: False == 1 operator, True == not allowed (new Error)
