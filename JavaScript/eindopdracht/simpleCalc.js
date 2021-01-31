@@ -1,35 +1,67 @@
-let display = document.getElementById('display');
-let memory = document.getElementById('memory');
-let som = '';
-let solution = '';
-let getal1 = '';
-let getal2 = '';
-let op = '';
+/**Globals section */
+let display = document.getElementById('display'); //Display-element wordt getarget
+let memory = document.getElementById('memory'); //Memory-element wordt getarget
+let som = ''; //Som (berekening)
+let solution = ''; //Uitkomst
+let getal1 = ''; //Getal 1
+let getal2 = ''; //Getal 2
+let op = ''; //Operator
 
-let getalToggle = false;
-let periodToggle = true;
+let getalToggle = false; //getalToggle {boolean} bepaald wanneer getal1 (false) wordt aangeroepen en wanneer getal2 (true)
+let periodToggle = false; //periodToggle {boolean} bepaald dat er een period (.) is gebruikt!
+let opToggle = false; //opToggle {boolean} bepaald wanneer er een operator is gebruikt
 
+/** 
+ * checkInput FUNCTION
+ * -------------------
+ * Each time a button is clicked, THIS function is called. 
+ * 
+ */
 function checkInput(inputElement) {
     document.getElementById('reset').textContent = 'C';
     switch (inputElement.textContent) {
         case '=':
             logger(`Getal1: ${getal1}`);
             logger(`Operator: ${op}`);
-            logger(`Getal2: ${getal2}`);
-            som+=getal2;
+
+            //Check to see if getal2 is filled in
+            if (getal2) {
+                logger(`Getal2: ${getal2}`);
+                som+=getal2;
+            } else {
+                logger(`SPECIAL CASE`);
+                som+=getal1;
+            }
+            
             showInDisplay(getal2);
             memory.textContent = som;
-            logger(`Memory: ${document.getElementById('memory').textContent}`);            
+            logger(`Memory: ${document.getElementById('memory').textContent}`);
+            if (periodToggle === true || solution ) {
+                
+            }
             solution = calc(som).toFixed(2);
-            logger(`Solution: ${solution}`);
+            logger(`Solution: ${typeof solution}`);
             showInDisplay(solution);
             break;
+
+            /**
+             * AC/ C Button
+             * -------------
+             * When button is pressed change value of the button from AC to C
+             */
         case 'AC':
             reset();
             break;
         case 'C':
             reset();
             break;
+
+            /**
+             * +/- Button
+             * ------------
+             * entered value should be flipped from neg to pos || pos to neg 
+             * Tip:  new getal = getal*-1
+             */
         case '+/-':
             if (getalToggle === false) {
                 flip('getal1');
@@ -46,71 +78,91 @@ function checkInput(inputElement) {
                 logger(getal2);
             }
             break;
+            /**
+             * Operator Buttons section
+             * ------------------------
+             * - getal1 gets added to the som
+             * - getalToggle is flipped
+             * - operator (op) gets added to the som
+             * - new som get displayed on screen (display)
+             */
         case '+':
             op = '+';
-            if (getalToggle === false) {
+            if (getalToggle === false && opToggle === false) {
                 getalToggle=toggler(getalToggle);
                 periodToggle=toggler(periodToggle);
                 som += getal1;
                 som += op;
+                opToggle = toggler(opToggle);
                 showInDisplay(som);
-                
-            }else{                
+                inputElement.classList.toggle('clicked');
+            }else if(getalToggle === true && opToggle === true){                
                 som += getal2;
                 showInDisplay(som);
             }            
             break;
         case '-':
             op = '-';
-            if (getalToggle === false) {
+            if (getalToggle === false && opToggle === false) {
                 getalToggle=toggler(getalToggle);
                 periodToggle=toggler(periodToggle);
                 som += getal1;
                 som += op;
+                opToggle = toggler(opToggle);
                 showInDisplay(som);
-            }else{                
+                inputElement.classList.toggle('clicked');
+            }else if(getalToggle === true && opToggle === true){                
                 som += getal2;
                 showInDisplay(getal2);
             }            
             break;
         case 'x':
             op = '*';
-            if (getalToggle === false) {
+            if (getalToggle === false && opToggle === false) {
                 som += getal1;
                 som += op;                
                 getalToggle=toggler(getalToggle);
                 periodToggle=toggler(periodToggle);
+                opToggle = toggler(opToggle);
                 showInDisplay(som);
-            }else{
+                inputElement.classList.toggle('clicked');
+            }else if(getalToggle === true && opToggle === true){
                 som += getal2;
                 showInDisplay(som);
             }
             break;
         case '/':
             op = '/';
-            if (getalToggle === false) {
+            if (getalToggle === false && opToggle === false) {
                 getalToggle=toggler(getalToggle);
                 periodToggle=toggler(periodToggle);
                 som += getal1;
                 som += op;
-            }else{
+                opToggle = toggler(opToggle);
+                inputElement.classList.toggle('clicked');
+            }else if(getalToggle === true && opToggle === true){
                 som+=getal2;
                 showInDisplay(som);
             }
             break;
+            /**
+             * Period Button
+             * --------------
+             * When the period button has been clicked the periodToggle is flipped 
+             * and for that "getal" it's not allowed anymore
+             */
         case '.':
-            if (getalToggle === false && periodToggle === true) {
+            if (getalToggle === false && periodToggle === false) {
                 getal1+='.';
                 logger(getal1);
                 showInDisplay(getal1);
                 periodToggle=toggler(periodToggle);
-            } else if(getalToggle === true && periodToggle === true){
+            } else if(getalToggle === true && periodToggle === false){
                 getal2+='.';
                 showInDisplay(getal2);
                 periodToggle=toggler(periodToggle);
-            }else if(periodToggle === false){
+            }else if(periodToggle === true){
                 logger(`Only 1 PERIOD (.) allowed!!`);
-                // periodToggle=toggler(periodToggle);
             }
             break;
         case '%':
@@ -178,10 +230,11 @@ function resetDisplay() {
     solution = '';
     op = '';
 
-    if (getalToggle === true && periodToggle === false) {
+    if (getalToggle === true && opToggle === true) {
         getalToggle = toggler(getalToggle);
-        periodToggle = toggler(periodToggle);
-    }else if (periodToggle === false) {
+        // periodToggle = toggler(periodToggle);
+        opToggle = toggler(opToggle);
+    }else if (periodToggle === true) {
         periodToggle = toggler(periodToggle);
     }
 }

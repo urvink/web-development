@@ -1,3 +1,4 @@
+/** Config, Imports, etc*/
 @font-face {
     font-family: 'Calculator Font';
     src: url('./assets/calc_font.ttf'); /* IE9 Compat Modes */
@@ -5,13 +6,14 @@
         url('./assets/calc_font.ttf') format('truetype'), /* Pretty Modern Browsers */
         url('./assets/calc_font.ttf')  format('truetype'), /* Safari, Android, iOS */
     }
-
+/**Resets*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/**Elements*/
 h1 {
     text-align: center;
 }
@@ -28,9 +30,9 @@ button {
     align-items: center;
     outline: none;
     border: none;
-    /* flex-grow: 1; */
-    
+    /* flex-grow: 1; */ 
 }
+
 button:active{
     background-color: #ffffff;
 }
@@ -121,16 +123,16 @@ button:active{
     justify-content: space-between;
 }
 
-.operators {
+.opContainer .operators {
     background-color: orange;
     color: white;
     flex-direction: column;
     font-size: 14px;
 }
-.operators:active{
+.opContainer .clicked{
     background-color: green;
 }
 
-.numbers {
+.numbersContainer .numbers {
     background-color: rgb(90, 88, 88);
 }
