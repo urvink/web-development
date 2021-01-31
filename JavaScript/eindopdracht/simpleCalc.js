@@ -36,9 +36,12 @@ function checkInput(inputElement) {
             showInDisplay(getal2);
             memory.textContent = som;
             logger(`Memory: ${document.getElementById('memory').textContent}`);
-            if (periodToggle === true || solution ) {
+            /**
+             * Check to see if getal1 || getal2 || solution has decimals
+             */
+            /*if ((getal1 || getal2 || solution) === decimal ) {
                 
-            }
+            }*/
             solution = calc(som).toFixed(2);
             logger(`Solution: ${typeof solution}`);
             showInDisplay(solution);
@@ -218,7 +221,9 @@ function calc(equation) {
 function resetDisplay() {
     getal1 = '';
     getal2 = '';
+
     document.getElementById('reset').textContent = 'AC';
+
     showInDisplay();
     if (memory === false) {
         memory.textContent+=`=${solution}`;
