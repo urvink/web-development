@@ -16,36 +16,30 @@
                 <div id="memory"></div>
                 <div id="display"></div>
             </div>
-            <div class="buttonsContainer flex">
-                <div>
-                    <div class="genericButtons flex">
-                        <button id="reset" onclick="resetDisplay()">AC</button>
-                        <button id="numberToggle" class="flip" onclick="checkInput(this)" >+/-</button>
-                        <button id="mod" class="mod" onclick="checkInput(this)">%</button>
-                    </div>
-                    <div class="numbersContainer flex">
-                        <button class="numbers" id="one" onclick="checkInput(this)">1</button>
-                        <button class="numbers" id="two" onclick="checkInput(this)">2</button>
-                        <button class="numbers" id="three" onclick="checkInput(this)">3</button>
-                        <button class="numbers" id="four" onclick="checkInput(this)">4</button>
-                        <button class="numbers" id="five" onclick="checkInput(this)">5</button>
-                        <button class="numbers" id="six" onclick="checkInput(this)">6</button>
-                        <button class="numbers" id="seven" onclick="checkInput(this)">7</button>
-                        <button class="numbers" id="eight" onclick="checkInput(this)">8</button>
-                        <button class="numbers" id="nine" onclick="checkInput(this)">9</button>
-                        <button class="numbers" id="zero" onclick="checkInput(this)">0</button>
-                        <button class="numbers" id="period" onclick="checkInput(this)">.</button>
-                    </div>
-                </div>
-                <div class="opContainer flex">
-                    <button id="divide" class="operators" onclick="checkInput(this)">/</button>
-                    <button id="multiply" class="operators" onclick="checkInput(this)">x</button>
-                    <button id="minus" class="operators" onclick="checkInput(this)">-</button>
-                    <button id="plus" class="operators" onclick="checkInput(this)">+</button>
-                    <button id="equals" class="operators" onclick="checkInput(this)">=</button>
-                </div>
+            <div class="buttonsContainer flex">            
+                <button id="reset" onclick="resetDisplay()">AC</button>
+                <button id="numberToggle" class="flip" onclick="checkInput(this)" >+/-</button>
+                <button id="mod" class="mod" onclick="checkInput(this)">%</button>
+                <button id="divide" class="operators" onclick="checkInput(this)">/</button>
+            
+                <button class="numbers" onclick="checkInput(this)">7</button>
+                <button class="numbers" onclick="checkInput(this)">8</button>
+                <button class="numbers" onclick="checkInput(this)">9</button>
+                <button id="multiply" class="operators" onclick="checkInput(this)">x</button>            
 
+                <button class="numbers" onclick="checkInput(this)">4</button>
+                <button class="numbers" onclick="checkInput(this)">5</button>
+                <button class="numbers" onclick="checkInput(this)">6</button>
+                <button id="minus" class="operators" onclick="checkInput(this)">-</button>
 
+                <button class="numbers" onclick="checkInput(this)">1</button>
+                <button class="numbers" onclick="checkInput(this)">2</button>
+                <button class="numbers" onclick="checkInput(this)">3</button>
+                <button id="plus" class="operators" onclick="checkInput(this)">+</button>
+
+                <button id="zero" class="numbers" onclick="checkInput(this)">0</button>
+                <button class="numbers" onclick="checkInput(this)">.</button>                
+                <button id="equals" class="operators" onclick="checkInput(this)">=</button>
             </div>
         </div>
 

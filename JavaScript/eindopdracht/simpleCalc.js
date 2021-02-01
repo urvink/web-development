@@ -10,6 +10,16 @@ let op = ''; //Operator
 let getalToggle = false; //getalToggle {boolean} bepaald wanneer getal1 (false) wordt aangeroepen en wanneer getal2 (true)
 let periodToggle = false; //periodToggle {boolean} bepaald dat er een period (.) is gebruikt!
 let opToggle = false; //opToggle {boolean} bepaald wanneer er een operator is gebruikt
+logger('Start\n-------------------------------')
+logger(`Getal Toggle: ${getalToggle}`);
+logger(`Period Toggle: ${periodToggle}`);
+logger(`Op Toggle: ${opToggle}`);
+logger(`Getal1: ${getal1}`);
+logger(`Operator: ${op}`);
+logger(`Getal2: ${getal2}`);
+logger(`Som: ${som}`);
+logger(`Solution: ${solution}`)
+logger(`\n--------------------------`)
 
 /** 
  * checkInput FUNCTION
@@ -43,7 +53,7 @@ function checkInput(inputElement) {
                 
             }*/
             solution = calc(som).toFixed(2);
-            logger(`Solution: ${typeof solution}`);
+            logger(`Solution: ${solution}`);
             showInDisplay(solution);
             break;
 
@@ -91,14 +101,15 @@ function checkInput(inputElement) {
              */
         case '+':
             op = '+';
-            if (getalToggle === false && opToggle === false) {
-                getalToggle=toggler(getalToggle);
-                periodToggle=toggler(periodToggle);
+            logger(`Operator: ${op}`)
+            if (getalToggle === false && opToggle === false) {                
                 som += getal1;
                 som += op;
+                getalToggle=toggler(getalToggle);
+                periodToggle=toggler(periodToggle);
                 opToggle = toggler(opToggle);
+                // toggleOpClass(inputElement);
                 showInDisplay(som);
-                inputElement.classList.toggle('clicked');
             }else if(getalToggle === true && opToggle === true){                
                 som += getal2;
                 showInDisplay(som);
@@ -106,14 +117,16 @@ function checkInput(inputElement) {
             break;
         case '-':
             op = '-';
+            logger(`Operator: ${op}`)
             if (getalToggle === false && opToggle === false) {
-                getalToggle=toggler(getalToggle);
-                periodToggle=toggler(periodToggle);
                 som += getal1;
                 som += op;
+                getalToggle=toggler(getalToggle);
+                periodToggle=toggler(periodToggle);
                 opToggle = toggler(opToggle);
+                // toggleOpClass(inputElement);
                 showInDisplay(som);
-                inputElement.classList.toggle('clicked');
+                
             }else if(getalToggle === true && opToggle === true){                
                 som += getal2;
                 showInDisplay(getal2);
@@ -121,14 +134,15 @@ function checkInput(inputElement) {
             break;
         case 'x':
             op = '*';
+            logger(`Operator: ${op}`)
             if (getalToggle === false && opToggle === false) {
                 som += getal1;
                 som += op;                
                 getalToggle=toggler(getalToggle);
                 periodToggle=toggler(periodToggle);
                 opToggle = toggler(opToggle);
+                // toggleOpClass(inputElement);
                 showInDisplay(som);
-                inputElement.classList.toggle('clicked');
             }else if(getalToggle === true && opToggle === true){
                 som += getal2;
                 showInDisplay(som);
@@ -136,13 +150,14 @@ function checkInput(inputElement) {
             break;
         case '/':
             op = '/';
+            logger(`Operator: ${op}`)
             if (getalToggle === false && opToggle === false) {
-                getalToggle=toggler(getalToggle);
-                periodToggle=toggler(periodToggle);
                 som += getal1;
                 som += op;
+                getalToggle=toggler(getalToggle);
+                periodToggle=toggler(periodToggle);
                 opToggle = toggler(opToggle);
-                inputElement.classList.toggle('clicked');
+                // toggleOpClass(inputElement);
             }else if(getalToggle === true && opToggle === true){
                 som+=getal2;
                 showInDisplay(som);
@@ -164,7 +179,7 @@ function checkInput(inputElement) {
                 getal2+='.';
                 showInDisplay(getal2);
                 periodToggle=toggler(periodToggle);
-            }else if(periodToggle === true){
+            }else if(periodToggle){
                 logger(`Only 1 PERIOD (.) allowed!!`);
             }
             break;
@@ -184,17 +199,33 @@ function checkInput(inputElement) {
             if (getalToggle === false) {
                 // logger(`Getal1\n------------`);
                 getal1+=inputElement.textContent;
-                logger(` Default getal1: ${getal1}`);
+                logger(`Getal1: ${getal1}`);
                 showInDisplay(getal1);
-            } else {
+            } else if(getalToggle){
                 // logger(`Getal2\n------------`);
                 getal2+=inputElement.textContent;
-                logger(` Default getal2: ${getal2}`);
+                logger(`Getal2: ${getal2}`);
                 showInDisplay(getal2);
+            }else {
+                throw new Error('Invalid start of calculation!');
             }
             break;
     }
 }
+
+/**
+ * 
+ * 
+ */
+
+function toggleOpClass(element) {
+    element.classList.toggle('clicked');
+}
+
+/**
+ * 
+ * @param {String} output 
+ */
 
 function showInDisplay(output) {
     display.textContent = output;
@@ -225,6 +256,7 @@ function resetDisplay() {
     document.getElementById('reset').textContent = 'AC';
 
     showInDisplay();
+    
     if (memory === false) {
         memory.textContent+=`=${solution}`;
     }else{
@@ -235,12 +267,12 @@ function resetDisplay() {
     solution = '';
     op = '';
 
-    if (getalToggle === true && opToggle === true) {
+    if (getalToggle && opToggle && periodToggle) {
         getalToggle = toggler(getalToggle);
-        // periodToggle = toggler(periodToggle);
         opToggle = toggler(opToggle);
-    }else if (periodToggle === true) {
         periodToggle = toggler(periodToggle);
+    }else {
+        logger(`Reset Mis step!`)
     }
 }
 
