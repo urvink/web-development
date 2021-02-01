@@ -1,14 +1,11 @@
 # Web-development
 
 ## Week 1 - HTML
-
-    * Onderdeel 1
-    - Intro
-    - Semantics
-    - Headers
-    - Paragrafen
-
-    * Onderdeel 2
+    - [Intro](HTML/Intro/intro.html)
+    - [Semantics](HTML/Semantics/semantics.html)
+    - [Headers](HTML/Headers/headers.html)
+    - [Paragrafen](HTML/Paragrafen/paragrafen.html)
+    - 
     - [README](/README.md)
     - /HTML/HTML Forms/html_forms.html
     - https://www.techgrounds.nl
@@ -24,7 +21,7 @@
 
 ## Week 2 & 3 - CSS
 
-Coming soon....
+  * Onderdeel
 
 ## Week 4 - SaSS & Bootstrap
 
