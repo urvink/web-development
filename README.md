@@ -10,8 +10,6 @@
     - /HTML/HTML Forms/html_forms.html
     - https://www.techgrounds.nl
 
-
-    * Onderdeel 3 **
     - Forms
     - Tables
     - 
@@ -27,14 +25,14 @@
 
 Coming soon....
 
-## Week 5 - JavaScript
+## Week 5, 6, 7 & 8 - JavaScript
 
 Coming soon....
 
-## Week 6
+## Week 9 - Portfolio
 
 Coming soon....
 
-## Week 7
+## Week 10 - Java | Back-end
 
 Coming soon....
