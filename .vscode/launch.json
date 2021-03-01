@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Opdracht8",
+            "request": "launch",
+            "mainClass": "Java.Syntax.Opdracht8",
+            "projectName": "web-development_3ee391e7"
+        },
+        {
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",

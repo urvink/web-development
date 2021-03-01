@@ -226,7 +226,7 @@
                         <td>Kim Sing</td>
                         <td class="talen grade"></td>
                         <td class="beta grade"></td>
-                        <td class="volgende_klas grade">yes</td>
+                        <td class="volgende_klas grade"></td>
                     </tr>
                     <tr id="samantha">
                         <td>Samantha</td>
@@ -252,8 +252,9 @@
     </main>
 
     <script>
-
-        
+        /**
+         * Globals
+         * */        
         const data = document.getElementsByTagName('tbody');
         const grades = document.getElementsByClassName('grade');
         let willem =[];
@@ -273,8 +274,6 @@
             gareth[subjs_index] = data[subjs_index].getElementsByClassName('gareth')[0];
         }
 
-        // console.log(jan[3].lastElementChild);
-
         // Beta        
         let willem_beta_avg = calc_average(willem[0].lastElementChild.innerText, willem[2].lastElementChild.innerText);
         let jan_beta_avg = calc_average(jan[0].lastElementChild.innerText, jan[2].lastElementChild.innerText);
@@ -293,11 +292,11 @@
 
         //Resultaat
         conclusion__tbody = document.getElementById('conclusion');
-        // console.log(conclusion__tbody);
 
         /** 
-         * Set TALEN to HTML-element
+         * Set TALEN & BETA to HTML-element
          * */
+
         //talen
         conclusion__tbody.firstElementChild.children[1].textContent = willem_talen_avg;
         conclusion__tbody.children[1].children[1].textContent = jan_talen_avg;
@@ -318,14 +317,32 @@
         /**
          * VOLGENDE KLAS?
          * ---------------
-         * Datatype: Boolean
+         * 
          * Condition: avg(talen + beta) > 6.5 = VOLGENDE KLAS
+         * */        
+        let willem_advance = advance(calc_average(willem_talen_avg, willem_beta_avg));
+        let jan_advance = advance(calc_average(jan_talen_avg, jan_beta_avg));
+        let kim_sing_advance = advance(calc_average(kim_sing_talen_avg, kim_sing_beta_avg));
+        let samantha_advance = advance(calc_average(samantha_talen_avg, samantha_beta_avg));
+        let joyce_advance = advance(calc_average(joyce_talen_avg, joyce_beta_avg));
+        let gareth_advance = advance(calc_average(gareth_talen_avg, gareth_beta_avg));
+        
+        /**
+         * Set advance (volgende klas) to HTML-Element
          * */
+        conclusion__tbody.firstElementChild.children[3].textContent = willem_advance;
+        conclusion__tbody.children[1].children[3].textContent = jan_advance;
+        conclusion__tbody.children[2].children[3].textContent = kim_sing_advance;
+        conclusion__tbody.children[3].children[3].textContent = samantha_advance;
+        conclusion__tbody.children[4].children[3].textContent = joyce_advance;
+        conclusion__tbody.children[5].children[3].textContent = gareth_advance;
         
 
         /**
          * Add Event listener to element to listen for changes
+         * 
         grades.addEventListener('change', updated_value);
+
         function updated_value(e) {
             document.getElementsByClassName('grade').innerText = e.target.value;
         }*/
@@ -333,47 +350,47 @@
         for (let index = 0; index < grades.length; index++) {
             const grade = grades[index];
             
-            // console.log(grade);
             // Cijfer > 7.5 --> Donker groen
             if (grade.innerText > 7.5) {
-                // console.log(`Cijfer > 7.5 (${grade.innerText})`);
                 // Add class .dark_green
                 addClassToElement(grade, 'dark_green');
-                // grade.classList.add("dark_green");
             }else
             // Cijfer < 5.5 --> Rood        
-            if(grade.textContent < 5.5 || grade.textContent == (true || 'yes')){
-                // console.log(`Cijfer < 5.5 (${grade.innerText})`);
+            if(grade.textContent < 5.5 || grade.textContent == ('no')){
                 //Add Class .red
                 addClassToElement(grade, 'red')
-                // grade.classList.add("red");
             }else 
             // Cijfer >= 5.5 --> Groen
-            if(grade.innerText >= 5.5 || grade.textContent == (false || 'no')){
-                // console.log(`Cijfer >= 5.5 (${grade.innerText})`);
+            if(grade.innerText >= 5.5 || grade.textContent == ('yes')){
                 // Add class .green
                 addClassToElement(grade, 'green')
-                // grade.classList.add("green");
             }else{
 
-            }
-            
-            
+            }            
         }
 
-        // grades.forEach(grade => {console.log(grade.innerText);});
-
-         /**
-         * Functions
+        /**
+         * FUNCTIONS SECTION
          * --------------
          * */
-         function calc_average(nr1, nr2) {
+
+        /**
+         * Calculate the average of two values
+         */
+        function calc_average(nr1, nr2) {
             return (parseInt(nr1)+parseInt(nr2))/2;
+        }
+
+        function advance(avg) {
+            if(avg>= 6.5){
+                return "yes";
+            }else{
+                return "no";
+            }
         }
 
         function changeDetected(data) {
             console.log(`${data}`);
-
 
             /**
             // const grade = document.getElementsByClassName('grade');

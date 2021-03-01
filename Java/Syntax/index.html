@@ -13,7 +13,8 @@
     <main>
         <h1>Syntax | Java | Back-end</h1>
 
-        <div class="opdrachten">
+        <!-- Opdracht 1 -->
+        <div class="assignments">
             <h3>Opdracht 1 - Basic Syntax</h3>
             <div class="questions">
                 <p>Voordat je Java kan gebruiken moet je de syntax kunnen begrijpen. Doe onderzoek naar de volgende
@@ -44,8 +45,150 @@
                 </dl>
             </div>
         </div>
+        <!-- Opdracht 2 -->
+        <div class="assignments">
+            <h3>Opdracht 2 - Variables</h3>
+            <div class="questions">
+                <p>Ook variables werken in Java net iets anders dan je hiervoor misschien gewend bent. Java maakt onderscheid tussen 3 soorten variables:
 
+                    Local variables
+                    Instance variables
+                    Class variables (ook wel Static variables genoemd)
+                    
+                    Wat voor soort variabele je gebruikt hangt onder andere af van de plek waar je hem declareert .
+                    
+                    a) Waar wordt een local variable gedeclareerd?
+                    
+                    Class/Static variables en Instance variables worden op dezelfde plek gedeclareerd, en houden ook allebei de gegevens van een Object bij.
+                    
+                    b) Wat voor soort informatie sla je op in een instance variable?
+                    c) Wat voor soort informatie sla je op in een class variable?
+                    
+                     De waarde van een class variable kan je in principe ook opslaan in een instance variable.
+                    
+                    d) Wat is het voordeel van het gebruiken van een class variable?
+                    </p>
+            </div>
+            <div class="answers">
+                a) Wordt binnen een functie aangemaakt
+                b) Informatie die <u>NIET</u> wat zegt over de class/ object 
+                c) Informatie die <u>WEL</u>
+                d) Dat je die niet opnieuw hoeft te declareren en het worden gezien als apart van elkaar, dus ook apart aan te roepen zijn
+            </div>
+        </div>
+        <!-- Opdracht 3 -->
+        <div class="assignments">
+            <h3>Opdracht 3 - Access Control Modifiers</h3>
+            <div class="questions">
+                <p>Java gebruikt zogenaamde modifiers om bepaalde eigenschappen van stukjes code te veranderen. Deze zijn te verdelen in Access Control Modifiers en Non-Access Modifiers
 
+                    De Access Control Modifiers zijn heel belangrijk om te begrijpen - die geven namelijk aan welke onderdelen van je applicatie van het betreffende stukje code gebruik mogen maken.
+                    
+                    Noem de vier verschillende Access Control Modifiers en geef bij elke een korte beschrijving.
+                </p>
+            </div>
+            <div class="answers">
+                <h3>Access Control Modifiers</h3>
+                <dl>
+                    <dt>Public</dt>
+                    <dd>Toegang is mogelijk in en uit een class en of in en uit een package</dd>
+                    <dt>Private</dt>
+                    <dd>Alleen toegankelijk binnen de class</dd>
+                    <dt>Protected</dt>
+                    <dd>Alleen toegankelijk binnen de package en kinderen van die package</dd>
+                    <dt>Default</dt>
+                    <dd>Alleen toegankelijk binnen de package, als je geen access modifier aangeeft, is dit de standaard waarde</dd>
+                </dl>
+            </div>
+        </div>
+
+        <!-- Opdracht 4 -->
+        <div class="assignments">
+            <h3>Opdracht 4 - Non-Access Modifiers</h3>
+            <div class="questions">
+                <p>Zoals bij de vorige opdracht vermeld stond, zijn er ook enkele Non-Access Modifiers. Het grootste deel hiervan hoef je nog niet te kennen, maar de volgende twee wel:
+                    <ul>
+                        <li>Static</li>
+                        <li>Final</li>
+                    </ul>
+                    
+                    Static ben je eerder al tegengekomen. Kan je ook uitleggen waar je Final voor zou gebruiken?                    
+                </p>
+            </div>
+            <div class="answers">
+                Final duidt aan dat een class/ varible/ Method niet meer gaat veranderen (geen inheritance/ niet veranderd of niet overschreven)
+            </div>
+        </div>
+
+        <!-- Opdracht 5 -->
+        <div class="assignments">
+            <h3>Opdracht 5 - Strictly Typed</h3>
+            <div class="questions">
+                <p>Er wordt in IT onderscheid gemaakt tussen programmeertalen die Strictly/Strongly Typed zijn, en talen die Loosely/Weakly Typed zijn. Java is Strictly Typed - dit betekent dat je bij elke variabele in Java een datatype moet declareren. Bij Loosely Typed programmeertalen zoals JavaScript hoeft dit niet.
+                    <br>
+                   a) Wat is een voordeel van Strict Typing?
+                   b) Wat is een voordeel van Weak Typing?
+                   
+                </p>
+            </div>
+            <div class="answers">
+                a) Strict typing: Geeft een laagje security over je code heen, waardoor je kan afdwingen wat je wilt en ook welke datatype die is.
+                b) Weak typing: Dan ben je vrij om ten allertijden een andere datatype te krijgen.
+            </div>
+        </div>
+
+        <!-- Opdracht 6 -->
+        <div class="assignments">
+            <h3>Opdracht 6 - main & Arrays</h3>
+            <div class="questions">
+                <p>De main method van een Java class is de functie die wordt uitgevoerd als je een programma draait. Dit zal er altijd zo uit zien:
+                    <img src="../img/opdr6_fig" alt="Opdracht 6 figuur: Java Practice class">
+                    Public & static heb je hiervoor gehad; die geven aan dat je main method toegankelijk is voor iedereen, en dat deze voor elke Object van je class precies hetzelfde is.
+
+                    void geeft aan dat er geen return value wordt verwacht. Bij de main method is dit verplicht!
+
+                    Tenslotte nog <img src="../img/opdr6_fig2.png" alt="main(String[] args)"> Dit slaat op de naam en parameters.
+
+                    Met String[] args geef je dus aan dat de parameters van de main method in een array zitten. Dit array heet args (kort voor arguments) en bestaat enkel uit strings.
+                    <br>
+                    a) Kan je een reden bedenken waarom deze parameter verplicht is?
+                    <br>
+                    System.out.println() wordt gebruikt om tekst weer te geven in de console. Voor debugging doeleinden kan je dit net zo gebruiken als de console.log() command van JavaScript.
+
+                    Arrays declareer je zo:
+                    <img src="../img/Opdr6_fig3" alt="JavaTest class">
+                    <br>
+                    b) Kan je elementen van een Java Array veranderen?
+                    C) Kan je elementen aan een Java Array toevoegen?
+                    <br>
+                    Net als bij JavaScript worden Arrays vaak gebruikt in combinatie met Loops. In de volgende opdracht gaan we hier verder op in.
+                </p>
+            </div>
+            <div class="answers">
+                a) Dan je ervoor zorgen dat er geen malafide code kan worden geintroduceert in je object
+                b) Ja
+                c) Nee
+            </div>
+        </div>
+
+        <h3>Opdracht 7: Theorie</h3>
+        
+        <!-- Opdracht 8 -->
+        <div class="assignments">
+            <h3>Opdracht 8 - Loops & Conditions</h3>
+            <div class="questions">
+                <p>Er wordt in IT onderscheid gemaakt tussen programmeertalen die Strictly/Strongly Typed zijn, en talen die Loosely/Weakly Typed zijn. Java is Strictly Typed - dit betekent dat je bij elke variabele in Java een datatype moet declareren. Bij Loosely Typed programmeertalen zoals JavaScript hoeft dit niet.
+                    <br>
+                   a) Wat is een voordeel van Strict Typing?
+                   b) Wat is een voordeel van Weak Typing?
+                   
+                </p>
+            </div>
+            <div class="answers">
+                a) Strict typing: Geeft een laagje security over je code heen, waardoor je kan afdwingen wat je wilt en ook welke datatype die is.
+                b) Weak typing: Dan ben je vrij om ten allertijden een andere datatype te krijgen.
+            </div>
+        </div>
 
     </main>
 </div>
